@@ -51,14 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCAreaInspector.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCAxisInspector.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCButtonInspector.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCDPadInspector.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCGuiTools.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCJoystickInspector.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCMenu.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\Editor\ETCTouchPadInspector.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCAreaInspector.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCAxisInspector.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCButtonInspector.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCDPadInspector.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCGuiTools.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCJoystickInspector.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCMenu.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\Editor\ETCTouchPadInspector.cs" />
      <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
      <None Include="Assets\Minimap\DOTween\DOTween50.xml" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
@@ -135,6 +135,21 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween50.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/96552/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@1.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -149,21 +164,6 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Users/96552/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="DOTweenEditor">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/Editor/DOTweenEditor.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween50.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

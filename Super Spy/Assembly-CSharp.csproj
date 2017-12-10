@@ -51,25 +51,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Examples\_Medias\SliderText.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimation.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimationDungeon.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ComponentExtensions.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCArea.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCAxis.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCBase.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCButton.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCDPad.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCInput.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCJoystick.cs" />
-     <Compile Include="Assets\Character\Control\EasyTouch\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Examples\_Medias\SliderText.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimation.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimationDungeon.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\InitTarget.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ComponentExtensions.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCArea.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCAxis.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCBase.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCButton.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCDPad.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCInput.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCJoystick.cs" />
+     <Compile Include="Assets\Character\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+     <Compile Include="Assets\Character\MonsterBaseTeam\3D\AnimatorControllers\AniCtrl.cs" />
+     <Compile Include="Assets\Character\MonsterBaseTeam\3D\AnimatorControllers\WizardAniCtrl.cs" />
+     <Compile Include="Assets\Character\XiaoBin\Scripts\Controller.cs" />
+     <Compile Include="Assets\Character\XiaoBin\Scripts\SoldierInit.cs" />
      <Compile Include="Assets\Map\Tower\GenerateSoldiers.cs" />
-     <Compile Include="Assets\Map\Tower\Scripts\Positions.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Rotate.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\TowerController.cs" />
-     <Compile Include="Assets\Map\XiaoBin\Scripts\Controller.cs" />
-     <Compile Include="Assets\Map\XiaoBin\Scripts\SoldierInit.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapCameraManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapController.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapEffect.cs" />
@@ -115,23 +117,23 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween50.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/96552/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/96552/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween50.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween43.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

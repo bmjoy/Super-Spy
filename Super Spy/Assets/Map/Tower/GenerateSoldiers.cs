@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class GenerateSoldiers : MonoBehaviour {
 	public GameObject soldier;
 	public GameObject magician;
+	public Vector3 red_quanshui, blue_quanshui;
 
 	float last_time, cur_time;
-	Transform[] targets;
+
 	// Use this for initialization
 	void Start() {
 		cur_time = last_time = 0;
-		targets = GameObject.Find ("TowersPosition").GetComponent<Positions>().targets;
 		Generate ();
 	}
 	// Update is called once per frame
@@ -25,27 +25,32 @@ public class GenerateSoldiers : MonoBehaviour {
 	}
 
 	void Generate() {
-		GameObject origin_target;
-		while (true) {
-			int index = Random.Range (0, targets.Length);
-			GameObject obj = targets [index].gameObject;
-			if (gameObject.tag != obj.tag) {
-				origin_target = obj;
-				break;
-			}
-		}
-
 		GameObject ins = null;
+		Vector3 target = GetEnermyQuanShui (gameObject.tag);
 		for (int i = 0; i < 3; i++) {
-			GameObject new_soldier = null;
 			if (ins == null) {
 				ins = magician;
 			} else {
 				ins = soldier;
 			}
-			new_soldier = (GameObject)Instantiate (ins, transform);
+			GameObject new_soldier = (GameObject)Instantiate (ins, transform);
 			new_soldier.GetComponent<SoldierInit> ().SetStage (gameObject.tag);
-			new_soldier.GetComponent<Controller> ().SetTarget (origin_target);
+				new_soldier.GetComponent<Controller> ().SetTarget (target);
+		}
+	}
+
+	Vector3 GetEnermyQuanShui(string tag) {
+		if (tag == "Red") {
+			return blue_quanshui;
+		} else if (tag == "Blue") {
+			return red_quanshui;
+		} else {
+			int i = Random.Range (0, 2);
+			if (i == 0) {
+				return red_quanshui;
+			} else {
+				return blue_quanshui;
+			}
 		}
 	}
 }
