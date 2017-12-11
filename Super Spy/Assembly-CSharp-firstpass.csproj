@@ -87,7 +87,9 @@
      <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
+     <None Include="Assets\Character\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\Clip.shader" />
      <None Include="Assets\Minimap\DOTween\DOTween50.xml" />
+     <None Include="Assets\SkillEffectDisplay\Resources\Effect\Shader\Particle Alpha Blend1.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Minimap\DOTween\readme.txt" />

@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Character\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\ClipObjControl.cs" />
      <Compile Include="Assets\Character\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
      <Compile Include="Assets\Character\EasyTouchControls\Examples\_Medias\SliderText.cs" />
      <Compile Include="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\CharacterAnimation.cs" />
@@ -80,11 +81,17 @@
      <Compile Include="Assets\Minimap\Scripts\MiniMapPoolManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapView.cs" />
      <Compile Include="Assets\Minimap\Scripts\ScaleController.cs" />
+     <Compile Include="Assets\SkillEffectDisplay\Scripts\MoveController.cs" />
+     <Compile Include="Assets\SkillEffectDisplay\Scripts\SkillArea.cs" />
+     <Compile Include="Assets\SkillEffectDisplay\Scripts\SkillJoystick.cs" />
+     <Compile Include="Assets\SkillEffectDisplay\Scripts\ThirdCamera.cs" />
      <Compile Include="Assets\Store\Scripts\comeback.cs" />
      <Compile Include="Assets\Store\Scripts\EventTriggerClick.cs" />
      <Compile Include="Assets\Store\Scripts\MyImage.cs" />
      <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
+     <None Include="Assets\Character\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\Clip.shader" />
      <None Include="Assets\Minimap\DOTween\DOTween50.xml" />
+     <None Include="Assets\SkillEffectDisplay\Resources\Effect\Shader\Particle Alpha Blend1.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Minimap\DOTween\readme.txt" />

@@ -10,5 +10,9 @@ public class InitTarget : MonoBehaviour {
 		if (button) {
 			button.axis.directTransform = target;
 		}
+		var skill_buttons = transform.Find ("SkillButtons");
+		foreach (var skill in skill_buttons.GetComponentsInChildren<SkillArea>()) {
+			skill.player = target.gameObject;
+		}
 	}
 }
