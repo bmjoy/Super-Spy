@@ -7,14 +7,9 @@ public class WizardAniCtrl : AniCtrl {
 	// Update is called once per frame
 	void Update () {
 		if (isLocalPlayer) {
-			if (ETCInput.GetAxis ("Vertical") != 0 ||
-			    ETCInput.GetAxis ("Horizontal") != 0) {
-				anim.SetBool ("run", true);
-
-			} else {
-				anim.SetBool ("run", false);
-			}
-
+			anim.SetBool ("run", ETCInput.GetAxis ("Vertical") != 0 ||
+					ETCInput.GetAxis ("Horizontal") != 0);
+			anim.SetBool ("pugong", ETCInput.GetButtonDown ("ButtonHit"));
 			if (Input.GetKey(KeyCode.Escape)) {
 				Application.Quit ();
 			}

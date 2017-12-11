@@ -1,6 +1,5 @@
-Android
+WindowsStandalone
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EventTriggerClick
-b73fb44014da8ea86b1a66d3094c2694 Assembly-CSharp.dll:.ThirdCamera
 1c87578e8be3ae82b40d239d06946da5 Assembly-CSharp.dll:.SkillJoystick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -179,7 +178,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9d1e138111d33aad3c62dab4e71ae0e6 Assembly-CSharp.dll:.MiniMapElement
 94678f7833bd0dd50297dbd289556f88 Assembly-CSharp.dll:.ETCButton
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MoveController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InitTarget
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 fca2ca106e94163353df3dcc945f1fa0 Assembly-CSharp.dll:.GenerateSoldiers
@@ -194,3 +192,4 @@ ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SliderText
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+911bd64320e5be88fe8261f9baab5e1e Assembly-CSharp.dll:.SkillEffect

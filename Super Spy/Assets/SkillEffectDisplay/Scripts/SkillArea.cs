@@ -21,9 +21,9 @@ public class SkillArea : MonoBehaviour {
         Sector120,        // 扇形
     }
 
-    SkillJoystick joystick;
+    protected SkillJoystick joystick;
 
-    public GameObject player;      
+    public GameObject player;
 
     public SkillAreaType areaType;      // 设置指示器类型
 
@@ -47,7 +47,7 @@ public class SkillArea : MonoBehaviour {
     Dictionary<SKillAreaElement, Transform> allElementTrans;
 
     // Use this for initialization
-    void Start()
+	public virtual void Start()
     {
         joystick = GetComponent<SkillJoystick>();
 
@@ -58,7 +58,7 @@ public class SkillArea : MonoBehaviour {
         InitSkillAreaType();
     }
 
-    void OnDestroy()
+	public virtual void OnDestroy()
     {
         joystick.onJoystickDownEvent -= OnJoystickDownEvent;
         joystick.onJoystickMoveEvent -= OnJoystickMoveEvent;
@@ -90,7 +90,7 @@ public class SkillArea : MonoBehaviour {
         CreateSkillArea();
     }
 
-    void OnJoystickUpEvent()
+	protected virtual void OnJoystickUpEvent()
     {
         isPressed = false;
         HideElements();
@@ -101,7 +101,7 @@ public class SkillArea : MonoBehaviour {
         this.deltaVec = new Vector3(deltaVec.x, 0, deltaVec.y);
     }
 
-    void LateUpdate()
+	public virtual void LateUpdate()
     {
         if(isPressed)
             UpdateElement();
