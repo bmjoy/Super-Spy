@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 114056385353472230}
   - component: {fileID: 114462881407123158}
   - component: {fileID: 136873871895845812}
+  - component: {fileID: 114137496915403458}
   m_Layer: 0
   m_Name: FreeLich 1
   m_TagString: Untagged
@@ -877,6 +878,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack_distance: 0
+--- !u!114 &114137496915403458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503147092217752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: 10
 --- !u!114 &114462881407123158
 MonoBehaviour:
   m_ObjectHideFlags: 1

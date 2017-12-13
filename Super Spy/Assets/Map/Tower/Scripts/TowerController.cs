@@ -1,25 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class TowerController : Check {
-	public Material blue, red;
-	MeshRenderer render;
+	public Material blue, red,gray;
 	// Use this for initialization
 	void Start () {
 		ChangeStage (transform.gameObject.tag);
-		var quan = transform.Find ("quan_hero").gameObject;
-		render = quan.GetComponentInChildren<MeshRenderer> ();
-		render.enabled = false;
 	}
 
-	void Update() {
-		GameObject obj = FindObjectAroundthePoint (transform.position, Vector3.forward,
-			                 360f, 90, 10f);
-		render.enabled = obj != null;
-	}
-	void ChangeStage(string tag) {
+	public void ChangeStage(string tag) {
 		transform.Find ("Walls").tag = tag;
 		switch (tag) {
 		case "Blue":
@@ -27,6 +17,9 @@ public class TowerController : Check {
 			break;
 		case "Red":
 			SetTowerMaterial (red);
+			break;
+		case "Gray":
+			SetTowerMaterial (gray);
 			break;
 		default:
 			break;

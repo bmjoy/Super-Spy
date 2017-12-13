@@ -3,62 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkillEffect : SkillArea {
+public class SkillEffect : Effect {
 	public string skill;
-	public GameObject effect;
-	Image mask;
-	Text time_text;
-	public float cooling_time;
-	float cur_time;
-	// Use this for initialization
-	public override void Start () {
-		base.Start ();
-		joystick.onJoystickUpEvent += PlaySkill;
-		cur_time = 0;
-		var m_mask = transform.parent.Find (
-			             transform.gameObject.name.Replace ("Skill", "mask"));
-		mask = m_mask.GetComponent<Image>();
-		mask.gameObject.SetActive (false);
-		time_text = m_mask.GetComponentInChildren<Text>();
-		time_text.text = "";
-	}
 
-	public override void OnDestroy() {
-		base.OnDestroy ();
-		joystick.onJoystickUpEvent -= PlaySkill;
-	}
-
-	void Update() {
-		if (mask.fillAmount == 0) {
-			time_text.text = "";
-			mask.gameObject.SetActive (false);
-		} else {
-			cur_time += Time.deltaTime;
-			float remaining_time = cooling_time - cur_time;
-			string t;
-			if (remaining_time < 10f) {
-				t = string.Format ("{0:F}", remaining_time);
-			} else {
-				t = ((int)remaining_time).ToString();
-			}
-			time_text.text = t;
-			mask.fillAmount = remaining_time / cooling_time;
-		}
-	}
 	public override void LateUpdate() {
 		base.LateUpdate ();
 		if (player) {
+			//var cc = player.GetComponent<CharacterController> ();
 			var anim = player.GetComponent<Animator> ();
+			AnimatorStateInfo state_info = anim.GetCurrentAnimatorStateInfo (0);
+			/*if (cc.enabled == false) {
+				cc.enabled = state_info.normalizedTime >= 1.0f;
+			}*/
 			anim.SetBool (skill, false);
 		}
 
 	}
-	void PlaySkill()
+	protected override void PlayEffect()
 	{
-		if (player/* && mask.fillAmount == 0*/) {
+		base.PlayEffect ();
+		if (player) {
 			var anim = player.GetComponent<Animator> ();
-			//var cc = player.GetComponent<CharacterController> ();
-			//cc.enabled = false;
+			/*var cc = player.GetComponent<CharacterController> ();
+			cc.enabled = false;*/
 			anim.SetBool (skill, true);
 			Vector3 pos;
 			GameObject skill_effect;
@@ -111,9 +78,6 @@ public class SkillEffect : SkillArea {
 				default:
 					break;
 			}
-			mask.gameObject.SetActive (true);
-			mask.fillAmount = 1;
-			cur_time = 0;
 		}
 	}
 

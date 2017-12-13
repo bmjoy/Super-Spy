@@ -14,5 +14,6 @@ public class InitTarget : MonoBehaviour {
 		foreach (var skill in skill_buttons.GetComponentsInChildren<SkillEffect>()) {
 			skill.player = target.gameObject;
 		}
+		skill_buttons.GetComponentInChildren<BianshenEffect> ().player = target.gameObject;
 	}
 }
