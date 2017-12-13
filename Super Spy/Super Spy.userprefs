@@ -1,11 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SkillEffectDisplay\Scripts\SkillEffect.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Network\NetworkManagerHud2.cs">
     <Files>
-      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillJoystick.cs" Line="7" Column="22" />
-      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillArea.cs" Line="9" Column="25" />
-      <File FileName="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\InitTarget.cs" Line="15" Column="37" />
-      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillEffect.cs" Line="30" Column="10" />
+      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillJoystick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Character\XiaoBin\Scripts\Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Character\XiaoBin\Scripts\Check.cs" Line="1" Column="1" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillEffect.cs" Line="42" Column="38" />
+      <File FileName="Assets\SkillEffectDisplay\Particle Dissolve Shader by Moonflower Carnivore\Scripts\LifeControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Network\NetworkManagerHud2.cs" Line="18" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

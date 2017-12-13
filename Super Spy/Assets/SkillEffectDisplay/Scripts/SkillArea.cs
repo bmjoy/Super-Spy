@@ -29,13 +29,12 @@ public class SkillArea : MonoBehaviour {
 
     Vector3 deltaVec;
 
-    float outerRadius = 6;      // 外圆半径
+	protected float outerRadius = 6;      // 外圆半径
     float innerRadius = 2f;     // 内圆半径
     float cubeWidth = 2f;       // 矩形宽度 （矩形长度使用的外圆半径）
     int angle = 60;             // 扇形角度
 
-    bool isPressed = false;
-
+    private bool isPressed = false;
 
     string path = "Effect/Prefabs/Hero_skillarea/";  // 路径
     string circle = "quan_hero";    // 圆形
@@ -309,7 +308,7 @@ public class SkillArea : MonoBehaviour {
     /// 获取InnerCircle元素位置
     /// </summary>
     /// <returns></returns>
-    Vector3 GetCirclePosition(float dist)
+	protected Vector3 GetCirclePosition(float dist)
     {
         if (player == null) return Vector3.zero;
 
@@ -325,7 +324,7 @@ public class SkillArea : MonoBehaviour {
     /// 获取Cube、Sector元素朝向
     /// </summary>
     /// <returns></returns>
-    Vector3 GetCubeSectorLookAt()
+	protected Vector3 GetCubeSectorLookAt()
     {
         if (player == null) return Vector3.zero;
         
