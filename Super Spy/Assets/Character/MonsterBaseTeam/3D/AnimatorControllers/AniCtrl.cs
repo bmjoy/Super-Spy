@@ -8,7 +8,7 @@ public class AniCtrl : NetworkBehaviour {
 	public Vector3 origin_position;
 	protected Animator anim;
 
-	void Start() {
+	public virtual void Start() {
 		if (isLocalPlayer) {
 			transform.position = origin_position;
 			anim = GetComponent<Animator> ();

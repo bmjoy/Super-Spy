@@ -41,7 +41,7 @@ public class SkillEffect : SkillArea {
 			} else {
 				t = ((int)remaining_time).ToString();
 			}
-			time_text.text = t + "s";
+			time_text.text = t;
 			mask.fillAmount = remaining_time / cooling_time;
 		}
 	}
