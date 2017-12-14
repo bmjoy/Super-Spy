@@ -9,8 +9,6 @@ namespace UnityEngine.Networking
     {
         NetworkManager manager;
         [SerializeField]
-        public bool showGUI = true;
-        [SerializeField]
         public int offsetX;
         [SerializeField]
         public int offsetY;
@@ -19,41 +17,9 @@ namespace UnityEngine.Networking
         {
             this.manager = base.GetComponent<NetworkManager>();
         }
-        private void Update()
-        {
-            if (!this.showGUI)
-            {
-                return;
-            }
-            if (!this.manager.IsClientConnected() && !NetworkServer.active && this.manager.matchMaker == null)
-            {
-                if (Application.platform != RuntimePlatform.WebGLPlayer)
-                {
-                    if (Input.GetKeyDown(KeyCode.S))
-                    {
-                        this.manager.StartServer();
-                    }
-                    if (Input.GetKeyDown(KeyCode.H))
-                    {
-                        this.manager.StartHost();
-                    }
-                }
-                if (Input.GetKeyDown(KeyCode.C))
-                {
-                    this.manager.StartClient();
-                }
-            }
-            if (NetworkServer.active && this.manager.IsClientConnected() && Input.GetKeyDown(KeyCode.X))
-            {
-                this.manager.StopHost();
-            }
-        }
+
         private void OnGUI()
         {
-            if (!this.showGUI)
-            {
-                return;
-            }
             int num = 10 + this.offsetX;
             int num2 = 40 + this.offsetY;
             bool flag = this.manager.client == null || this.manager.client.connection == null || this.manager.client.connection.connectionId == -1;

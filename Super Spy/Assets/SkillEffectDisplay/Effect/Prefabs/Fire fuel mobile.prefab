@@ -10,6 +10,8 @@ GameObject:
   - component: {fileID: 461480}
   - component: {fileID: 19824662}
   - component: {fileID: 114724764183506106}
+  - component: {fileID: 114006818801609430}
+  - component: {fileID: 114147571183984348}
   m_Layer: 0
   m_Name: Fire fuel mobile
   m_TagString: Untagged
@@ -6652,6 +6654,59 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114954}
   m_IsPrefabParent: 1
+--- !u!114 &114006818801609430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 247
+    i1: 53
+    i2: 131
+    i3: 32
+    i4: 89
+    i5: 140
+    i6: 74
+    i7: 52
+    i8: 25
+    i9: 203
+    i10: 83
+    i11: 61
+    i12: 141
+    i13: 164
+    i14: 195
+    i15: 46
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114147571183984348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 0
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114724764183506106
 MonoBehaviour:
   m_ObjectHideFlags: 1

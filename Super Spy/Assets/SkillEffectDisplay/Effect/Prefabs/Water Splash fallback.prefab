@@ -112,6 +112,8 @@ GameObject:
   - component: {fileID: 400012}
   - component: {fileID: 19800010}
   - component: {fileID: 114208138370273184}
+  - component: {fileID: 114350185804231728}
+  - component: {fileID: 114823580017756872}
   m_Layer: 0
   m_Name: Water Splash fallback
   m_TagString: Untagged
@@ -23027,5 +23029,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotate: 0
   move: 0
-  life_time: 6
   target: {x: 0, y: 0, z: 0}
+--- !u!114 &114350185804231728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 254
+    i1: 147
+    i2: 114
+    i3: 181
+    i4: 233
+    i5: 10
+    i6: 221
+    i7: 68
+    i8: 121
+    i9: 69
+    i10: 117
+    i11: 92
+    i12: 69
+    i13: 18
+    i14: 17
+    i15: 99
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114823580017756872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1

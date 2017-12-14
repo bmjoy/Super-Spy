@@ -1,28 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class LifeControl : MonoBehaviour {
+public class LifeControl : NetworkBehaviour {
 	public bool rotate, move;
-	public float life_time;
 	public Vector3 target;
-	float cur_time;
-	// Use this for initialization
-	void Start () {
-		cur_time = Time.time;
+
+	/*void CmdDestroy() {
+		Destroy (gameObject);
 	}
-	
+	[ClientRpc]
+	void RpcDestroy() {
+		Destroy (gameObject);
+	}*/
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - cur_time > life_time) {
-			Destroy (gameObject);
-		} else {
+		//if (isLocalPlayer) {
+			
 			if (rotate) {
 				transform.RotateAround (target, Vector3.up, 10);
 			}
 			if (move) {
 				transform.position = Vector3.Lerp (transform.position, target, 0.01f);
 			}
-		}
+
+		//}
 	}
 }

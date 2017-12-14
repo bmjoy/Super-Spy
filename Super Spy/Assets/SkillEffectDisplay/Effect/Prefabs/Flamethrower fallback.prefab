@@ -60,6 +60,8 @@ GameObject:
   m_Component:
   - component: {fileID: 400012}
   - component: {fileID: 19800012}
+  - component: {fileID: 114480344861389330}
+  - component: {fileID: 114777259380150758}
   m_Layer: 0
   m_Name: Flamethrower fallback
   m_TagString: Untagged
@@ -16473,3 +16475,56 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100012}
   m_IsPrefabParent: 1
+--- !u!114 &114480344861389330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 110
+    i1: 109
+    i2: 54
+    i3: 154
+    i4: 100
+    i5: 169
+    i6: 177
+    i7: 36
+    i8: 72
+    i9: 178
+    i10: 68
+    i11: 226
+    i12: 125
+    i13: 210
+    i14: 112
+    i15: 63
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114777259380150758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 0
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
