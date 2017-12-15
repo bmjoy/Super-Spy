@@ -95,6 +95,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400008}
+  - component: {fileID: 114942330045983962}
+  - component: {fileID: 114383358477729370}
   m_Layer: 0
   m_Name: StaminaRegeneration2
   m_TagString: Untagged
@@ -703,3 +705,49 @@ Prefab:
 --- !u!1002 &100100001
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!114 &114383358477729370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70bf38b1114ca845ada9e32829be266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate: 0
+  move: 0
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &114942330045983962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 206
+    i1: 182
+    i2: 125
+    i3: 140
+    i4: 96
+    i5: 240
+    i6: 219
+    i7: 84
+    i8: 105
+    i9: 154
+    i10: 180
+    i11: 98
+    i12: 226
+    i13: 80
+    i14: 182
+    i15: 88
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

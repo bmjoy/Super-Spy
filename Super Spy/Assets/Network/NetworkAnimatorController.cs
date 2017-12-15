@@ -11,6 +11,7 @@ public class NetworkAnimatorController : NetworkBehaviour {
 	public virtual void Start() {
 		anim = GetComponent<Animator> ();
 		transform.position = origin_position;
+
 		if (isLocalPlayer) {
 			var controller = GameObject.Find ("Canvas");
 			controller.transform.Find ("SkillButtons").GetComponent<InitTarget> ().SetTarget (transform);
@@ -18,9 +19,6 @@ public class NetworkAnimatorController : NetworkBehaviour {
 			joystick.axisX.directTransform = joystick.axisY.directTransform = joystick.cameraLookAt = transform;
 			var button = controller.GetComponentInChildren<ETCButton> ();
 			button.axis.directTransform = transform;
-			if (tag == "Blue") {
-				Camera.main.transform.Rotate (0, 0, 180);
-			}
 		}
 	}
 

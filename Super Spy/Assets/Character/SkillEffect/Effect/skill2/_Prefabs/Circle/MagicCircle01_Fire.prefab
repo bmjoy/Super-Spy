@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 198115690465594948}
   - component: {fileID: 199247184030363092}
   - component: {fileID: 114007086139422394}
+  - component: {fileID: 114603439218160962}
   m_Layer: 0
   m_Name: MagicCircle01_Fire
   m_TagString: Untagged
@@ -291,6 +292,20 @@ MonoBehaviour:
     i15: 193
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!114 &114603439218160962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013330418600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70bf38b1114ca845ada9e32829be266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate: 0
+  move: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!198 &198000010073286322
 ParticleSystem:
   m_ObjectHideFlags: 1

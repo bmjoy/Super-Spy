@@ -34,7 +34,7 @@ public class BianshenEffect : Effect {
 		base.PlayEffect ();
 		if (player) {
 			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
-			skill_ctrl.ShowEffect ("bianshen", false, Vector3.zero);
+			skill_ctrl.ShowEffect ("bianshen", true, Vector3.zero);
 			remaining_time = 30;
 		}
 	}

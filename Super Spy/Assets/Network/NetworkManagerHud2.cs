@@ -31,14 +31,12 @@ namespace UnityEngine.Networking
                     {
                         if (GUI.Button(new Rect((float)num, (float)num2, 200f, 60f), "创建房间"))
                         {
-							//GetComponent<RedBlue> ().ChangePrefab ();
                             this.manager.StartHost();
                         }
                         num2 += 64;
                     }
                     if (GUI.Button(new Rect((float)num, (float)num2, 105f, 60f), "进入房间（IP）"))
                     {
-						//GetComponent<RedBlue> ().ChangePrefab ();
                         this.manager.StartClient();
                     }
                     this.manager.networkAddress = GUI.TextField(new Rect((float)(num + 105), (float)num2, 95f, 60f), this.manager.networkAddress);

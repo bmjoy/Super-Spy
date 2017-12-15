@@ -25,7 +25,7 @@ public class NetworkSkillController : NetworkBehaviour {
 			int num = 0;
 			SetVisual (!flag);
 			if (flag) {
-				Destroy(GameObject.Instantiate (skills [num], transform), 30);
+				Destroy(GameObject.Instantiate (skills [num], transform), life_time[num]);
 			}
 		} else {
 			if (flag) {
@@ -45,16 +45,42 @@ public class NetworkSkillController : NetworkBehaviour {
 					break;
 				case "skill2":
 					transform.LookAt (pos);
+
+					x = pos.x - transform.position.x;
+					z = pos.z - transform.position.z;
 					skill_effect = GameObject.Instantiate (skills [num], 
-						transform.position, 
-						skills [num].transform.rotation);
+						pos, 
+						transform.rotation);
+					pos.x += x * 5;
+					pos.y = 3;
+					pos.z += z * 5;
+					if (gameObject.tag == "Blue") {
+						
+						var life_ctrl = skill_effect.GetComponent<LifeControl> ();
+						life_ctrl.target = pos;
+						life_ctrl.move = true;
+						life_ctrl.rotate = false;
+					}
 					break;
 				case "skill3":
 					transform.LookAt (pos);
-					pos = transform.position;
+					if (gameObject.tag == "Red") {
+						pos = transform.position;
+					} else {
+						x = pos.x - transform.position.x;
+						z = pos.z - transform.position.z;
+						pos.x += x * 5;
+						pos.z += z * 5;
+					}
 					pos.y = 0.7f;
 					skill_effect = GameObject.Instantiate (skills [num], 
 						pos, skills [num].transform.rotation);
+					if (gameObject.tag == "Blue") {
+						var life_ctrl = skill_effect.GetComponent<LifeControl> ();
+						life_ctrl.target = transform.position;
+						life_ctrl.move = false;
+						life_ctrl.rotate = true;
+					}
 					break;
 				case "skill4":
 					transform.LookAt (pos);
@@ -64,7 +90,6 @@ public class NetworkSkillController : NetworkBehaviour {
 				default:
 					break;
 				}
-				Debug.Log ("lalala");
 				Destroy (skill_effect, life_time[num]);
 			}
 		}
@@ -72,15 +97,14 @@ public class NetworkSkillController : NetworkBehaviour {
 	}
 
 	void SetVisual(bool is_visual) {
-		if (isLocalPlayer) {
-			return;
-		}
-		foreach (var render in GetComponentsInChildren<MeshRenderer>()) {
-			render.enabled = is_visual;
-		}
-		foreach (var render in GetComponentsInChildren<SkinnedMeshRenderer>()) {
-			render.enabled = is_visual;
-		}
 		GetComponent<CapsuleCollider> ().enabled = is_visual;
+		if (!isLocalPlayer) {
+			foreach (var render in GetComponentsInChildren<MeshRenderer>()) {
+				render.enabled = is_visual;
+			}
+			foreach (var render in GetComponentsInChildren<SkinnedMeshRenderer>()) {
+				render.enabled = is_visual;
+			}
+		}
 	}
 }
