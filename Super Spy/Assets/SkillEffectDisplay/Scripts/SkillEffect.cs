@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class SkillEffect : Effect {
 	public string skill;
-	public float life_time;
 	public override void LateUpdate() {
 		base.LateUpdate ();
 		if (player) {
 			NetworkAnimatorController ani_ctrl = player.GetComponent<NetworkAnimatorController> ();
-
-			ani_ctrl.SetAnimation (skill, false, Vector3.zero);
+			ani_ctrl.SetAnimation (skill, false);
+			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
+			skill_ctrl.ShowEffect (skill, false, Vector3.zero);
 		}
 
 	}
@@ -21,6 +21,8 @@ public class SkillEffect : Effect {
 		base.PlayEffect ();
 		if (player) {
 			NetworkAnimatorController ani_ctrl = player.GetComponent<NetworkAnimatorController> ();
+			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
+
 			Vector3 pos = Vector3.zero;
 			switch (areaType) {
 			case SkillAreaType.OuterCircle_InnerCircle:
@@ -33,7 +35,8 @@ public class SkillEffect : Effect {
 			default:
 				break;
 			}
-			ani_ctrl.SetAnimation (skill, true, pos);
+			ani_ctrl.SetAnimation (skill, true);
+			skill_ctrl.ShowEffect (skill, true, pos);
 		}
 	}
 

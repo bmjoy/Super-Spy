@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(SkillJoystick))]
 public class Effect : SkillArea {
-	public GameObject effect;
 	public float cooling_time;
 	protected Image mask;
 	protected Text time_text;

@@ -1,4 +1,4 @@
-Android
+WindowsStandalone
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EventTriggerClick
 1c87578e8be3ae82b40d239d06946da5 Assembly-CSharp.dll:.SkillJoystick
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -48,6 +48,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DayNightController
 bca2dce9d3596d95f058660192bb13b3 Assembly-CSharp.dll:.SoldierInit
 5335adc40707ab1a12eba7a36f2ed495 Assembly-CSharp.dll:.MiniMapView
 8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
@@ -86,7 +87,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 94b068afd10f470a07239342aba26b9b Assembly-CSharp.dll:.Positions
 6a94e52f5473c8be89d592d7d9149d76 Assembly-CSharp.dll:.ScaleController
 6c156248975c65e334daa4cbfba64bd1 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectActivator
-959aad71fdf1a08c4d190f76e7a159a4 Assembly-CSharp.dll:UnityEngine.Networking.NetworkManagerHud2
+78bf862ea4269d779ca34dc6110205e4 Assembly-CSharp.dll:UnityEngine.Networking.NetworkManagerHud2
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -182,9 +183,11 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 16b1bc3edffa897c8d38da255843c1c3 Assembly-CSharp.dll:.TowerController
 2169d3f72ae82a04b3c3f16705e20506 Assembly-CSharp.dll:.LifeControl
 9fce388019c646875184ef2c54f6a6a6 Assembly-CSharp.dll:.Bullet
+e24f2aa0adf889b19eb4d1519e609d08 Assembly-CSharp.dll:.RedBlue
 9d1e138111d33aad3c62dab4e71ae0e6 Assembly-CSharp.dll:.MiniMapElement
 94678f7833bd0dd50297dbd289556f88 Assembly-CSharp.dll:.ETCButton
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkSkillController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InitTarget
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 fca2ca106e94163353df3dcc945f1fa0 Assembly-CSharp.dll:.GenerateSoldiers
@@ -199,4 +202,3 @@ ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SliderText
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkSkillController

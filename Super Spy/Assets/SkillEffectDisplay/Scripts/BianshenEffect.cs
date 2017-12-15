@@ -7,12 +7,11 @@ public class BianshenEffect : Effect {
 	float remaining_time;
 
 	public override void LateUpdate() {
-		base.Update ();
+		base.LateUpdate ();
 		if (remaining_time <= 0) {
 			if (player) {
-				NetworkAnimatorController ani_ctrl = player.GetComponent<NetworkAnimatorController> ();
-
-				ani_ctrl.SetAnimation ("bianshen", false, Vector3.zero);
+				NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
+				skill_ctrl.ShowEffect ("bianshen", false, Vector3.zero);
 			}
 		} else {
 			remaining_time -= Time.deltaTime;
@@ -34,9 +33,9 @@ public class BianshenEffect : Effect {
 	{
 		base.PlayEffect ();
 		if (player) {
-			NetworkAnimatorController ani_ctrl = player.GetComponent<NetworkAnimatorController> ();
+			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
+			skill_ctrl.ShowEffect ("bianshen", false, Vector3.zero);
 			remaining_time = 30;
-			ani_ctrl.SetAnimation ("bianshen", true, Vector3.zero);
 		}
 	}
 }
