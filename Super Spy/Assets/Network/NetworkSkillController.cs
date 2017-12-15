@@ -36,7 +36,12 @@ public class NetworkSkillController : NetworkBehaviour {
 
 				switch (state) {
 				case "skill1":
-					skill_effect = GameObject.Instantiate (skills [num], transform);
+					if (gameObject.tag == "Red") {
+						skill_effect = GameObject.Instantiate (skills [num], transform);
+					} else {
+						skill_effect = GameObject.Instantiate (skills [num], transform.position, 
+							skills [num].transform.rotation);
+					}
 					break;
 				case "skill2":
 					transform.LookAt (pos);

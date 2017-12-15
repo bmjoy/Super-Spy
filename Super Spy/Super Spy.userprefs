@@ -2,12 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Network\NetworkSkillController.cs">
     <Files>
-      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="36" Column="24" />
-      <File FileName="Assets\Network\NetworkSkillController.cs" Line="50" Column="19" />
-      <File FileName="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\InitTarget.cs" Line="10" Column="1" />
-      <File FileName="Assets\SkillEffectDisplay\Scripts\BianshenEffect.cs" Line="38" Column="24" />
-      <File FileName="Assets\SkillEffectDisplay\Scripts\SkillEffect.cs" Line="38" Column="40" />
-      <File FileName="Assets\SkillEffectDisplay\Scripts\Effect.cs" Line="17" Column="26" />
+      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Network\NetworkSkillController.cs" Line="42" Column="15" />
+      <File FileName="Assets\Character\EasyTouchControls\Examples\Version 2.X_New Features\Script\InitTarget.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
