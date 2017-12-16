@@ -33,6 +33,7 @@ public class NetworkSkillController : NetworkBehaviour {
 
 				GameObject skill_effect = null;
 				float x, z;
+				LifeControl life_ctrl;
 
 				switch (state) {
 				case "skill1":
@@ -49,18 +50,19 @@ public class NetworkSkillController : NetworkBehaviour {
 					x = pos.x - transform.position.x;
 					z = pos.z - transform.position.z;
 					skill_effect = GameObject.Instantiate (skills [num], 
-						pos, 
+						transform.position, 
 						transform.rotation);
 					pos.x += x * 5;
 					pos.y = 3;
 					pos.z += z * 5;
-					if (gameObject.tag == "Blue") {
+					life_ctrl = skill_effect.GetComponent<LifeControl> ();
+					life_ctrl.target = pos;
+					life_ctrl.move = true;
+					life_ctrl.rotate = false;
+					/*if (gameObject.tag == "Blue") {
 						
-						var life_ctrl = skill_effect.GetComponent<LifeControl> ();
-						life_ctrl.target = pos;
-						life_ctrl.move = true;
-						life_ctrl.rotate = false;
-					}
+
+					}*/
 					break;
 				case "skill3":
 					transform.LookAt (pos);
@@ -76,7 +78,7 @@ public class NetworkSkillController : NetworkBehaviour {
 					skill_effect = GameObject.Instantiate (skills [num], 
 						pos, skills [num].transform.rotation);
 					if (gameObject.tag == "Blue") {
-						var life_ctrl = skill_effect.GetComponent<LifeControl> ();
+						life_ctrl = skill_effect.GetComponent<LifeControl> ();
 						life_ctrl.target = transform.position;
 						life_ctrl.move = false;
 						life_ctrl.rotate = true;

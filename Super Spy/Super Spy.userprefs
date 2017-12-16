@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Network\NetworkManagerHud2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Network\NetworkSkillController.cs">
     <Files>
-      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="60" Column="2" />
-      <File FileName="Assets\GameControl\Scripts\SelectPlayer.cs" Line="23" Column="34" />
-      <File FileName="Assets\GameControl\Scripts\ChangePlayerPrefab.cs" Line="17" Column="9" />
-      <File FileName="Assets\Character\EasyTouchControl\Examples\Version 2.X_New Features\Script\InitTarget.cs" Line="14" Column="17" />
-      <File FileName="Assets\Network\NetworkManagerHud2.cs" Line="115" Column="45" />
-      <File FileName="Assets\Network\NetworkSkillController.cs" Line="53" Column="7" />
+      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameControl\Scripts\SelectPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameControl\Scripts\ChangePlayerPrefab.cs" Line="1" Column="1" />
+      <File FileName="Assets\Character\EasyTouchControl\Examples\Version 2.X_New Features\Script\InitTarget.cs" Line="1" Column="1" />
+      <File FileName="Assets\Network\NetworkManagerHud2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Network\NetworkSkillController.cs" Line="81" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
