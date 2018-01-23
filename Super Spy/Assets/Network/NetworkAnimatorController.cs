@@ -20,8 +20,8 @@ public class NetworkAnimatorController : NetworkBehaviour {
 			var button = controller.GetComponentInChildren<ETCButton> ();
 			button.axis.directTransform = transform;
 
-			var fog = Camera.main.gameObject.AddComponent<FogOfWar3D> ();
-			fog.m_viewer = fog.m_topLeft = fog.m_topRight = fog.m_bottomLeft = fog.m_bottomRight = transform;
+			var fog = Camera.main.GetComponent<FogOfWar3D> ();
+			fog.m_viewer = transform;
 		}
 	}
 

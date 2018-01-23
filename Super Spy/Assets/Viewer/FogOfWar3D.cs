@@ -47,6 +47,9 @@ public class FogOfWar3D : MonoBehaviour
         m_fogOfWarMaterial.SetFloat("_FogDensity", m_fogDensity);
     }
 
+	void Update() {
+		OnPreRender ();
+	}
 	void OnPreRender()
 	{
 		if (m_fogOfWarMaterial !=null)
