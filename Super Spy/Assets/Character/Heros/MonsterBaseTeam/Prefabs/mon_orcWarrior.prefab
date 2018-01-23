@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 11100002}
-  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
@@ -883,8 +882,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400062}
   - component: {fileID: 13700000}
-  - component: {fileID: 11400002}
-  - component: {fileID: 11400004}
   m_Layer: 0
   m_Name: mon_orcWrrior
   m_TagString: Untagged
@@ -1036,7 +1033,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0.8505857, y: 0.14671509, z: 0.5043351, w: -0.024991993}
+  m_LocalRotation: {x: 0.8505858, y: 0.1467151, z: 0.50433517, w: -0.024991997}
   m_LocalPosition: {x: -0.18559225, y: 0.004966545, z: -0.038185578}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -1529,16 +1526,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100118}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 3, y: 0, z: 35}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400064}
   - {fileID: 400062}
   - {fileID: 400002}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &400088
 Transform:
   m_ObjectHideFlags: 1
@@ -1857,52 +1854,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2c5c0fb3e353e4d9e28a8bcb16efdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shadowHeight: 0.01
-  shadowOpacity: 0.6
-  shadowSize: 1.4
-  shadowPosition: {fileID: 400088}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be6a4ec62619324a970d6e4640be7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonInterface: {fileID: 0}
-  textureColor:
-  - {fileID: 2800000, guid: bab7864164f8bfd4dbc7221f5def21a0, type: 3}
-  - {fileID: 2800000, guid: 29b84b1158a31624b97595184240da41, type: 3}
-  - {fileID: 2800000, guid: 62688ac9ed7d2954385e6d9c19942cb9, type: 3}
-  - {fileID: 2800000, guid: c5cffbdc74b815549a5ae89d858d1cc7, type: 3}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fe8dedd0ec2e84db374e78d83488fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonInterface: {fileID: 0}
-  weaponGroup: {fileID: 0}
-  weaponHand: {fileID: 400120}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

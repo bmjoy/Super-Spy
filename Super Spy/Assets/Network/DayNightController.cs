@@ -6,15 +6,20 @@ using UnityEngine.Networking;
 
 public class DayNightController : NetworkBehaviour {
 	GameObject image;
+	public float day_time, night_time;
+	bool is_day;
+	float cur_time;
 	// Use this for initialization
 	void Start () {
-		var canvas = GameObject.Find ("Canvas");
-		image = canvas.transform.Find ("Image").gameObject;
-		image.SetActive (false);
-		var button = canvas.transform.Find ("Toggle").GetComponent<Toggle> ();
-		button.onValueChanged.AddListener(delegate(bool is_night) {
-			this.DayNightChange(is_night);
-		});
+		cur_time = Time.time;
+		is_day = true;
+
+	}
+
+	void Update() {
+		if (is_day) {
+
+		}
 	}
 
 	[Command]

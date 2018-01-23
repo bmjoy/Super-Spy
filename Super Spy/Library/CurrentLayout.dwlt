@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -93,10 +93,10 @@ MonoBehaviour:
     y: 0
     width: 314
     height: 635
-  m_MinSize: {x: 232, y: 471}
-  m_MaxSize: {x: 10002, y: 14021}
+  m_MinSize: {x: 232, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 51
+  controlID: 52
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,10 +118,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 713, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 50
+  controlID: 98
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -265,6 +265,7 @@ MonoBehaviour:
     y: 92
     width: 723
     height: 614
+  m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,15 +292,44 @@ MonoBehaviour:
     y: 92
     width: 723
     height: 614
-  m_ViewPositions:
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_ViewTransforms:
     m_KeySerializationHelper:
-    - {fileID: 1107527615868361304, guid: 286f4a46d1d1d9a4d97db021e1b78be4, type: 2}
     - {fileID: 1107848266920474654, guid: 6764801556a0ec14b845fb2c3f646bb4, type: 2}
     - {fileID: 1107848266920474654, guid: a3931d4cef901e24db7fb4706819c99d, type: 2}
     m_ValueSerializationHelper:
-    - {x: 451, y: 325.80005}
-    - {x: 421.80002, y: 284.40002}
-    - {x: 329.80002, y: 253.80005}
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -339,6 +369,7 @@ MonoBehaviour:
     y: 92
     width: 323
     height: 614
+  m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -365,6 +396,7 @@ MonoBehaviour:
     y: 92
     width: 323
     height: 614
+  m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
@@ -398,6 +430,7 @@ MonoBehaviour:
     y: 385
     width: 312
     height: 321
+  m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -410,19 +443,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Character/Heros/Blade_Girl/Prefabs
+    - Assets/Character/Heros/MonsterBaseTeam/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Character/Heros/Blade_Girl/Prefabs
+  - Assets/Character/Heros/MonsterBaseTeam/Prefabs
   m_LastFoldersGridSize: 50
   m_LastProjectPath: E:\UnityProject\Super Spy
   m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a02f0000
-    m_LastClickedID: 12192
-    m_ExpandedIDs: 00000000362a0000b82a0000522b0000982d0000082f00000a2f0000c6320000023400009e340000c4350000383600006c360000d23600006437000070370000e6370000683a0000703a0000c83a0000e83a0000983b00003e3c0000344600002648000094c7000096c7000098c700009ac700009cc700009ec70000a0c70000a2c70000a4c70000a6c70000a8c70000aac70000acc70000aec70000b0c70000b2c70000b4c70000b6c70000b8c70000bac70000bcc70000bec70000c0c70000c2c70000c4c70000ffffff7f
+    scrollPos: {x: 0, y: 132}
+    m_SelectedIDs: 4e540000
+    m_LastClickedID: 21582
+    m_ExpandedIDs: 000000009a38000018390000a2390000b63b0000083d00000a3d000076400000aa4100003442000040430000b0430000e443000044440000d0440000dc4400004e45000072470000a6470000aa470000fe4700001c480000c248000060490000365300001c5500009a5600009c5600009e560000a0560000a2560000a4560000a6560000a8560000aa560000ac560000ae560000b0560000b2560000b4560000b6560000b8560000ba560000bc560000be560000c0560000c2560000c4560000c6560000c8560000ca560000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -450,7 +483,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000362a0000b82a0000522b0000982d0000082f00000a2f000062300000c6320000023400009e340000c4350000383600006c360000d23600006437000070370000e6370000683a0000703a0000c83a0000e83a0000983b00003e3c0000344600002648000094c7000096c7000098c700009ac700009cc700009ec70000a0c70000a2c70000a4c70000a6c70000a8c70000aac70000acc70000aec70000b0c70000b2c70000b4c70000b6c70000b8c70000bac70000bcc70000bec70000c0c70000c2c70000c4c70000
+    m_ExpandedIDs: 000000009a38000018390000a2390000b63b0000083d00000a3d0000764000003442000040430000b0430000e443000044440000d0440000dc4400004e450000a6470000aa470000fe4700001c480000c248000060490000365300001c5500009a5600009c5600009e560000a0560000a2560000a4560000a6560000a8560000aa560000ac560000ae560000b0560000b2560000b4560000b6560000b8560000ba560000bc560000be560000c0560000c2560000c4560000c6560000c8560000ca560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -531,25 +564,26 @@ MonoBehaviour:
     y: 92
     width: 312
     height: 272
+  m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 42e1fdff0ee2fdffb8e3fdff50f8fdff16f9fdff46f9fdff2afcfdfff0fcfdff9cfefdff8ef9ffff00000000c6570000
+    m_ExpandedIDs: 26ebfcffda62fdffac63ffff6e64ffff2e66ffff3aedffffb6ffffff00000000324b02006e4b0200ac54020080620200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: mon_orcWarrior
+      m_OriginalName: mon_orcWarrior
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -171302
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -584,15 +618,16 @@ MonoBehaviour:
     y: 92
     width: 723
     height: 614
+  m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 10064.42483311051
+  lastFramingTime: 3463.5040703162094
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.3130054, y: 4.060519, z: -0.6932373}
+    m_Target: {x: 17.913244, y: -1.3598518, z: 31.737663}
     speed: 2
-    m_Value: {x: -1.3130054, y: 4.060519, z: -0.6932373}
+    m_Value: {x: 17.913244, y: -1.3598518, z: 31.737663}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -601,6 +636,7 @@ MonoBehaviour:
     showSkybox: 1
     showFlares: 1
     showImageEffects: 1
+    showParticleSystems: 1
   grid:
     xGrid:
       m_Target: 0
@@ -615,13 +651,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.42762515, y: 0.010846916, z: -0.00513172, w: -0.9038765}
+    m_Target: {x: 0.1211555, y: -0.8410808, z: 0.48313352, w: 0.21091834}
     speed: 2
-    m_Value: {x: -0.42762515, y: 0.010846917, z: -0.0051317206, w: -0.90387654}
+    m_Value: {x: 0.1211555, y: -0.8410808, z: 0.48313352, w: 0.21091834}
   m_Size:
-    m_Target: 26.673302
+    m_Target: 120.822044
     speed: 2
-    m_Value: 26.673302
+    m_Value: 120.822044
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -659,6 +695,7 @@ MonoBehaviour:
     y: 92
     width: 723
     height: 614
+  m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0

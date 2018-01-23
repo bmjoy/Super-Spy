@@ -10,7 +10,7 @@ public class Effect : SkillArea {
 	protected Text time_text;
 	protected float cur_time;
 	// Use this for initialization
-	public virtual void Start () {
+	public override void Start () {
 		base.Start ();
 		joystick.onJoystickUpEvent += PlayEffect;
 		cur_time = 0;

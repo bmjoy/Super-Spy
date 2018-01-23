@@ -25,8 +25,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400002}
   - component: {fileID: 13700000}
-  - component: {fileID: 11400002}
-  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: mon_trolCurer
   m_TagString: Untagged
@@ -930,7 +928,6 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 11100002}
-  - component: {fileID: 11400004}
   m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
@@ -945,7 +942,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 38.5, y: 0, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400120}
@@ -1881,52 +1878,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fe8dedd0ec2e84db374e78d83488fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonInterface: {fileID: 0}
-  weaponGroup: {fileID: 0}
-  weaponHand: {fileID: 400062}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be6a4ec62619324a970d6e4640be7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonInterface: {fileID: 0}
-  textureColor:
-  - {fileID: 2800000, guid: bf796aba1bc4d014b96739b704619c1a, type: 3}
-  - {fileID: 2800000, guid: fdd03dcd27905124abd042142836445d, type: 3}
-  - {fileID: 2800000, guid: 525cfaa1d0dfbaf43a69b0aeaf26f665, type: 3}
-  - {fileID: 2800000, guid: c60b14871c9908247bf0574b52051d2d, type: 3}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2c5c0fb3e353e4d9e28a8bcb16efdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shadowHeight: 0.01
-  shadowOpacity: 0.6
-  shadowSize: 1.5
-  shadowPosition: {fileID: 400116}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

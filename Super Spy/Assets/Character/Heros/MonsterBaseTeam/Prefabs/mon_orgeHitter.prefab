@@ -895,8 +895,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400118}
   - component: {fileID: 13700000}
-  - component: {fileID: 11400002}
-  - component: {fileID: 11400004}
   m_Layer: 0
   m_Name: mon_orgeHitter
   m_TagString: Untagged
@@ -912,10 +910,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400120}
-  - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 11100002}
-  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
@@ -929,16 +925,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 30, y: 0, z: -5}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 400116}
   - {fileID: 400118}
   - {fileID: 400120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -1811,13 +1807,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &3300000
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100120}
-  m_Mesh: {fileID: 4300000, guid: f7ea449153453b34f865e64d704427e1, type: 3}
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -1852,52 +1841,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2c5c0fb3e353e4d9e28a8bcb16efdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shadowHeight: 0.01
-  shadowOpacity: 0.6
-  shadowSize: 1.8
-  shadowPosition: {fileID: 0}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be6a4ec62619324a970d6e4640be7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonInterface: {fileID: 0}
-  textureColor:
-  - {fileID: 2800000, guid: 138f78cd477faea41b70b94672bee312, type: 3}
-  - {fileID: 2800000, guid: d0c41786a7dd1e0438588a25abce94cb, type: 3}
-  - {fileID: 2800000, guid: 70189e816c81e5a48a15cddf11df95be, type: 3}
-  - {fileID: 2800000, guid: 04366cf2deff35b43a6828dc0ef6e7a4, type: 3}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fe8dedd0ec2e84db374e78d83488fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonInterface: {fileID: 0}
-  weaponGroup: {fileID: 0}
-  weaponHand: {fileID: 400058}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
