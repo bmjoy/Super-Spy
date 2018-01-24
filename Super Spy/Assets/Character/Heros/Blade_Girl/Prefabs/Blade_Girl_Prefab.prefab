@@ -901,8 +901,8 @@ GameObject:
   - component: {fileID: 114705703001896662}
   - component: {fileID: 114986127179324638}
   - component: {fileID: 114635200750898494}
-  - component: {fileID: 114893144016175284}
   - component: {fileID: 114510949391279050}
+  - component: {fileID: 114642416117915198}
   m_Layer: 0
   m_Name: Blade_Girl_Prefab
   m_TagString: Blue
@@ -2322,6 +2322,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin_position: {x: 153, y: 3, z: 164}
+--- !u!114 &114642416117915198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1782754854568520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1205285110, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visRange: 10
+  visUpdateInterval: 1
+  checkMethod: 0
+  forceHidden: 0
 --- !u!114 &114705703001896662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2343,21 +2358,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114893144016175284
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1782754854568520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1205285110, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  visRange: 10
-  visUpdateInterval: 1
-  checkMethod: 0
-  forceHidden: 0
 --- !u!114 &114914677541842988
 MonoBehaviour:
   m_ObjectHideFlags: 1
