@@ -3,7 +3,6 @@ SceneListBegin?
 Assets/Scenes/main.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EventTriggerClick
-0269271ddd7023f6cc3653da47d58665 Assembly-CSharp.dll:.SelectPlayer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -119,7 +118,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 78a2a366a0a3b585e1178d2dd9d006ab Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.WaypointProgressTracker
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-e774905c3935d2568fb79acb24b525b7 Assembly-CSharp.dll:.MiniMapCameraManager
+0557dc43c47b4c4893b883ac68e28f68 Assembly-CSharp.dll:.MiniMapCameraManager
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 6e714b24188cddfc9ae1e07d05ed4ddd Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ParticleSystemDestroyer
@@ -131,7 +130,6 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Check
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChangePlayerPrefab
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 149e538468c9a609cf26b23682c996c7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
@@ -139,6 +137,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SpyIdentity
+1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:.FogOfWarExplorer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiniMapEffect
 a7d3c6c6948d99dd4116e659ddcf5ac4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
 a90e94673f50d2237c1b971c138660c6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMoveAndRotate
@@ -171,12 +170,12 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 2dbfd4f7836c7f6a79e17be5f4bf7969 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.WaypointCircuit
 66534b6bd5c855d3192d1392f4b0bb2f Assembly-CSharp.dll:.ClipObjControl
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ETCInput
+7a4a9f324a292c22ca651c516131e5c4 Assembly-CSharp.dll:.FogOfWarEffect
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.AlphaButtonClickMask
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
-25c162ac203c2e4b5008402c7a7e27f5 Assembly-CSharp.dll:.FogOfWar3D
 a79fd381d8575d77aa7dbf5b80e02681 Assembly-CSharp.dll:.HP
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 d2af69ce28cda6fcf0b7728ae3f251b4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DynamicShadowSettings
@@ -208,6 +207,7 @@ e5b297578672434876304be80fca6b94 Assembly-CSharp.dll:.ETCJoystick
 6e5b4e4aefd24f76c2ce7633d7ed666e Assembly-CSharp.dll:.NetworkAnimatorController
 95539d9d25892beddc16d7885a7184aa Assembly-CSharp.dll:.BianshenEffect
 ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FogOfWarStalker
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FPSCounter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SliderText
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate

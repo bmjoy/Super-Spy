@@ -59,6 +59,7 @@
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCJoystickInspector.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCMenu.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCTouchPadInspector.cs" />
+     <Compile Include="Assets\FogOfWar\Editor\FogOfWarEffectEditor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
