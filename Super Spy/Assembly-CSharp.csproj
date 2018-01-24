@@ -73,8 +73,6 @@
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillJoystick.cs" />
      <Compile Include="Assets\Character\XiaoBin\Scripts\Controller.cs" />
      <Compile Include="Assets\Character\XiaoBin\Scripts\SoldierInit.cs" />
-     <Compile Include="Assets\GameControl\Scripts\ChangePlayerPrefab.cs" />
-     <Compile Include="Assets\GameControl\Scripts\SelectPlayer.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Bullet.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Check.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\GenerateSoldiers.cs" />
@@ -99,14 +97,12 @@
      <Compile Include="Assets\Store\Scripts\comeback.cs" />
      <Compile Include="Assets\Store\Scripts\EventTriggerClick.cs" />
      <Compile Include="Assets\Store\Scripts\MyImage.cs" />
-     <Compile Include="Assets\Viewer\FogOfWar3D.cs" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_SimpleDoubleSide.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_UVscroll.shader" />
      <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
      <None Include="Assets\Character\Heros\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\Clip.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_Beam.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_UVscrollFresnel.shader" />
-     <None Include="Assets\Resources\FogOfWar.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_DoubleDistortionRamp02.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_DissolveSimple.shader" />
      <None Include="Assets\Minimap\DOTween\DOTween50.xml" />
@@ -127,7 +123,6 @@
      <None Include="Assets\Minimap\DOTween\DOTween43.xml" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\Toon Additive.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\ParticleBlendEffect.shader" />
-     <None Include="Assets\Resources\FogOfWarCast.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

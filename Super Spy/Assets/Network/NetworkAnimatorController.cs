@@ -19,9 +19,6 @@ public class NetworkAnimatorController : NetworkBehaviour {
 			joystick.axisX.directTransform = joystick.axisY.directTransform = joystick.cameraLookAt = transform;
 			var button = controller.GetComponentInChildren<ETCButton> ();
 			button.axis.directTransform = transform;
-
-			var fog = Camera.main.GetComponent<FogOfWar3D> ();
-			fog.m_viewer = transform;
 		}
 	}
 
