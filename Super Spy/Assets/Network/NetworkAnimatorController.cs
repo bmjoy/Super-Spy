@@ -16,6 +16,12 @@ public class NetworkAnimatorController : NetworkBehaviour {
 			var controller = GameObject.Find ("Canvas");
 			controller.transform.Find ("SkillButtons").GetComponent<InitTarget> ().SetTarget (transform);
 			var joystick = controller.GetComponentInChildren<ETCJoystick> ();
+			if (gameObject.tag == "Blue") {
+				controller.transform.Find ("Minimap/MiniMapBg/Mask/Bg").rotation = Quaternion.Euler (0, 0, 180);
+				joystick.TurnAndMove = -1;
+				joystick.followOffset.z *= -1;
+				var minimap = controller.GetComponentInChildren<MiniMapCameraManager> ().flag = -1;
+			}
 			joystick.axisX.directTransform = joystick.axisY.directTransform = joystick.cameraLookAt = transform;
 			var button = controller.GetComponentInChildren<ETCButton> ();
 			button.axis.directTransform = transform;

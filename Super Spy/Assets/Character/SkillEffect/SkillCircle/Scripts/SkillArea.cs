@@ -9,9 +9,8 @@ public enum SkillAreaType
     OuterCircle_InnerSector = 2,
     OuterCircle_InnerCircle = 3,
 }
-
+	
 public class SkillArea : MonoBehaviour {
-
     enum SKillAreaElement
     {
         OuterCircle,    // 外圆

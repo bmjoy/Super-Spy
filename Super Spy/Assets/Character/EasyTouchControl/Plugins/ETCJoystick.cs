@@ -738,10 +738,10 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 	}
 	#endregion
 
-
+	public int TurnAndMove = 1;
 	private void DoTurnAndMove(){
 
-		float angle =Mathf.Atan2( axisX.axisValue,axisY.axisValue ) * Mathf.Rad2Deg;
+		float angle =Mathf.Atan2( TurnAndMove * axisX.axisValue,TurnAndMove * axisY.axisValue ) * Mathf.Rad2Deg;
 		float speed = tmMoveCurve.Evaluate( new Vector2(axisX.axisValue,axisY.axisValue).magnitude) * tmSpeed;
 
 		if (axisX.directTransform != null){

@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleScenes\Scripts\NetworkLobbyHook.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarExplorer.cs">
     <Files>
-      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Network\NetworkManager2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyHook.cs" Line="1" Column="1" />
-      <File FileName="Assets\SampleScenes\Scripts\NetworkLobbyHook.cs" Line="15" Column="42" />
+      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCJoystick.cs" Line="70" Column="16" />
+      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCBase.cs" Line="299" Column="33" />
+      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCAxis.cs" Line="12" Column="22" />
+      <File FileName="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillArea.cs" Line="45" Column="61" />
+      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCButton.cs" Line="24" Column="36" />
+      <File FileName="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarExplorer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

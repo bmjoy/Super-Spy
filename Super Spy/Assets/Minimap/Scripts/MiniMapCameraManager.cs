@@ -5,6 +5,7 @@ using DG.Tweening;
 public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler{
 	public Transform minimap;
 	public ScaleController scaleController;
+	public int flag = 1;
 	private Transform point;
 
 	public Vector3 cameraOffset;
@@ -21,7 +22,7 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
 
     void Start()
     {
-        point = transform.Find( "Mask/Bg/Point" );
+        point = transform.Find( "Mask/Point" );
         polygonCollider2D = transform.Find( "Mask/Bg" ).GetComponent<PolygonCollider2D>();
 
         mapSize = MiniMapView.Instance.mapSize;
@@ -42,7 +43,10 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
 			var joystick = controller.GetComponentInChildren<ETCJoystick> ();
 			target = joystick.cameraLookAt;
 			joystick.cameraLookAt = null;
-			SetCameraPosition( point.localPosition );
+			Vector2 pos = point.localPosition;
+			pos.x *= flag;
+			pos.y *= flag;
+			SetCameraPosition( pos );
 		} else {
 			if (!audios.isPlaying) {
 				audios.Play ();
@@ -69,8 +73,10 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
         }
 
         point.position = eventData.position;
-
-		SetCameraPosition( point.localPosition );
+		Vector2 pos = point.localPosition;
+		pos.x *= flag;
+		pos.y *= flag;
+		SetCameraPosition( pos );
     }
 
     Tweener tweener;
@@ -83,5 +89,6 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
         }
 
 		tweener = DOTween.To( () => Camera.main.transform.localPosition, value => Camera.main.transform.localPosition = value, targetPosition, 0.3f ).SetEase(Ease.OutQuad);
+		Camera.main.transform.rotation = Quaternion.Euler (90, 0, 0);
     }
 }

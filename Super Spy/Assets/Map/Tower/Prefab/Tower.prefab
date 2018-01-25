@@ -606,15 +606,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soldier: {fileID: 1344826912453464, guid: 7b4c7a4f5d964e04d8a87b7b9265b012, type: 2}
   magician: {fileID: 1503147092217752, guid: c4e312373d8d3a44dac8d232bc3b4003, type: 2}
-  red_quanshui: {x: -60, y: 0, z: -63}
-  blue_quanshui: {x: 63, y: 0, z: 60}
+  red_quanshui: {x: 40, y: 0, z: 37}
+  blue_quanshui: {x: 163, y: 0, z: 160}
 --- !u!114 &114461349606440136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718533149653878}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b144fb80eba972418c5998a142a897f, type: 3}
   m_Name: 

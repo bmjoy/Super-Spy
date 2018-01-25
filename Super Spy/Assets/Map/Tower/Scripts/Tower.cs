@@ -90,9 +90,7 @@ public class Tower : Check {
 	}
 	public void Attack(GameObject enemy)
 	{
-        Debug.Log(enemy.name + enemy.transform.position);
         Bullet n = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y+6, transform.position.z), transform.rotation);
         n.InitData(enemy, 8, 2);
-        
     }
 }

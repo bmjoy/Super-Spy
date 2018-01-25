@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SkillEffect : Effect {
 	public string skill;
+
 	public override void LateUpdate() {
 		base.LateUpdate ();
 		if (player) {
