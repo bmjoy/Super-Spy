@@ -346,8 +346,8 @@ GameObject:
   - component: {fileID: 114182428526554998}
   - component: {fileID: 114749999476910416}
   - component: {fileID: 114205056001914362}
-  - component: {fileID: 114532547254732818}
   - component: {fileID: 114174148932232238}
+  - component: {fileID: 114605159722255148}
   m_Layer: 0
   m_Name: Blade_Warrior_Prefab
   m_TagString: Red
@@ -2604,7 +2604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: 1000
+  HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
+  blood: 100
 --- !u!114 &114182428526554998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2640,7 +2641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
---- !u!114 &114532547254732818
+--- !u!114 &114605159722255148
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2648,13 +2649,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238489775458748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1205285110, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 17d305cc9901b5e4193a2f5ebe5933a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visRange: 10
-  visUpdateInterval: 1
-  checkMethod: 0
-  forceHidden: 0
+  attack_distance: 5
+  attack_cd: 0
+  attack_power: 5
 --- !u!114 &114647239064169932
 MonoBehaviour:
   m_ObjectHideFlags: 1

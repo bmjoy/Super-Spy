@@ -1,13 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarExplorer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\EasyTouchControl\Examples\Version 2.X_New Features\Script\InitTarget.cs">
     <Files>
-      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCJoystick.cs" Line="70" Column="16" />
-      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCBase.cs" Line="299" Column="33" />
-      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCAxis.cs" Line="12" Column="22" />
-      <File FileName="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillArea.cs" Line="45" Column="61" />
-      <File FileName="Assets\Character\EasyTouchControl\Plugins\ETCButton.cs" Line="24" Column="36" />
-      <File FileName="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarExplorer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Map\Tower\Scripts\Check.cs" Line="1" Column="1" />
+      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="13" Column="24" />
+      <File FileName="Assets\Map\Tower\Scripts\HP.cs" Line="42" Column="2" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="53" Column="23" />
+      <File FileName="Assets\Map\Tower\Scripts\Bullet.cs" Line="33" Column="48" />
+      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="36" Column="15" />
+      <File FileName="Assets\Character\Scripts\HeroAttack.cs" Line="11" Column="2" />
+      <File FileName="Assets\Character\XiaoBin\Scripts\XiaoBinController.cs" Line="35" Column="11" />
+      <File FileName="Assets\Map\Tower\Scripts\GenerateSoldiers.cs" Line="38" Column="46" />
+      <File FileName="Assets\Character\EasyTouchControl\Examples\Version 2.X_New Features\Script\InitTarget.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

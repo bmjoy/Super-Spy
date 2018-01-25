@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject mTarget;
-    public float mMoveSpeed;
-    public int mAttack;//shang害zhi
-                       // Use this for initialization
+    GameObject mTarget;
+    float mMoveSpeed;
+    int mAttack;//shang害zhi
+
     public void InitData(GameObject target, float move_speed, int atk)
     {
         mTarget = target;
         mMoveSpeed = move_speed;
         mAttack = atk;
     }
-    void Start()
-    {
-
-    }
+    
     private Vector3 mTargetPos;
     // Update is called once per frame
     void Update()
@@ -32,7 +29,7 @@ public class Bullet : MonoBehaviour
             if (Time.deltaTime >= total_time)
             {//追上人了
                 
-               	mTarget.GetComponent<HP>().AddHP(-mAttack);
+				mTarget.GetComponent<AttackBase>().BeAttacked(gameObject, mAttack);
                 GameObject.Destroy(gameObject);
             }
             else//子dan追人

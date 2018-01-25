@@ -9,6 +9,9 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 11100000}
+  - component: {fileID: 136208837712914792}
+  - component: {fileID: 114102742664210402}
+  - component: {fileID: 114398014315185926}
   m_Layer: 0
   m_Name: mon_orgeHitter
   m_TagString: Untagged
@@ -1936,3 +1939,43 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114102742664210402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBar: {fileID: 1508713447858406, guid: 9cc9264e1f68b044ab9e9511880b97af, type: 2}
+  blood: 30
+--- !u!114 &114398014315185926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea0f668997b668e49b343dba2dbd7fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack_distance: 0
+  attack_cd: 0
+  attack_power: 0
+--- !u!136 &136208837712914792
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}

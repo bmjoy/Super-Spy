@@ -59,10 +59,6 @@ public class NetworkSkillController : NetworkBehaviour {
 					life_ctrl.target = pos;
 					life_ctrl.move = true;
 					life_ctrl.rotate = false;
-					/*if (gameObject.tag == "Blue") {
-						
-
-					}*/
 					break;
 				case "skill3":
 					transform.LookAt (pos);

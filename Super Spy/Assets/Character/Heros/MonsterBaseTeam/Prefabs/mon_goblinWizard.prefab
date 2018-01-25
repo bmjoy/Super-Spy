@@ -546,13 +546,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4849069137816180}
-  - component: {fileID: 143471829385319510}
   - component: {fileID: 95432784939582520}
-  - component: {fileID: 114210911065273396}
-  - component: {fileID: 114375503217350510}
-  - component: {fileID: 114182555296966792}
-  - component: {fileID: 114285660932170608}
   - component: {fileID: 136409296159205298}
+  - component: {fileID: 114316219881155324}
+  - component: {fileID: 114305754594824730}
   m_Layer: 0
   m_Name: mon_goblinWizard
   m_TagString: Red
@@ -1843,7 +1840,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116229805988262}
-  m_LocalRotation: {x: 0.68487054, y: 0.10815459, z: 0.71568406, w: 0.08397277}
+  m_LocalRotation: {x: 0.6848705, y: 0.10815457, z: 0.715684, w: 0.08397276}
   m_LocalPosition: {x: 0.0620607, y: 0.005726509, z: -0.10292232}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Children:
@@ -1875,7 +1872,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114182555296966792
+--- !u!114 &114305754594824730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1883,18 +1880,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539034902289816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1590678366, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: ea0f668997b668e49b343dba2dbd7fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Animator: {fileID: 95432784939582520}
-  m_ParameterSendBits: 0
-  param0: 
-  param1: 
-  param2: 
-  param3: 
-  param4: 
-  param5: 
---- !u!114 &114210911065273396
+  attack_distance: 0
+  attack_cd: 0
+  attack_power: 0
+--- !u!114 &114316219881155324
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1902,62 +1894,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539034902289816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 236
-    i1: 21
-    i2: 152
-    i3: 111
-    i4: 200
-    i5: 63
-    i6: 237
-    i7: 196
-    i8: 120
-    i9: 108
-    i10: 239
-    i11: 139
-    i12: 96
-    i13: 19
-    i14: 83
-    i15: 57
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
---- !u!114 &114285660932170608
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539034902289816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114375503217350510
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539034902289816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 4
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  HPBar: {fileID: 1508713447858406, guid: 9cc9264e1f68b044ab9e9511880b97af, type: 2}
+  blood: 30
 --- !u!136 &136409296159205298
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2066,20 +2007,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.23551458, y: 0.16982132, z: 0.045954347}
     m_Extent: {x: 1.0062246, y: 1.0263164, z: 1.1131879}
   m_DirtyAABB: 0
---- !u!143 &143471829385319510
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539034902289816}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.09, z: 0}

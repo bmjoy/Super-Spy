@@ -8,10 +8,10 @@ public class DayNightController : NetworkBehaviour {
 	GameObject image;
 	public float day_time, night_time;
 	bool is_day;
-	float cur_time;
+	//float cur_time;
 	// Use this for initialization
 	void Start () {
-		cur_time = Time.time;
+		//cur_time = Time.time;
 		is_day = true;
 
 	}

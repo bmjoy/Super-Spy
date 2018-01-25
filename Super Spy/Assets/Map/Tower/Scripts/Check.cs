@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Check : MonoBehaviour {
 
-	public GameObject FindObjectAroundthePoint(Vector3 point, Vector3 dir, float angle, int rayCount, float distance){ 
+	public static GameObject FindObjectAroundthePoint(Vector3 point, Vector3 dir, float angle, int rayCount, float distance, string tag){ 
 		float anglefrom = -angle / 2; 
 		float angleTo = angle / 2; 
 		float step = angle / rayCount; 
@@ -15,14 +15,15 @@ public class Check : MonoBehaviour {
 			Ray ray = new Ray (point,temp); 
 			if (Physics.Raycast (ray, out hit, distance)) {
 				GameObject obj = hit.transform.gameObject;
-				if (obj.tag != gameObject.tag && obj.layer != 9) { 
+
+				if (obj.tag != tag && obj.layer != 9) { 
 					return obj;
 				}
 			} 
 		}
 		return null; 
 	} 
-	Vector3 GetRotateVector(Vector3 rogAngle,Vector3 dir){ 
+	static Vector3 GetRotateVector(Vector3 rogAngle,Vector3 dir){ 
 		Vector3 newDir =  Matrix4x4.TRS(Vector3.zero,Quaternion.Euler(rogAngle),Vector3.one) * dir; 
 		return newDir.normalized; 
 	}   

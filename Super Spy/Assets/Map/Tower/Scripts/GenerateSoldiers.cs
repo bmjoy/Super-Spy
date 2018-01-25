@@ -35,7 +35,7 @@ public class GenerateSoldiers : MonoBehaviour {
 			}
 			GameObject new_soldier = (GameObject)Instantiate (ins, transform);
 			new_soldier.GetComponent<SoldierInit> ().SetStage (gameObject.tag);
-				new_soldier.GetComponent<Controller> ().SetTarget (target);
+			new_soldier.GetComponent<XiaoBinController> ().SetTarget (target);
 		}
 	}
 
