@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
             if (Time.deltaTime >= total_time)
             {//追上人了
                 
-				mTarget.GetComponent<AttackBase>().BeAttacked(gameObject, mAttack);
+				mTarget.GetComponentInChildren<AttackBase>().BeAttacked(gameObject, mAttack);
                 GameObject.Destroy(gameObject);
             }
             else//子dan追人

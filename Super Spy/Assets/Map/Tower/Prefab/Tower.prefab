@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 33281385614457318}
   - component: {fileID: 23558236778989128}
   - component: {fileID: 64036396474642164}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4396987248079424}
   - component: {fileID: 33032092666872482}
   - component: {fileID: 23171023108063906}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enterance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 114124076565384550}
   - component: {fileID: 114500691160100442}
   - component: {fileID: 114123828550457736}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tower
   m_TagString: Gray
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 4250070335508702}
   - component: {fileID: 33925938446602348}
   - component: {fileID: 23185454416669484}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Blocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 33577848212825146}
   - component: {fileID: 23678944583525338}
   - component: {fileID: 114816257076507524}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Woods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 33017306647964778}
   - component: {fileID: 23173924826369056}
   - component: {fileID: 114870213726698288}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 4440440837375202}
   - component: {fileID: 33161030564494360}
   - component: {fileID: 23751925605574448}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Banners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4877472474013076}
   - component: {fileID: 212235030976669736}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: rang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ Transform:
   m_GameObject: {fileID: 1111034116633896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 1.5, y: 0.1, z: 1.5}
   m_Children: []
   m_Father: {fileID: 4117413026578688}
   m_RootOrder: 6
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2a77cb19f54954c9af547891175728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack_distance: 10
+  attack_distance: 5
   attack_cd: 1.5
   attack_power: 2
   blue: {fileID: 2100000, guid: 8999c75be50b6d44896b01b326e8a326, type: 2}

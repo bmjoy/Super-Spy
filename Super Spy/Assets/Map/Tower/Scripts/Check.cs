@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Check : MonoBehaviour {
+	static GameObject GetRootParent(Transform child) {
+		while (child.parent && child.parent.tag != "Untagged") {
+			child = child.parent;
+		}
+		return child.gameObject;
+	}
 
-	public static GameObject FindObjectAroundthePoint(Vector3 point, Vector3 dir, float angle, int rayCount, float distance, string tag){ 
-		float anglefrom = -angle / 2; 
-		float angleTo = angle / 2; 
-		float step = angle / rayCount; 
-		Vector3 temp; 
-		RaycastHit hit;
-		for (float an = anglefrom; an <= angleTo; an += step) { 
-			temp = GetRotateVector (Vector3.up*an,dir);//shexianfangxiang
-			Ray ray = new Ray (point,temp); 
-			if (Physics.Raycast (ray, out hit, distance)) {
-				GameObject obj = hit.transform.gameObject;
+	public static GameObject FindObjectAroundthePoint(Vector3 point, float radius, string tag){ 
+		Collider[] colls = Physics.OverlapSphere (point, radius, 11);
+		foreach (var item in colls) {
+			var root = GetRootParent (item.transform);
 
-				if (obj.tag != tag && obj.layer != 9) { 
-					return obj;
-				}
-			} 
+			if (root.tag != tag) {
+				return root;
+			}
 		}
 		return null; 
 	} 
