@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 136359187474446092}
   - component: {fileID: 114379764733393796}
   - component: {fileID: 114597889100291882}
+  - component: {fileID: 114286508573333174}
   m_Layer: 0
   m_Name: mon_trolCurer
   m_TagString: Untagged
@@ -1978,6 +1979,38 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114286508573333174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 161
+    i1: 250
+    i2: 77
+    i3: 222
+    i4: 78
+    i5: 29
+    i6: 86
+    i7: 20
+    i8: 75
+    i9: 123
+    i10: 132
+    i11: 148
+    i12: 161
+    i13: 243
+    i14: 44
+    i15: 225
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114379764733393796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1990,7 +2023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1508713447858406, guid: 9cc9264e1f68b044ab9e9511880b97af, type: 2}
-  blood: 30
+  max_blood: 10
 --- !u!114 &114597889100291882
 MonoBehaviour:
   m_ObjectHideFlags: 1

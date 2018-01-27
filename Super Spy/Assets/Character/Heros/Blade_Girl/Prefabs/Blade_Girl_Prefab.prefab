@@ -1577,7 +1577,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814514970075030}
-  m_LocalRotation: {x: 0.5860293, y: 0.7818797, z: 0.21032208, w: 0.0316001}
+  m_LocalRotation: {x: 0.58602923, y: 0.7818796, z: 0.21032205, w: 0.031600095}
   m_LocalPosition: {x: 0.10010575, y: -0.12684684, z: 0.5340092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2305,6 +2305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
+  max_blood: 100
   blood: 100
 --- !u!114 &114377122536472026
 MonoBehaviour:

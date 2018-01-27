@@ -881,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74d53cb3197573488e6f96f76902dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack_distance: 4
+  attack_distance: 2
   attack_cd: 2
   attack_power: 2
 --- !u!114 &114137496915403458
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1508713447858406, guid: 9cc9264e1f68b044ab9e9511880b97af, type: 2}
-  blood: 15
+  max_blood: 10
 --- !u!114 &114137692746093340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -946,7 +946,7 @@ MonoBehaviour:
     i13: 59
     i14: 64
     i15: 3
-  m_ServerOnly: 1
+  m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
 --- !u!114 &114397435311437504
 MonoBehaviour:

@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1508713447858406, guid: 9cc9264e1f68b044ab9e9511880b97af, type: 2}
-  blood: 10
+  max_blood: 10
 --- !u!114 &114390524910760284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -957,7 +957,7 @@ MonoBehaviour:
     i13: 101
     i14: 176
     i15: 18
-  m_ServerOnly: 1
+  m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
 --- !u!114 &114453304589839550
 MonoBehaviour:

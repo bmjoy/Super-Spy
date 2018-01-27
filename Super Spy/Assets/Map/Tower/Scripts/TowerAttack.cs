@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class TowerAttack : AttackBase {
 	public Material blue, red,gray;
@@ -18,33 +19,33 @@ public class TowerAttack : AttackBase {
 	protected override void Update()
 	{
 		base.Update ();
-
 		if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
 		{
-			GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, gameObject.tag);
+			GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
 			this.Attack (mAttackTarget);
 		}
 	}
 
 	string blood_tag = "Gray";
+
 	public override void BeAttacked(GameObject enemy, int power) {
 		HP hp = GetComponent<HP> ();
 		if (blood_tag != enemy.tag) {
-			if (power <= hp.blood) {
-				hp.blood -= power;
+			if (power <= hp.curBlood) {
+				hp.curBlood -= power;
 			} else {
-				hp.blood = power - hp.blood;
+				hp.curBlood = power - hp.curBlood;
 				blood_tag = enemy.tag;
 				hp.UpdateColor (blood_tag);
 			}
 		} else {
-			hp.blood += power;
-			if (hp.blood >= hp.originBlood) {
-				hp.blood = hp.originBlood;
+			hp.curBlood += power;
+			if (hp.curBlood >= hp.originBlood) {
+				hp.curBlood = hp.originBlood;
 				ChangeStage (blood_tag);
 			}
 		}
-		hp.UpdateBar ();
+		//hp.UpdateBar ();
 	}
 
 	public override void Attack(GameObject enemy)
@@ -59,11 +60,11 @@ public class TowerAttack : AttackBase {
 			n.InitData(enemy, 8, 2);
 		}
 	}
-
-	public void ChangeStage(string tag) {
-		gameObject.tag = tag;
-		transform.Find ("Walls").tag = tag;
-		switch (tag) {
+		
+	public void ChangeStage(string zhenying) {
+		gameObject.tag = zhenying;
+		transform.Find ("Walls").tag = zhenying;
+		switch (zhenying) {
 		case "Blue":
 			SetTowerMaterial (Color.blue);
 			break;
@@ -76,6 +77,7 @@ public class TowerAttack : AttackBase {
 		default:
 			break;
 		}
+
 	}
 
 	void SetTowerMaterial(Color color) {

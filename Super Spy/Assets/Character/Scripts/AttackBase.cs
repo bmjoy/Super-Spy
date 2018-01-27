@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(Collider))]
-public class AttackBase : MonoBehaviour {
+public class AttackBase : NetworkBehaviour {
 	public int attack_distance;
 	public float attack_cd;
 	public int attack_power;
@@ -12,7 +13,7 @@ public class AttackBase : MonoBehaviour {
 	protected virtual void Start () {
 		_time = 0;
 	}
-	
+
 	// Update is called once per frame
 	protected virtual void Update () {
 		if (!CanAttack()) {

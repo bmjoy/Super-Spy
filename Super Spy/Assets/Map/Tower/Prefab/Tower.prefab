@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 114124076565384550}
   - component: {fileID: 114500691160100442}
   - component: {fileID: 114123828550457736}
+  - component: {fileID: 114607753786943816}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Gray
@@ -605,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1160566874324768, guid: 130082987fa0a7d43a04316c52c72060, type: 2}
-  blood: 30
+  max_blood: 10
 --- !u!114 &114124076565384550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,6 +640,38 @@ MonoBehaviour:
   red: {fileID: 2100000, guid: 8e043b6f4987e59428ed29f5bc23e15f, type: 2}
   gray: {fileID: 2100000, guid: db1e9116321d2194c938e1f3f84d6411, type: 2}
   bullet: {fileID: 114670665431570548, guid: adff6295211d64249b426411b48e875d, type: 2}
+--- !u!114 &114607753786943816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718533149653878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 178
+    i1: 10
+    i2: 186
+    i3: 174
+    i4: 31
+    i5: 27
+    i6: 114
+    i7: 36
+    i8: 203
+    i9: 244
+    i10: 216
+    i11: 110
+    i12: 185
+    i13: 9
+    i14: 144
+    i15: 160
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114816257076507524
 MonoBehaviour:
   m_ObjectHideFlags: 1

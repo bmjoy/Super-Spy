@@ -1,47 +1,69 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityStandardAssets.Utility;
 using UnityEngine.UI;
 
-public class HP : MonoBehaviour {
+public class HP : NetworkBehaviour {
 	public GameObject HPBar;
-	public int blood=10;
-	protected int m_originBlood;
 
+	public int max_blood = 10;
+	[SyncVar (hook = "OnHeathChanged")]
+	int blood;
+
+	public int curBlood {
+		get	{
+			return blood;
+		}
+		set {
+			blood = value;
+		}
+	}
 	public int originBlood {
 		get	{
-			return m_originBlood;
+			return max_blood;
 		}
 	}
 
 	GameObject bar;
 
-	protected virtual void Start() {
-		m_originBlood = blood;
-		bar = GameObject.Instantiate (HPBar, transform);
-		UpdateColor (gameObject.tag);
-		UpdateHP (0);
-	}
-
 	protected virtual void Update() {
 		bar.transform.LookAt (Camera.main.transform);
 	}
+		
+	void Start() {
+		bar = GameObject.Instantiate (HPBar, transform);
+		UpdateColor (gameObject.tag);
+		blood = max_blood;
+	}
 
+	[Server]
 	public void UpdateHP(int hp) {
+		bool died = false;
 		blood += hp;
 		if (blood > 0) {
-			if (blood > originBlood) {
-				blood = originBlood;
+			if (blood > max_blood) {
+				blood = max_blood;
 			}
-			UpdateBar ();
+
+			//UpdateBar ();
 		} else {
-			GameObject.Destroy(gameObject);
+			died = true;
+			//GameObject.Destroy(gameObject);
+		}
+		RpcCheck (died);
+	}
+
+	[ClientRpc]
+	void RpcCheck(bool died) {
+		if (died) {
+			GameObject.Destroy (gameObject);
 		}
 	}
 
 	public void UpdateBar() {
-		bar.GetComponentInChildren<Image> ().fillAmount = blood / (float)originBlood;
+		bar.GetComponentInChildren<Image> ().fillAmount = blood / (float)max_blood;
 	}
 
 	public virtual void UpdateColor(string tag) {
@@ -56,5 +78,10 @@ public class HP : MonoBehaviour {
 			bar.GetComponentInChildren<Image> ().color = Color.gray;
 			break;
 		}
+	}
+
+	void OnHeathChanged(int value) {
+		blood = value;
+		UpdateBar ();
 	}
 }

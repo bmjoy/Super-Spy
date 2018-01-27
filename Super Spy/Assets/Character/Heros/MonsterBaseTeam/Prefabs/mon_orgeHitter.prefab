@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 136208837712914792}
   - component: {fileID: 114102742664210402}
   - component: {fileID: 114398014315185926}
+  - component: {fileID: 114915865151388162}
   m_Layer: 0
   m_Name: mon_orgeHitter
   m_TagString: Untagged
@@ -1951,7 +1952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1508713447858406, guid: 9cc9264e1f68b044ab9e9511880b97af, type: 2}
-  blood: 30
+  max_blood: 10
 --- !u!114 &114398014315185926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1966,6 +1967,38 @@ MonoBehaviour:
   attack_distance: 0
   attack_cd: 0
   attack_power: 0
+--- !u!114 &114915865151388162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 8
+    i1: 33
+    i2: 231
+    i3: 32
+    i4: 19
+    i5: 132
+    i6: 63
+    i7: 180
+    i8: 138
+    i9: 235
+    i10: 142
+    i11: 150
+    i12: 132
+    i13: 204
+    i14: 96
+    i15: 94
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!136 &136208837712914792
 CapsuleCollider:
   m_ObjectHideFlags: 1
