@@ -340,6 +340,7 @@ GameObject:
   - component: {fileID: 143759021114440126}
   - component: {fileID: 136823282666332378}
   - component: {fileID: 95420923669093702}
+  - component: {fileID: 114947572943642586}
   - component: {fileID: 114700439198774014}
   - component: {fileID: 114647239064169932}
   - component: {fileID: 114685650401990332}
@@ -2605,7 +2606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
-  max_blood: 10
+  max_blood: 100
 --- !u!114 &114182428526554998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2730,8 +2731,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270f878da36d41e48a30405e2284cf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin_position: {x: 100, y: 3, z: 105}
-  respam_time: 10
+--- !u!114 &114947572943642586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1238489775458748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658f21ca06cace74494d3eecf22eb03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin_position: {x: 100, y: 0, z: 105}
+  towers: {fileID: 1744192379995982, guid: acd1505f121d26e45828fbd32a3076c9, type: 2}
 --- !u!136 &136823282666332378
 CapsuleCollider:
   m_ObjectHideFlags: 1

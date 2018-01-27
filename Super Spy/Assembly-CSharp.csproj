@@ -66,6 +66,7 @@
      <Compile Include="Assets\Character\Heros\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\ClipObjControl.cs" />
      <Compile Include="Assets\Character\Scripts\AttackBase.cs" />
      <Compile Include="Assets\Character\Scripts\HeroAttack.cs" />
+     <Compile Include="Assets\Character\Scripts\HeroInit.cs" />
      <Compile Include="Assets\Character\Scripts\SpyIdentity.cs" />
      <Compile Include="Assets\Character\Scripts\XiaoBinAttack.cs" />
      <Compile Include="Assets\Character\Simple Health Bar\Scripts\SimpleHealthBar.cs" />

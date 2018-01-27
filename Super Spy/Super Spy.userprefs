@@ -1,14 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Minimap\Scripts\ScaleController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\Scripts\HeroInit.cs">
     <Files>
-      <File FileName="Assets\Map\Tower\Scripts\GenerateSoldiers.cs" Line="9" Column="34" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="14" Column="21" />
-      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="6" Column="43" />
-      <File FileName="Assets\Character\Scripts\HeroAttack.cs" Line="7" Column="23" />
-      <File FileName="Assets\Map\Tower\Scripts\HP.cs" Line="58" Column="25" />
-      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="12" Column="26" />
-      <File FileName="Assets\Minimap\Scripts\ScaleController.cs" Line="20" Column="44" />
+      <File FileName="Assets\Network\NetworkAnimatorController.cs" Line="17" Column="15" />
+      <File FileName="Assets\Character\Scripts\HeroInit.cs" Line="34" Column="6" />
+      <File FileName="Assets\Map\Tower\Scripts\HP.cs" Line="38" Column="21" />
+      <File FileName="Assets\Character\XiaoBin\Scripts\XiaoBinController.cs" Line="87" Column="1" />
+      <File FileName="Assets\Map\Tower\Scripts\GenerateSoldiers.cs" Line="21" Column="9" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="14" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

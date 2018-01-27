@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -93,10 +93,10 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 619
-  m_MinSize: {x: 232, y: 471}
-  m_MaxSize: {x: 10002, y: 14021}
+  m_MinSize: {x: 232, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 29
+  controlID: 52
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,10 +118,10 @@ MonoBehaviour:
     y: 30
     width: 1349
     height: 619
-  m_MinSize: {x: 709, y: 471}
-  m_MaxSize: {x: 18004, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 127
+  controlID: 121
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,8 +140,8 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 288
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -168,7 +168,7 @@ MonoBehaviour:
     y: 0
     width: 1349
     height: 669
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -229,8 +229,8 @@ MonoBehaviour:
     y: 0
     width: 801
     height: 619
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
@@ -402,7 +402,7 @@ MonoBehaviour:
     x: 1058
     y: 100
     width: 300
-    height: 605
+    height: 598
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 MonoBehaviour:
@@ -477,19 +477,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Character/Heros/Blade_Warrior/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Character/Heros/Blade_Warrior/Prefabs
   m_LastFoldersGridSize: 50
   m_LastProjectPath: E:\UnityProject\Super Spy
   m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 722f0000
-    m_LastClickedID: 12146
-    m_ExpandedIDs: 00000000ec280000702900000e2a0000822c0000f42d0000f62d0000f22f0000d8310000c233000060340000fc34000072350000a8360000b43600002e37000088390000c0390000ca3900002e3a0000fe3a0000ac3b0000b0450000e2470000bc530000be530000c0530000c2530000c4530000c6530000c8530000ca530000cc530000ce530000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000e6530000e8530000ea530000ec530000ee530000f0530000ffffff7f
+    scrollPos: {x: 0, y: 119}
+    m_SelectedIDs: 92460000
+    m_LastClickedID: 18066
+    m_ExpandedIDs: 00000000d428000058290000f6290000062c00006a2c0000dc2d0000de2d0000da2f0000c03100000e330000aa330000e43400005a350000903600009c36000016370000a8390000b2390000163a0000e63a0000943b000098450000ca470000b4bf0000b6bf0000b8bf0000babf0000bcbf0000bebf0000c0bf0000c2bf0000c4bf0000c6bf0000c8bf0000cabf0000ccbf0000cebf0000d0bf0000d2bf0000d4bf0000d6bf0000d8bf0000dabf0000dcbf0000debf0000e0bf0000e2bf0000e4bf0000e6bf0000e8bf0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +517,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ec280000702900000e2a00001e2c0000822c0000f42d0000f62d0000f22f0000d831000026330000c233000060340000fc34000072350000a8360000b43600002e37000088390000c0390000ca3900002e3a0000fe3a0000ac3b0000b0450000e2470000bc530000be530000c0530000c2530000c4530000c6530000c8530000ca530000cc530000ce530000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000e6530000e8530000ea530000ec530000ee530000f0530000
+    m_ExpandedIDs: 00000000d428000058290000f62900006a2c0000dc2d0000de2d0000da2f0000c0310000aa33000048340000e43400005a350000903600009c3600001637000070390000a8390000b2390000163a0000e63a0000943b000098450000ca470000b4bf0000b6bf0000b8bf0000babf0000bcbf0000bebf0000c0bf0000c2bf0000c4bf0000c6bf0000c8bf0000cabf0000ccbf0000cebf0000d0bf0000d2bf0000d4bf0000d6bf0000d8bf0000dabf0000dcbf0000debf0000e0bf0000e2bf0000e4bf0000e6bf0000e8bf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -603,7 +603,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 4836fdffbe36fdff5638fdff8838fdffac4efdff224ffdffba50fdffec50fdffe094fdffdec4fdffece7fdff760afeffaa37ffff6a3affffe23affff5257ffff5e57ffff7879ffff7cb1ffff42b6ffffbeb6ffff2ad3ffff32d3ffff7efbffff00000000e09101000ad50200c8e10200f0f602008cfd02001eb30500bcc706007ad406003ef00600bede0800
+    m_ExpandedIDs: 3ea3faffc4a3fafff0bdfaff16befaff1ecafaffd6cafaffe8e4fafff4e4faffb8e6faff7406fbfff606fbff9e08fbffde08fbffaa1cfbff1869fbffcc89fbff3c8efbffc08efbffcea8fbffd6a8fbff42acfbffc6acfbffd4c6fbffdcc6fbff5cf1fbff4cf3fbff5a0dfcff620dfcffee7cfcff502efdffa83cfdff2c3dfdffd859fdfffe59fdff3c79fdffbe79fdff5c96fdff7496fdff78a4fdffb4a6fdff60c3fdff86c3fdff3a05feffba05feff4622feff5c22feffdaeffeff3cf3feffba1bfffffedeffff9efbffff00000000685a010066920100dcc00500fce80500daf805005a0a06005c130900d6170900b84b09001c980a008ea20a008ab00a00b6f70a00
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -622,7 +622,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
   m_ExpandedScenes:
-  - main
+  - NetworkLobby
   m_CurrenRootInstanceID: 0
   m_Locked: 1
   m_CurrentSortingName: TransformSorting
@@ -654,14 +654,14 @@ MonoBehaviour:
     height: 598
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1233.1597487446927
+  lastFramingTime: 4968.831808414026
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 398.49158, y: 290.5, z: 0}
+    m_Target: {x: 147.99213, y: 0.5965658, z: 99.49918}
     speed: 2
-    m_Value: {x: 398.49158, y: 290.5, z: 0}
+    m_Value: {x: 147.99213, y: 0.5965658, z: 99.49918}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -685,13 +685,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.07103292, y: 0.69193953, z: -0.06872675, w: -0.71515787}
     speed: 2
-    m_Value: {x: 0, y: -0, z: 0, w: -1}
+    m_Value: {x: -0.07103292, y: 0.69193953, z: -0.06872675, w: -0.71515787}
   m_Size:
-    m_Target: 1572.9783
+    m_Target: 1.4287331
     speed: 2
-    m_Value: 1572.9783
+    m_Value: 1.4287331
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -217,7 +217,7 @@ a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 9b2ea1e17f48f9cac9a3ff88e0a673fa Assembly-CSharp.dll:.ETCJoystick
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiniMapPoolManager
-9da453aed1f8f2209d9dc69c29fc25f8 Assembly-CSharp.dll:.NetworkAnimatorController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkAnimatorController
 95539d9d25892beddc16d7885a7184aa Assembly-CSharp.dll:.BianshenEffect
 ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FogOfWarStalker
@@ -227,3 +227,4 @@ ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 239d2cc8d353bbfcbefc27fa8f0221cc Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyServerList
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+19265a44d286c9fc4028a232a8acf767 Assembly-CSharp.dll:.HeroInit

@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class GenerateSoldiers : MonoBehaviour {
+public class GenerateSoldiers : NetworkBehaviour {
 	public GameObject soldier;
 	public GameObject magician;
 	public Vector3 red_quanshui, blue_quanshui;
@@ -11,11 +12,13 @@ public class GenerateSoldiers : MonoBehaviour {
 	float last_time, cur_time;
 
 	// Use this for initialization
+	[Server]
 	void Start() {
 		cur_time = last_time = 0;
 		Generate ();
 	}
 	// Update is called once per frame
+	[Server]
 	void Update () {
 		cur_time = Time.time;
 		if (cur_time - last_time >= 30.0f) {

@@ -71,6 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117413026578688}
+  - component: {fileID: 114506407914704830}
   - component: {fileID: 114124076565384550}
   - component: {fileID: 114500691160100442}
   - component: {fileID: 114515271638859530}
@@ -80,7 +81,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1750159474342674
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718533149653878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44, y: 0, z: 2.1999998}
+  m_LocalPosition: {x: 100, y: 0, z: 100}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4440440837375202}
@@ -599,7 +600,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718533149653878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be5f13cc623894941afcbee4fc1d5adb, type: 3}
   m_Name: 
@@ -626,6 +627,38 @@ MonoBehaviour:
   red: {fileID: 2100000, guid: 8e043b6f4987e59428ed29f5bc23e15f, type: 2}
   gray: {fileID: 2100000, guid: db1e9116321d2194c938e1f3f84d6411, type: 2}
   bullet: {fileID: 114670665431570548, guid: adff6295211d64249b426411b48e875d, type: 2}
+--- !u!114 &114506407914704830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718533149653878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 178
+    i1: 10
+    i2: 186
+    i3: 174
+    i4: 31
+    i5: 27
+    i6: 114
+    i7: 36
+    i8: 203
+    i9: 244
+    i10: 216
+    i11: 110
+    i12: 185
+    i13: 9
+    i14: 144
+    i15: 160
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114515271638859530
 MonoBehaviour:
   m_ObjectHideFlags: 1
