@@ -2,8 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroAttack : XiaoBinAttack {
+public class HeroAttack : AttackBase {
 	float m_recovery = 0;
+
+	public override bool CanAttack ()
+	{
+		return base.CanAttack () && GetComponent<Animator>().GetBool("pugong");
+	}
+
+	public override void Attack (GameObject enemy)
+	{
+		base.Attack (enemy);
+		if (enemy) {
+			Vector3 look = enemy.transform.position;
+			look.y = transform.position.y;
+			transform.LookAt (look);
+		}
+	}
 
 	public override void BeAttacked (GameObject enemy, int power)
 	{
@@ -14,9 +29,13 @@ public class HeroAttack : XiaoBinAttack {
 	protected override void Update ()
 	{
 		base.Update ();
+		if (this.CanAttack()) {
+			GameObject obj = Check.FindObjectAroundthePoint (transform.position, attack_distance, gameObject.tag);
+			Attack (obj);
+		}
 		if (Time.time - m_recovery > 1.0f) {
 			m_recovery = Time.time;
-			GetComponentInParent<HP> ().UpdateHP (1);
+			GetComponent<HP> ().UpdateHP (1);
 		}
 	}
 }

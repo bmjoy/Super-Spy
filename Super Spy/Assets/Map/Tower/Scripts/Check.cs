@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Check : MonoBehaviour {
-	static GameObject GetRootParent(Transform child) {
-		while (child.parent && child.parent.tag != "Untagged") {
-			child = child.parent;
-		}
-		return child.gameObject;
-	}
 
 	public static GameObject FindObjectAroundthePoint(Vector3 point, float radius, string tag){ 
-		Collider[] colls = Physics.OverlapSphere (point, radius, 11);
-		foreach (var item in colls) {
-			var root = GetRootParent (item.transform);
-
-			if (root.tag != tag) {
-				return root;
+		Collider[] res = Physics.OverlapSphere (point, radius);
+		foreach (var item in res) {
+			if (item.tag != tag && item.gameObject.layer != 9) {
+				return item.gameObject;
 			}
 		}
 		return null; 

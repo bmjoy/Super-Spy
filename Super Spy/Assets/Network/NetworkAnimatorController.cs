@@ -41,7 +41,7 @@ public class NetworkAnimatorController : NetworkBehaviour {
 			bool flag = ETCInput.GetAxis ("Vertical") != 0 ||
 				ETCInput.GetAxis ("Horizontal") != 0;
 			SetAnimation (state, flag);
-			state = "attack";
+			state = "pugong";
 			flag = ETCInput.GetButtonDown ("ButtonHit");
 
 			SetAnimation (state, flag);

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: blade04 copy
-  m_Shader: {fileID: 4800000, guid: 343aa5b19e84d4ab5948bd7651c74dd4, type: 3}
+  m_Shader: {fileID: 10512, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -23,9 +23,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _ClipY: 0
     - _Cutoff: 0.5
     m_Colors:
-    - _ClipObjNormal: {r: 0, g: 1, b: 0, a: 1}
-    - _ClipObjPos: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 0.95522386, g: 0.93927187, b: 0.9267097, a: 1}

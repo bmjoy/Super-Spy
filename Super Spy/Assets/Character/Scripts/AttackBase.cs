@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class AttackBase : MonoBehaviour {
-	public float attack_distance;
+	public int attack_distance;
 	public float attack_cd;
 	public int attack_power;
 	float _time;
@@ -16,19 +17,6 @@ public class AttackBase : MonoBehaviour {
 	protected virtual void Update () {
 		if (!CanAttack()) {
 			_time += Time.deltaTime;
-		} else {
-			GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, attack_distance, gameObject.tag);
-			Attack (mAttackTarget);
-		}
-	}
-		
-	public virtual void OnTriggerStay(Collider other) {
-		AttackBase attack = other.GetComponentInParent<AttackBase> ();
-		GameObject obj = attack.gameObject;
-		if (obj.tag != gameObject.tag) {
-			if (attack.CanAttack()) {
-				attack.Attack (gameObject);
-			}
 		}
 	}
 
@@ -41,9 +29,6 @@ public class AttackBase : MonoBehaviour {
 			_time = 0;
 			AttackBase attack_base = enemy.GetComponent<AttackBase> ();
 			if (!attack_base) {
-				attack_base = enemy.GetComponentInChildren<AttackBase> ();
-			}
-			if (!attack_base) {
 				attack_base = enemy.GetComponentInParent<AttackBase> ();
 			}
 			attack_base.BeAttacked (gameObject, attack_power);
@@ -51,10 +36,6 @@ public class AttackBase : MonoBehaviour {
 	}
 
 	public virtual void BeAttacked(GameObject enemy, int power) {
-		HP hp = GetComponent<HP> ();
-		if (!hp) {
-			hp = GetComponentInParent<HP> ();
-		}
-		hp.UpdateHP (-power);
+		GetComponent<HP> ().UpdateHP (-power);
 	}
 }

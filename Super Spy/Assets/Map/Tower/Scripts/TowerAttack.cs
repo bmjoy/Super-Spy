@@ -15,6 +15,17 @@ public class TowerAttack : AttackBase {
 		show.enabled = false;
 	}
 
+	protected override void Update()
+	{
+		base.Update ();
+
+		if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
+		{
+			GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, gameObject.tag);
+			this.Attack (mAttackTarget);
+		}
+	}
+
 	string blood_tag = "Gray";
 	public override void BeAttacked(GameObject enemy, int power) {
 		HP hp = GetComponent<HP> ();

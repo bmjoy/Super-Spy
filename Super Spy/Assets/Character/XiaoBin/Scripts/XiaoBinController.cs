@@ -3,22 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class XiaoBinController : MonoBehaviour {
+public class XiaoBinController : AttackBase {
 	float last_dis;
 	Vector3 origin_target = Vector3.zero;
 	Animator anim;
 	NavMeshAgent navMeshAgent;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start ();
 		anim = GetComponent<Animator> ();
 		navMeshAgent = GetComponent<NavMeshAgent>();
+		//origin_target = cur_target = null;
+		if (attack_distance == 0) {
+			attack_distance = (int)navMeshAgent.stoppingDistance + 1;
+		}
 		last_dis = 0;
+	}
+
+	public override void Attack (GameObject enemy)
+	{
+		base.Attack (enemy);
+		if (enemy) {
+			Vector3 look = enemy.transform.position;
+			look.y = transform.position.y;
+			transform.LookAt (look);
+		}
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		GameObject obj = Check.FindObjectAroundthePoint (transform.position, 5, gameObject.tag);
+	protected override void Update () {
+		base.Update ();
+		if (!CanAttack()) {
+			return;
+		}
+		GameObject obj = Check.FindObjectAroundthePoint (transform.position, attack_distance + 2, gameObject.tag);
 
 		if (obj) {
 			SetTarget (obj.transform.position);
@@ -26,9 +45,13 @@ public class XiaoBinController : MonoBehaviour {
 			SetTarget (origin_target);
 		}
 		float dis = Vector3.Distance (transform.position, navMeshAgent.destination);
-		if (dis > 0 && dis <= (int)navMeshAgent.stoppingDistance + 1) {
+		if (dis > 0 && dis <= attack_distance) {
 			transform.LookAt (navMeshAgent.destination);
+
 			anim.SetBool ("attack", !anim.GetBool("attack"));
+			if (obj) {
+				this.Attack (obj);
+			}
 		} else {
 			anim.SetBool ("attack", false);
 			if (Mathf.Abs (dis - last_dis) < 0.1f * Time.deltaTime) {
