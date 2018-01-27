@@ -15,13 +15,11 @@ public class ScaleController : MonoBehaviour, IPointerClickHandler{
 
 	public void OnPointerClick (PointerEventData eventData) {
 		if (minimap.localScale.x == 1) {
-			minimap.localScale = new Vector3 (2, 2, 2);
-			transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
+			minimap.localScale = new Vector3 (1.5f, 1.5f, 1.5f);
 			GetComponent<Image> ().sprite = minus;
 			point.GetComponent<MyImage> ().small = false;
 		} else {
 			minimap.localScale = new Vector3 (1, 1, 1);
-			transform.localScale = new Vector3 (1, 1, 1);
 			GetComponent<Image> ().sprite = plus;
 			point.GetComponent<MyImage> ().small = true;
 		}

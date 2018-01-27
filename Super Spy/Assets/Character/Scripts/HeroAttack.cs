@@ -5,7 +5,6 @@ using UnityEngine.Networking;
 
 public class HeroAttack : AttackBase {
 	float m_recovery = 0;
-	public GameObject tower;
 
 	public override bool CanAttack ()
 	{

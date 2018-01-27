@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-[RequireComponent(typeof(Collider))]
 public class AttackBase : NetworkBehaviour {
 	public int attack_distance;
 	public float attack_cd;

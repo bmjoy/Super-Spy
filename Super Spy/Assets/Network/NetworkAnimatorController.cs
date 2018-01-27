@@ -7,11 +7,14 @@ using UnityStandardAssets.Utility;
 [RequireComponent(typeof(CharacterController), typeof(Animator))]
 public class NetworkAnimatorController : NetworkBehaviour {
 	public Vector3 origin_position;
+	public float respam_time;
+	float _time;
 	protected Animator anim;
 
 	public virtual void Start() {
 		anim = GetComponent<Animator> ();
 		transform.position = origin_position;
+		_time = respam_time;
 
 		if (isLocalPlayer) {
 			var canvas = GameObject.Find ("Canvas");

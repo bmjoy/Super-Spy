@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 114588719399007748}
   - component: {fileID: 114178841616673474}
   - component: {fileID: 114340439689096764}
-  - component: {fileID: 114310875007581624}
+  - component: {fileID: 114168479909628986}
   m_Layer: 0
   m_Name: Blade_Girl_Prefab
   m_TagString: Blue
@@ -1577,7 +1577,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814514970075030}
-  m_LocalRotation: {x: 0.58602923, y: 0.7818796, z: 0.21032205, w: 0.031600095}
+  m_LocalRotation: {x: 0.5860293, y: 0.7818797, z: 0.21032208, w: 0.0316001}
   m_LocalPosition: {x: 0.10010575, y: -0.12684684, z: 0.5340092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2267,6 +2267,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114168479909628986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1395180769760150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d305cc9901b5e4193a2f5ebe5933a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack_distance: 3
+  attack_cd: 1
+  attack_power: 5
 --- !u!114 &114178841616673474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2279,20 +2293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
---- !u!114 &114310875007581624
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d305cc9901b5e4193a2f5ebe5933a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack_distance: 5
-  attack_cd: 0
-  attack_power: 5
 --- !u!114 &114340439689096764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2305,8 +2305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
-  max_blood: 100
-  blood: 100
+  max_blood: 10
 --- !u!114 &114377122536472026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2329,7 +2328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270f878da36d41e48a30405e2284cf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin_position: {x: 153, y: 3, z: 164}
+  origin_position: {x: 100, y: 3, z: 100}
+  respam_time: 10
 --- !u!114 &114650294391854904
 MonoBehaviour:
   m_ObjectHideFlags: 1

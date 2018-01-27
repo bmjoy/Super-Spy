@@ -211,13 +211,13 @@ a5785c1c52267621a7556a5681877731 Assembly-CSharp.dll:.NetworkSkillController
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 8ca369eb1f70b6ddf18275a5e2fa36c4 Assembly-CSharp.dll:.SkillEffect
 fca2ca106e94163353df3dcc945f1fa0 Assembly-CSharp.dll:.GenerateSoldiers
-7af62fa5831ba7ec2b8903e212fb39de Assembly-CSharp.dll:.HeroAttack
+89725648cfe19503fc3f0a3f90fb0942 Assembly-CSharp.dll:.HeroAttack
 1369a844a5a8a7a3c4babe57e463df9b Assembly-CSharp.dll:.ETCDPad
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 9b2ea1e17f48f9cac9a3ff88e0a673fa Assembly-CSharp.dll:.ETCJoystick
 0ad469aca31264c6140b1e503c43ab6b Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MiniMapPoolManager
-6e5b4e4aefd24f76c2ce7633d7ed666e Assembly-CSharp.dll:.NetworkAnimatorController
+9da453aed1f8f2209d9dc69c29fc25f8 Assembly-CSharp.dll:.NetworkAnimatorController
 95539d9d25892beddc16d7885a7184aa Assembly-CSharp.dll:.BianshenEffect
 ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FogOfWarStalker

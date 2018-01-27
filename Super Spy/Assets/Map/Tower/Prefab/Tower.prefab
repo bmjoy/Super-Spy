@@ -73,15 +73,14 @@ GameObject:
   - component: {fileID: 4117413026578688}
   - component: {fileID: 114124076565384550}
   - component: {fileID: 114500691160100442}
-  - component: {fileID: 114123828550457736}
-  - component: {fileID: 114607753786943816}
+  - component: {fileID: 114515271638859530}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Gray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1750159474342674
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,19 +593,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5d12e5afe8a5c094facc3136b54379fc, type: 3}
---- !u!114 &114123828550457736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1718533149653878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBar: {fileID: 1160566874324768, guid: 130082987fa0a7d43a04316c52c72060, type: 2}
-  max_blood: 10
 --- !u!114 &114124076565384550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -640,7 +626,7 @@ MonoBehaviour:
   red: {fileID: 2100000, guid: 8e043b6f4987e59428ed29f5bc23e15f, type: 2}
   gray: {fileID: 2100000, guid: db1e9116321d2194c938e1f3f84d6411, type: 2}
   bullet: {fileID: 114670665431570548, guid: adff6295211d64249b426411b48e875d, type: 2}
---- !u!114 &114607753786943816
+--- !u!114 &114515271638859530
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -648,30 +634,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1718533149653878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 178
-    i1: 10
-    i2: 186
-    i3: 174
-    i4: 31
-    i5: 27
-    i6: 114
-    i7: 36
-    i8: 203
-    i9: 244
-    i10: 216
-    i11: 110
-    i12: 185
-    i13: 9
-    i14: 144
-    i15: 160
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  HPBar: {fileID: 1160566874324768, guid: 130082987fa0a7d43a04316c52c72060, type: 2}
+  max_blood: 10
 --- !u!114 &114816257076507524
 MonoBehaviour:
   m_ObjectHideFlags: 1

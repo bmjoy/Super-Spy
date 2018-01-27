@@ -31,8 +31,8 @@ public class HP : NetworkBehaviour {
 	protected virtual void Update() {
 		bar.transform.LookAt (Camera.main.transform);
 	}
-		
-	void Start() {
+
+	void OnEnable() {
 		bar = GameObject.Instantiate (HPBar, transform);
 		UpdateColor (gameObject.tag);
 		blood = max_blood;
@@ -46,11 +46,8 @@ public class HP : NetworkBehaviour {
 			if (blood > max_blood) {
 				blood = max_blood;
 			}
-
-			//UpdateBar ();
 		} else {
 			died = true;
-			//GameObject.Destroy(gameObject);
 		}
 		RpcCheck (died);
 	}
@@ -58,7 +55,7 @@ public class HP : NetworkBehaviour {
 	[ClientRpc]
 	void RpcCheck(bool died) {
 		if (died) {
-			GameObject.Destroy (gameObject);
+			Destroy (gameObject);
 		}
 	}
 
