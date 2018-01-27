@@ -7,7 +7,7 @@ public class HeroAttack : AttackBase {
 
 	public override bool CanAttack ()
 	{
-		return base.CanAttack () && GetComponent<Animator>().GetBool("pugong");
+		return base.CanAttack () && GetComponent<Animator>().GetBool("attack");
 	}
 
 	public override void Attack (GameObject enemy)

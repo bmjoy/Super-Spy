@@ -37,7 +37,9 @@ public class SkillEffect : Effect {
 				break;
 			}
 			ani_ctrl.SetAnimation (skill, true);
-			skill_ctrl.ShowEffect (skill, true, pos);
+			if (skill != "attack") {
+				skill_ctrl.ShowEffect (skill, true, pos);
+			}
 		}
 	}
 

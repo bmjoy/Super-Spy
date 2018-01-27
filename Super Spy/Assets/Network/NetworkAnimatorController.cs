@@ -24,8 +24,6 @@ public class NetworkAnimatorController : NetworkBehaviour {
 				canvas.GetComponentInChildren<MiniMapCameraManager> ().flag = -1;
 			}
 			joystick.axisX.directTransform = joystick.axisY.directTransform = joystick.cameraLookAt = transform;
-			var button = canvas.GetComponentInChildren<ETCButton> ();
-			button.axis.directTransform = transform;
 		}
 	}
 
@@ -40,10 +38,6 @@ public class NetworkAnimatorController : NetworkBehaviour {
 			string state = "run";
 			bool flag = ETCInput.GetAxis ("Vertical") != 0 ||
 				ETCInput.GetAxis ("Horizontal") != 0;
-			SetAnimation (state, flag);
-			state = "pugong";
-			flag = ETCInput.GetButtonDown ("ButtonHit");
-
 			SetAnimation (state, flag);
 			if (Input.GetKey(KeyCode.Escape)) {
 				Application.Quit ();
