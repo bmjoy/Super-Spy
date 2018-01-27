@@ -2743,7 +2743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin_position: {x: 100, y: 0, z: 105}
-  towers: {fileID: 1744192379995982, guid: acd1505f121d26e45828fbd32a3076c9, type: 2}
+  tower: {fileID: 1718533149653878, guid: b20abaae1f1b7224cbf4d86eb90990a0, type: 2}
 --- !u!136 &136823282666332378
 CapsuleCollider:
   m_ObjectHideFlags: 1

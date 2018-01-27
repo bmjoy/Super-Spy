@@ -33,13 +33,26 @@ public class HP : NetworkBehaviour {
 	}
 
 	void OnEnable() {
-		bar = GameObject.Instantiate (HPBar, transform);
-		UpdateColor (gameObject.tag);
+		if (bar == null) {
+			bar = GameObject.Instantiate (HPBar, transform);
+			UpdateColor (gameObject.tag);
+		}
 		blood = max_blood;
 	}
 
-	[Server]
 	public void UpdateHP(int hp) {
+		var netid = GetComponent<NetworkIdentity> ();
+		if (!isLocalPlayer) {
+			netid.AssignClientAuthority (connectionToClient);
+		}
+		CmdTakeDamage (hp);
+		if (!isLocalPlayer) {
+			netid.RemoveClientAuthority (connectionToClient);
+		}
+	}
+
+	[Command]
+	void CmdTakeDamage(int hp) {
 		bool died = false;
 		blood += hp;
 		if (blood > 0) {
@@ -50,6 +63,7 @@ public class HP : NetworkBehaviour {
 			died = true;
 		}
 		RpcCheck (died);
+
 	}
 
 	[ClientRpc]

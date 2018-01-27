@@ -5,10 +5,10 @@ using UnityEngine.Networking;
 
 public class TowerAttack : AttackBase {
 	public Material blue, red, gray;
-	public Bullet bullet;
+	public GameObject bullet;
 	SpriteRenderer show;
-	/*[SyncVar (hook = "OnZhenyingChanged")]
-	string zhenying;*/
+	[SyncVar (hook = "OnZhenyingChanged")]
+	string zhenying;
 	[SyncVar (hook = "OnBloodEmpty")]
 	string blood_tag;
 
@@ -16,21 +16,24 @@ public class TowerAttack : AttackBase {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start ();
-		/*zhenying =*/ blood_tag = tag;
+		ChangeStage (tag);
+		zhenying = blood_tag = tag;
 		show = transform.Find ("rang").GetComponent<SpriteRenderer> ();
 		show.enabled = false;
 	}
-
-	/*[Server]
+		
 	protected override void Update()
 	{
+		if (!isServer) {
+			return;
+		}
 		base.Update ();
 		if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
 		{
 			GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
-			this.Attack (mAttackTarget);
+			Attack (mAttackTarget);
 		}
-	}*/
+	}
 
 	[Server]
 	public override void BeAttacked(GameObject enemy, int power) {
@@ -46,29 +49,30 @@ public class TowerAttack : AttackBase {
 			hp.curBlood += power;
 			if (hp.curBlood >= hp.originBlood) {
 				hp.curBlood = hp.originBlood;
-				//zhenying = blood_tag;
+				zhenying = blood_tag;
 			}
 		}
 	}
-
+		
 	public override void Attack(GameObject enemy)
 	{
 		attack_power = 0;
 		base.Attack (enemy);
-		if (enemy == null) {
-			show.enabled = false; 
-		} else {
-			show.enabled = true; 
-			Bullet n = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y+6, transform.position.z), transform.rotation);
-			n.InitData(enemy, 8, 2);
+		bool toshow = false;
+		if (enemy) {
+			toshow = true;
+			GameObject n = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y+6, transform.position.z), transform.rotation);
+			n.GetComponent<Bullet>().InitData(enemy, 8, 2);
+			NetworkServer.Spawn (n);
 		}
+		show.enabled = toshow;
 	}
 
 	void OnBloodEmpty(string value) {
 		blood_tag = value;
 		GetComponent<HP> ().UpdateColor (blood_tag);
 	}
-	/*void OnZhenyingChanged(string value) {
+	void OnZhenyingChanged(string value) {
 		zhenying = value;
 		ChangeStage (zhenying);
 	}
@@ -97,5 +101,5 @@ public class TowerAttack : AttackBase {
 		foreach (var s in str) {
 			transform.Find(s).GetComponent<MeshRenderer> ().material.color = color;
 		}
-	}*/
+	}
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -93,10 +93,10 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 619
-  m_MinSize: {x: 232, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 232, y: 471}
+  m_MaxSize: {x: 10002, y: 14021}
   vertical: 1
-  controlID: 52
+  controlID: 29
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,10 +118,10 @@ MonoBehaviour:
     y: 30
     width: 1349
     height: 619
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 713, y: 471}
+  m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 121
+  controlID: 110
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,8 +140,8 @@ MonoBehaviour:
     y: 0
     width: 246
     height: 288
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -477,19 +477,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Character/Heros/Blade_Warrior/Prefabs
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Character/Heros/Blade_Warrior/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: 50
   m_LastProjectPath: E:\UnityProject\Super Spy
   m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 119}
-    m_SelectedIDs: 92460000
-    m_LastClickedID: 18066
-    m_ExpandedIDs: 00000000d428000058290000f6290000062c00006a2c0000dc2d0000de2d0000da2f0000c03100000e330000aa330000e43400005a350000903600009c36000016370000a8390000b2390000163a0000e63a0000943b000098450000ca470000b4bf0000b6bf0000b8bf0000babf0000bcbf0000bebf0000c0bf0000c2bf0000c4bf0000c6bf0000c8bf0000cabf0000ccbf0000cebf0000d0bf0000d2bf0000d4bf0000d6bf0000d8bf0000dabf0000dcbf0000debf0000e0bf0000e2bf0000e4bf0000e6bf0000e8bf0000ffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 46310000
+    m_LastClickedID: 12614
+    m_ExpandedIDs: 00000000d02a0000122b0000502b0000ec2b00005a2e0000ca2f0000cc2f0000c4310000a433000082350000b63600002c370000603800006c380000e6380000703b00007a3b0000de3b0000ae3c00005c3d0000564700006c49000078c300007ac300007cc300007ec3000080c3000082c3000084c3000086c3000088c300008ac300008cc300008ec3000090c3000092c3000094c3000096c3000098c300009ac300009cc300009ec30000a0c30000a2c30000a4c30000a6c30000a8c30000aac30000acc30000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +517,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d428000058290000f62900006a2c0000dc2d0000de2d0000da2f0000c0310000aa33000048340000e43400005a350000903600009c3600001637000070390000a8390000b2390000163a0000e63a0000943b000098450000ca470000b4bf0000b6bf0000b8bf0000babf0000bcbf0000bebf0000c0bf0000c2bf0000c4bf0000c6bf0000c8bf0000cabf0000ccbf0000cebf0000d0bf0000d2bf0000d4bf0000d6bf0000d8bf0000dabf0000dcbf0000debf0000e0bf0000e2bf0000e4bf0000e6bf0000e8bf0000
+    m_ExpandedIDs: 00000000d02a0000502b0000ec2b0000f82d00005a2e0000ca2f0000cc2f0000c4310000a4330000e634000082350000b63600002c370000603800006c380000e6380000703b00007a3b0000de3b0000ae3c00005c3d0000564700006c49000078c300007ac300007cc300007ec3000080c3000082c3000084c3000086c3000088c300008ac300008cc300008ec3000090c3000092c3000094c3000096c3000098c300009ac300009cc300009ec30000a0c30000a2c30000a4c30000a6c30000a8c30000aac30000acc30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: ba310000
     m_LastClickedID: 0
-    m_ExpandedIDs: 3ea3faffc4a3fafff0bdfaff16befaff1ecafaffd6cafaffe8e4fafff4e4faffb8e6faff7406fbfff606fbff9e08fbffde08fbffaa1cfbff1869fbffcc89fbff3c8efbffc08efbffcea8fbffd6a8fbff42acfbffc6acfbffd4c6fbffdcc6fbff5cf1fbff4cf3fbff5a0dfcff620dfcffee7cfcff502efdffa83cfdff2c3dfdffd859fdfffe59fdff3c79fdffbe79fdff5c96fdff7496fdff78a4fdffb4a6fdff60c3fdff86c3fdff3a05feffba05feff4622feff5c22feffdaeffeff3cf3feffba1bfffffedeffff9efbffff00000000685a010066920100dcc00500fce80500daf805005a0a06005c130900d6170900b84b09001c980a008ea20a008ab00a00b6f70a00
+    m_ExpandedIDs: da22f8ff7448f8ff9a9cf8ff62caf8ff1afaf8ff9afaf8ffd214f9ffda14f9ff6e5af9fff45af9ff2a75f9ff3275f9ff36a9f9ff32aaf9ff76c4f9ff8cc4f9ff28fdf9ffacfdf9ffe217faffea17faff9889faffe68afaff26a7faff86adfaff0aaefaff40c8faff48c8faffe679fbff6c7afbffa294fbffaa94fbff20cefbffa0cefbffdae8fbffe6e8fbff2a0efcffe656fcff285afcff9c5afcffd274fcffda74fcfff498fcffeab9fcff3cfffcffbcfffcff041afdff1e1afdff2c27fdffde27fdff1442fdff1c42fdffe497fdff92c2fdff98e8fdffb415feff1e42feff9c42feffd65cfeffe25cfeff4ae3feff3a71ffff98b2ffff88f9ffff00000000be61000080870200248c0200d08f02001490020002a102000eab02000ac002009ec20200ccd20200043f06008847060006740600108a06009a9b06001ea406009cd00600a6e60600
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

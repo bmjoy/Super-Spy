@@ -2168,7 +2168,6 @@ GameObject:
   - component: {fileID: 1166589157}
   - component: {fileID: 1166589156}
   - component: {fileID: 1166589155}
-  - component: {fileID: 1166589154}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2176,18 +2175,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1166589154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1166589153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
 --- !u!114 &1166589155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3504,7 +3491,8 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 1238489775458748, guid: b6cea08bc1d7c2844a780329c6f6b764, type: 2}
   - {fileID: 1395180769760150, guid: da4da167c6135204289bc24bc8abad34, type: 2}
-  - {fileID: 1744192379995982, guid: acd1505f121d26e45828fbd32a3076c9, type: 2}
+  - {fileID: 1595122694536210, guid: adff6295211d64249b426411b48e875d, type: 2}
+  - {fileID: 1718533149653878, guid: b20abaae1f1b7224cbf4d86eb90990a0, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

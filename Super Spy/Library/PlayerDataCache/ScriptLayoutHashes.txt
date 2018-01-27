@@ -186,6 +186,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.AlphaButtonClickMask
+29424c55c52897f25a78c3aed8901262 Assembly-CSharp.dll:.HeroInit
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 f1d73ac1760876ca422604500197a3f6 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyPlayerList
 197d4cbb1e64853d2ce79e773bca64aa Assembly-CSharp.dll:.HP
@@ -200,7 +201,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 89725648cfe19503fc3f0a3f90fb0942 Assembly-CSharp.dll:.XiaoBinController
-ba42b665f7236de77dc2252d29455bf6 Assembly-CSharp.dll:.TowerAttack
+6b8f7af6ce0f6a50304e076c86aa62b5 Assembly-CSharp.dll:.TowerAttack
 1c87578e8be3ae82b40d239d06946da5 Assembly-CSharp.dll:.SkillJoystick
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bullet
 9d1e138111d33aad3c62dab4e71ae0e6 Assembly-CSharp.dll:.MiniMapElement
@@ -227,4 +228,3 @@ ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 239d2cc8d353bbfcbefc27fa8f0221cc Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyServerList
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-19265a44d286c9fc4028a232a8acf767 Assembly-CSharp.dll:.HeroInit

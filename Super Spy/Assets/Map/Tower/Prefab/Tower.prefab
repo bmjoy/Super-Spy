@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718533149653878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 100}
+  m_LocalPosition: {x: 100, y: 1, z: 100}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4440440837375202}
@@ -626,7 +626,7 @@ MonoBehaviour:
   blue: {fileID: 2100000, guid: 8999c75be50b6d44896b01b326e8a326, type: 2}
   red: {fileID: 2100000, guid: 8e043b6f4987e59428ed29f5bc23e15f, type: 2}
   gray: {fileID: 2100000, guid: db1e9116321d2194c938e1f3f84d6411, type: 2}
-  bullet: {fileID: 114670665431570548, guid: adff6295211d64249b426411b48e875d, type: 2}
+  bullet: {fileID: 1595122694536210, guid: adff6295211d64249b426411b48e875d, type: 2}
 --- !u!114 &114506407914704830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -657,7 +657,7 @@ MonoBehaviour:
     i13: 9
     i14: 144
     i15: 160
-  m_ServerOnly: 0
+  m_ServerOnly: 1
   m_LocalPlayerAuthority: 0
 --- !u!114 &114515271638859530
 MonoBehaviour:
