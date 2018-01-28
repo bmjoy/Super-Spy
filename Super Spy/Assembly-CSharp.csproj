@@ -116,11 +116,8 @@
      <Compile Include="Assets\Minimap\Scripts\MiniMapPoolManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapView.cs" />
      <Compile Include="Assets\Minimap\Scripts\ScaleController.cs" />
-     <Compile Include="Assets\Network\DayNightController.cs" />
      <Compile Include="Assets\Network\NetworkAnimatorController.cs" />
      <Compile Include="Assets\Network\NetworkLobbyHook.cs" />
-     <Compile Include="Assets\Network\NetworkManager2.cs" />
-     <Compile Include="Assets\Network\NetworkManagerHud2.cs" />
      <Compile Include="Assets\Network\NetworkSkillController.cs" />
      <Compile Include="Assets\Store\Scripts\comeback.cs" />
      <Compile Include="Assets\Store\Scripts\EventTriggerClick.cs" />
