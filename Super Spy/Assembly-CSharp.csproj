@@ -52,8 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Character\EasyTouchControl\Component\ETCSetDirectActionTransform.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Examples\_Medias\SliderText.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Examples\Version 2.X_New Features\Script\InitTarget.cs" />
+     <Compile Include="Assets\Character\EasyTouchControl\Component\InitTarget.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ComponentExtensions.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCArea.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCAxis.cs" />
@@ -63,7 +62,7 @@
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCInput.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCJoystick.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCTouchPad.cs" />
-     <Compile Include="Assets\Character\Heros\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\ClipObjControl.cs" />
+     <Compile Include="Assets\Character\Heros\Blade_Girl\FT_Pulse_volume01\magic\ClipObjControl.cs" />
      <Compile Include="Assets\Character\Scripts\AttackBase.cs" />
      <Compile Include="Assets\Character\Scripts\HeroAttack.cs" />
      <Compile Include="Assets\Character\Scripts\HeroInit.cs" />
@@ -92,7 +91,6 @@
      <Compile Include="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarStalker.cs" />
      <Compile Include="Assets\Lobby\Scripts\DraggablePanel.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyCountdownPanel.cs" />
-     <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyHook.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyInfoPanel.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyManager.cs" />
@@ -117,7 +115,6 @@
      <Compile Include="Assets\Minimap\Scripts\MiniMapView.cs" />
      <Compile Include="Assets\Minimap\Scripts\ScaleController.cs" />
      <Compile Include="Assets\Network\NetworkAnimatorController.cs" />
-     <Compile Include="Assets\Network\NetworkLobbyHook.cs" />
      <Compile Include="Assets\Network\NetworkSkillController.cs" />
      <Compile Include="Assets\Store\Scripts\comeback.cs" />
      <Compile Include="Assets\Store\Scripts\EventTriggerClick.cs" />
@@ -125,29 +122,29 @@
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_SimpleDoubleSide.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_UVscroll.shader" />
      <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
-     <None Include="Assets\Character\Heros\Blade_Girl\Models\Blade_girl\FT_Pulse_volume01\magic\Clip.shader" />
+     <None Include="Assets\Character\Heros\Blade_Girl\FT_Pulse_volume01\magic\Clip.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_Beam.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_UVscrollFresnel.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_DoubleDistortionRamp02.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_DissolveSimple.shader" />
-     <None Include="Assets\Minimap\DOTween\DOTween50.xml" />
+     <None Include="Assets\DOTween\DOTween50.xml" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\effect_distortion_mask.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\ParticleAddSoftEffect.shader" />
      <None Include="Assets\Character\SkillEffect\SkillCircle\Resources\Effect\Shader\Particle Alpha Blend1.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_HeatDistortion.shader" />
-     <None Include="Assets\Minimap\DOTween\readme.txt" />
+     <None Include="Assets\DOTween\readme.txt" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_Simple.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\Toon Blended Premmultiply.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_Light.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\ParticlePremultiplyBlend.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\READ ME.txt" />
      <None Include="Assets\Character\SkillEffect\SkillCircle\Resources\Effect\Textures\item\NewSurfaceShader.shader" />
-     <None Include="Assets\Minimap\DOTween\DOTween46.xml" />
+     <None Include="Assets\DOTween\DOTween46.xml" />
      <None Include="Assets\Character\SkillEffect\Effect\skill2\Shaders\FT_DoubleDistortion.shader" />
      <None Include="Assets\FogOfWar\Shaders\FogOfWarBlur.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\ParticleAddEffect.shader" />
      <None Include="Assets\FogOfWar\Shaders\FogOfWarEffect.shader" />
-     <None Include="Assets\Minimap\DOTween\DOTween43.xml" />
+     <None Include="Assets\DOTween\DOTween43.xml" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\Toon Additive.shader" />
      <None Include="Assets\Character\SkillEffect\Effect\skill1\Shader\ParticleBlendEffect.shader" />
  <Reference Include="UnityEngine.UI">
@@ -216,21 +213,6 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="DOTween">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween43.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/DOTween50.dll</HintPath>
- </Reference>
- <Reference Include="DOTweenEditor">
- <HintPath>E:/UnityProject/Super Spy/Assets/Minimap/DOTween/Editor/DOTweenEditor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/96552/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -251,6 +233,21 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/96552/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>E:/UnityProject/Super Spy/Assets/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>E:/UnityProject/Super Spy/Assets/DOTween/DOTween50.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>E:/UnityProject/Super Spy/Assets/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/UnityProject/Super Spy/Assets/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>E:/UnityProject/Super Spy/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

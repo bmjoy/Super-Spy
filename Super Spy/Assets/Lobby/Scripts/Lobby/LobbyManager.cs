@@ -51,12 +51,9 @@ namespace Prototype.NetworkLobby
         
         protected ulong _currentMatchID;
 
-        protected LobbyHook _lobbyHooks;
-
         void Start()
         {
             s_Singleton = this;
-            _lobbyHooks = GetComponent<Prototype.NetworkLobby.LobbyHook>();
             currentPanel = mainMenuPanel;
 
             backButton.gameObject.SetActive(false);
@@ -66,6 +63,14 @@ namespace Prototype.NetworkLobby
 
             SetServerInfo("Offline", "None");
         }
+
+		int cur = 0;
+		public override GameObject OnLobbyServerCreateGamePlayer (NetworkConnection conn, short playerControllerId)
+		{
+			cur = (cur + 1) & 1;
+			gamePlayerPrefab = spawnPrefabs [cur];
+			return base.OnLobbyServerCreateGamePlayer (conn, playerControllerId);
+		}
 
         public override void OnLobbyClientSceneChanged(NetworkConnection conn)
         {
@@ -322,17 +327,6 @@ namespace Prototype.NetworkLobby
                 }
             }
 
-        }
-
-        public override bool OnLobbyServerSceneLoadedForPlayer(GameObject lobbyPlayer, GameObject gamePlayer)
-        {
-            //This hook allows you to apply state data from the lobby-player to the game-player
-            //just subclass "LobbyHook" and add it to the lobby object.
-
-            if (_lobbyHooks)
-                _lobbyHooks.OnLobbyServerSceneLoadedForPlayer(this, lobbyPlayer, gamePlayer);
-
-            return true;
         }
 
         // --- Countdown management
