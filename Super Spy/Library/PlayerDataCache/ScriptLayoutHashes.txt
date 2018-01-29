@@ -1,4 +1,4 @@
-WindowsStandalone
+Android
 SceneListBegin?
 Assets/Scenes/NetworkLobby.unity
 Assets/Scenes/main.unity
