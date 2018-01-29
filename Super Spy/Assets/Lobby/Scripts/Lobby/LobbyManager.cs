@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.Networking.Types;
 using UnityEngine.Networking.Match;
 using System.Collections;
-
+using System.Collections.Generic;
 
 namespace Prototype.NetworkLobby
 {
@@ -14,7 +14,7 @@ namespace Prototype.NetworkLobby
         static short MsgKicked = MsgType.Highest + 1;
 
         static public LobbyManager s_Singleton;
-
+		Queue<GameObject> gamePlayersQueue;
 
         [Header("Unity UI Lobby")]
         [Tooltip("Time in second between all players ready & match start")]
@@ -63,12 +63,10 @@ namespace Prototype.NetworkLobby
 
             SetServerInfo("Offline", "None");
         }
-
-		int cur = 0;
+			
 		public override GameObject OnLobbyServerCreateGamePlayer (NetworkConnection conn, short playerControllerId)
 		{
-			cur = (cur + 1) & 1;
-			gamePlayerPrefab = spawnPrefabs [cur];
+			gamePlayerPrefab = gamePlayersQueue.Dequeue ();
 			return base.OnLobbyServerCreateGamePlayer (conn, playerControllerId);
 		}
 
@@ -370,11 +368,18 @@ namespace Prototype.NetworkLobby
                 }
             }
 
+			gamePlayersQueue = new Queue<GameObject>();
             for (int i = 0; i < lobbySlots.Length; ++i)
             {
                 if (lobbySlots[i] != null)
                 {
-                    (lobbySlots[i] as LobbyPlayer).RpcUpdateCountdown(0);
+					LobbyPlayer player = (lobbySlots [i] as LobbyPlayer);
+					int index = 0;
+					if (player.playerColor == Color.blue) {
+						index = 1;
+					}
+					gamePlayersQueue.Enqueue (spawnPrefabs [index]);
+					player.RpcUpdateCountdown(0);
                 }
             }
 
