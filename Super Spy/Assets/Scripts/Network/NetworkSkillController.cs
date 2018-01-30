@@ -4,8 +4,14 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class NetworkSkillController : NetworkBehaviour {
-	public GameObject[] skills;
-	public float[] life_time;
+	GameObject[] skills;
+	float[] life_time;
+
+	void Start() {
+		HeroInit init = GetComponent<HeroInit> ();
+		skills = init.skills;
+		life_time = init.lifeTimes;
+	}
 	public void ShowEffect(string state, bool flag, Vector3 pos) {
 		CmdShowEffect (state, flag, pos);
 	}

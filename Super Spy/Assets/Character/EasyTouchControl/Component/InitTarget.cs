@@ -10,7 +10,7 @@ public class InitTarget : MonoBehaviour {
 
 		var bianshen = GetComponentInChildren<BianshenEffect> ();
 		if (bianshen) {
-			bool is_spy = target.GetComponent<SpyIdentity> ().IsSpy;
+			bool is_spy = false;/*target.GetComponent<SpyIdentity> ().IsSpy;*/
 			if (is_spy) {
 				bianshen.player = target.gameObject;
 			} else {

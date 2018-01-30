@@ -58,9 +58,18 @@ public class SkillArea : MonoBehaviour {
 
 	public virtual void OnDestroy()
     {
-        joystick.onJoystickDownEvent -= OnJoystickDownEvent;
-        joystick.onJoystickMoveEvent -= OnJoystickMoveEvent;
-        joystick.onJoystickUpEvent -= OnJoystickUpEvent;
+		if (joystick) {
+			if (joystick.onJoystickDownEvent != null) {
+				joystick.onJoystickDownEvent -= OnJoystickDownEvent;
+			}
+			if (joystick.onJoystickDownEvent != null) {
+				joystick.onJoystickDownEvent -= OnJoystickMoveEvent;
+			}
+			if (joystick.onJoystickUpEvent != null) {
+				joystick.onJoystickUpEvent -= OnJoystickUpEvent;
+			}
+		}
+        
     }
 
     void InitSkillAreaType()

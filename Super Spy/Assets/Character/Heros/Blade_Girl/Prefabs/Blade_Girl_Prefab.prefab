@@ -501,18 +501,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4269784153674928}
-  - component: {fileID: 143942734085153728}
-  - component: {fileID: 136207294096174174}
+  - component: {fileID: 114837664359301942}
+  - component: {fileID: 143159678795780688}
   - component: {fileID: 95182477348093082}
   - component: {fileID: 114993495188401610}
   - component: {fileID: 114921130095193006}
-  - component: {fileID: 114377122536472026}
-  - component: {fileID: 114415643183659274}
-  - component: {fileID: 114969800076518106}
-  - component: {fileID: 114588719399007748}
-  - component: {fileID: 114178841616673474}
-  - component: {fileID: 114340439689096764}
-  - component: {fileID: 114168479909628986}
   m_Layer: 0
   m_Name: Blade_Girl_Prefab
   m_TagString: Blue
@@ -1578,7 +1571,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814514970075030}
-  m_LocalRotation: {x: 0.5860293, y: 0.7818797, z: 0.21032208, w: 0.0316001}
+  m_LocalRotation: {x: 0.58602923, y: 0.7818796, z: 0.21032205, w: 0.031600095}
   m_LocalPosition: {x: 0.10010575, y: -0.12684684, z: 0.5340092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2268,57 +2261,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114168479909628986
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d305cc9901b5e4193a2f5ebe5933a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack_distance: 3
-  attack_cd: 1
-  attack_power: 5
---- !u!114 &114178841616673474
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31d3676dd904d34da860071d329d5b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 10
---- !u!114 &114340439689096764
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
-  max_blood: 100
---- !u!114 &114377122536472026
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e77b476d4564e44fabecb4705a4053c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114415643183659274
+--- !u!114 &114837664359301942
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2339,17 +2282,6 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114588719399007748
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270f878da36d41e48a30405e2284cf5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114921130095193006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2382,29 +2314,6 @@ MonoBehaviour:
     i15: 52
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!114 &114969800076518106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c873f67c35fc13d42b72d14b888c34c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skills:
-  - {fileID: 1878038004280662, guid: b1e17c5b965c40e4fb296c1b2cb20fab, type: 2}
-  - {fileID: 180852, guid: 9ef916b309aba9446a08be5910cbc272, type: 2}
-  - {fileID: 100012, guid: 6da647a5ddf517441af0e916ea8667d7, type: 2}
-  - {fileID: 100008, guid: f1177dffe93275645a1647b479053f8f, type: 2}
-  - {fileID: 100010, guid: 1916f5208820a5c4fa7d42b174f30c70, type: 2}
-  life_time:
-  - 30
-  - 10
-  - 5
-  - 4
-  - 3
 --- !u!114 &114993495188401610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2416,20 +2325,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658f21ca06cace74494d3eecf22eb03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin_position: {x: 100, y: 0, z: 95}
---- !u!136 &136207294096174174
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1395180769760150}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  originPosition: {x: 100, y: 1, z: 100}
+  maxBlood: 100
+  HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
+  attackDistance: 3
+  attackCd: 1.5
+  attackPower: 5
+  skills:
+  - {fileID: 1878038004280662, guid: b1e17c5b965c40e4fb296c1b2cb20fab, type: 2}
+  - {fileID: 180852, guid: 9ef916b309aba9446a08be5910cbc272, type: 2}
+  - {fileID: 100012, guid: 6da647a5ddf517441af0e916ea8667d7, type: 2}
+  - {fileID: 100008, guid: f1177dffe93275645a1647b479053f8f, type: 2}
+  - {fileID: 100010, guid: 1916f5208820a5c4fa7d42b174f30c70, type: 2}
+  lifeTimes:
+  - 30
+  - 10
+  - 5
+  - 4
+  - 3
 --- !u!137 &137061891626703040
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2623,7 +2536,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.11467905, y: -0.0033299923, z: 0.097331345}
     m_Extent: {x: 0.19231002, y: 0.18453018, z: 0.17369455}
   m_DirtyAABB: 0
---- !u!143 &143942734085153728
+--- !u!143 &143159678795780688
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

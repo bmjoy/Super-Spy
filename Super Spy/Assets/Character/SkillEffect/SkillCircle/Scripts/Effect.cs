@@ -12,7 +12,6 @@ public class Effect : SkillArea {
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
-		joystick.onJoystickUpEvent += PlayEffect;
 		cur_time = 0;
 		var m_mask = transform.parent.Find (
 			transform.gameObject.name.Replace ("Skill", "mask"));
@@ -22,9 +21,10 @@ public class Effect : SkillArea {
 		time_text.text = "";
 	}
 
-	public override void OnDestroy() {
-		base.OnDestroy ();
-		joystick.onJoystickUpEvent -= PlayEffect;
+	protected override void OnJoystickUpEvent ()
+	{
+		base.OnJoystickUpEvent ();
+		PlayEffect ();
 	}
 	
 	// Update is called once per frame

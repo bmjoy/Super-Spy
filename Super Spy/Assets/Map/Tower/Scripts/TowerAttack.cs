@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class TowerAttack : AttackBase {
-	public Material blue, red, gray;
-	public GameObject bullet;
+	GameObject bullet;
 	SpriteRenderer show;
 	[SyncVar (hook = "OnZhenyingChanged")]
 	string zhenying;
@@ -20,6 +19,7 @@ public class TowerAttack : AttackBase {
 		zhenying = blood_tag = tag;
 		show = transform.Find ("rang").GetComponent<SpriteRenderer> ();
 		show.enabled = false;
+		bullet = GetComponent<TowerInit> ().bullet;
 	}
 		
 	protected override void Update()
@@ -56,8 +56,6 @@ public class TowerAttack : AttackBase {
 		
 	public override void Attack(GameObject enemy)
 	{
-		attack_power = 0;
-		base.Attack (enemy);
 		bool toshow = false;
 		if (enemy) {
 			toshow = true;

@@ -1,4 +1,4 @@
-Android
+WindowsStandalone
 SceneListBegin?
 Assets/Scenes/NetworkLobby.unity
 Assets/Scenes/main.unity
@@ -52,7 +52,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 72372a6732732299b6dd9f3032fde16b Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyInfoPanel
-89725648cfe19503fc3f0a3f90fb0942 Assembly-CSharp.dll:.XiaoBinAttack
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.XiaoBinAttack
 bca2dce9d3596d95f058660192bb13b3 Assembly-CSharp.dll:.SoldierInit
 5335adc40707ab1a12eba7a36f2ed495 Assembly-CSharp.dll:.MiniMapView
 8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
@@ -170,7 +170,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-89725648cfe19503fc3f0a3f90fb0942 Assembly-CSharp.dll:.AttackBase
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AttackBase
 90615cae2347701e3e9b1f2ac6a12b41 Assembly-CSharp.dll:.SkillArea
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.comeback
 2dbfd4f7836c7f6a79e17be5f4bf7969 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.WaypointCircuit
@@ -181,10 +181,10 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.AlphaButtonClickMask
-6e5b4e4aefd24f76c2ce7633d7ed666e Assembly-CSharp.dll:.HeroInit
+6874b80232c73264d66184df35ddf018 Assembly-CSharp.dll:.HeroInit
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 f1d73ac1760876ca422604500197a3f6 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyPlayerList
-197d4cbb1e64853d2ce79e773bca64aa Assembly-CSharp.dll:.HP
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HP
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 d2af69ce28cda6fcf0b7728ae3f251b4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DynamicShadowSettings
 2169d3f72ae82a04b3c3f16705e20506 Assembly-CSharp.dll:.LifeControl
@@ -194,19 +194,19 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-89725648cfe19503fc3f0a3f90fb0942 Assembly-CSharp.dll:.XiaoBinController
-6b8f7af6ce0f6a50304e076c86aa62b5 Assembly-CSharp.dll:.TowerAttack
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.XiaoBinController
+d104c94fca453de5008e93cb4ce7dd30 Assembly-CSharp.dll:.TowerAttack
 1c87578e8be3ae82b40d239d06946da5 Assembly-CSharp.dll:.SkillJoystick
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bullet
 9d1e138111d33aad3c62dab4e71ae0e6 Assembly-CSharp.dll:.MiniMapElement
 94678f7833bd0dd50297dbd289556f88 Assembly-CSharp.dll:.ETCButton
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-a5785c1c52267621a7556a5681877731 Assembly-CSharp.dll:.NetworkSkillController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkSkillController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InitTarget
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 8ca369eb1f70b6ddf18275a5e2fa36c4 Assembly-CSharp.dll:.SkillEffect
 fca2ca106e94163353df3dcc945f1fa0 Assembly-CSharp.dll:.GenerateSoldiers
-89725648cfe19503fc3f0a3f90fb0942 Assembly-CSharp.dll:.HeroAttack
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroAttack
 1369a844a5a8a7a3c4babe57e463df9b Assembly-CSharp.dll:.ETCDPad
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 9b2ea1e17f48f9cac9a3ff88e0a673fa Assembly-CSharp.dll:.ETCJoystick
@@ -222,3 +222,4 @@ ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 239d2cc8d353bbfcbefc27fa8f0221cc Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyServerList
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Initialize

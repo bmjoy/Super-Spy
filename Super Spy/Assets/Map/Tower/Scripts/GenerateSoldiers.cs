@@ -5,9 +5,9 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class GenerateSoldiers : NetworkBehaviour {
-	public GameObject soldier;
-	public GameObject magician;
-	public Vector3 red_quanshui, blue_quanshui;
+	GameObject soldier;
+	GameObject magician;
+	Vector3 red_quanshui, blue_quanshui;
 
 	float last_time, cur_time;
 
@@ -15,6 +15,11 @@ public class GenerateSoldiers : NetworkBehaviour {
 	[Server]
 	void Start() {
 		cur_time = last_time = 0;
+		TowerInit init = GetComponent<TowerInit> ();
+		soldier = init.soldier;
+		magician = init.magician;
+		red_quanshui = init.red_quanshui;
+		blue_quanshui = init.blue_quanshui;
 		Generate ();
 	}
 	// Update is called once per frame

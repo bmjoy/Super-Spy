@@ -72,9 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117413026578688}
   - component: {fileID: 114506407914704830}
-  - component: {fileID: 114124076565384550}
-  - component: {fileID: 114500691160100442}
-  - component: {fileID: 114515271638859530}
+  - component: {fileID: 114839778587677476}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Gray
@@ -594,39 +592,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5d12e5afe8a5c094facc3136b54379fc, type: 3}
---- !u!114 &114124076565384550
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1718533149653878}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be5f13cc623894941afcbee4fc1d5adb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soldier: {fileID: 1344826912453464, guid: 7b4c7a4f5d964e04d8a87b7b9265b012, type: 2}
-  magician: {fileID: 1503147092217752, guid: c4e312373d8d3a44dac8d232bc3b4003, type: 2}
-  red_quanshui: {x: 40, y: 0, z: 37}
-  blue_quanshui: {x: 163, y: 0, z: 160}
---- !u!114 &114500691160100442
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1718533149653878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2a77cb19f54954c9af547891175728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack_distance: 10
-  attack_cd: 1.5
-  attack_power: 2
-  blue: {fileID: 2100000, guid: 8999c75be50b6d44896b01b326e8a326, type: 2}
-  red: {fileID: 2100000, guid: 8e043b6f4987e59428ed29f5bc23e15f, type: 2}
-  gray: {fileID: 2100000, guid: db1e9116321d2194c938e1f3f84d6411, type: 2}
-  bullet: {fileID: 1595122694536210, guid: adff6295211d64249b426411b48e875d, type: 2}
 --- !u!114 &114506407914704830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -659,19 +624,6 @@ MonoBehaviour:
     i15: 160
   m_ServerOnly: 1
   m_LocalPlayerAuthority: 0
---- !u!114 &114515271638859530
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1718533149653878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653c421b65bc4a14d8c1c126d97a1b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBar: {fileID: 1160566874324768, guid: 130082987fa0a7d43a04316c52c72060, type: 2}
-  max_blood: 10
 --- !u!114 &114816257076507524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -684,6 +636,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -1.5
+--- !u!114 &114839778587677476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718533149653878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb110061a6c48746a76d42eef1bfadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxBlood: 30
+  HPBar: {fileID: 1160566874324768, guid: 130082987fa0a7d43a04316c52c72060, type: 2}
+  attackDistance: 6
+  attackCd: 1
+  attackPower: 2
+  bullet: {fileID: 1595122694536210, guid: adff6295211d64249b426411b48e875d, type: 2}
+  soldier: {fileID: 1344826912453464, guid: 7b4c7a4f5d964e04d8a87b7b9265b012, type: 2}
+  magician: {fileID: 1503147092217752, guid: c4e312373d8d3a44dac8d232bc3b4003, type: 2}
+  red_quanshui: {x: 40, y: 0, z: 37}
+  blue_quanshui: {x: 163, y: 0, z: 160}
 --- !u!114 &114870213726698288
 MonoBehaviour:
   m_ObjectHideFlags: 1

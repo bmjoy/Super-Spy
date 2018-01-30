@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class AttackBase : NetworkBehaviour {
-	public int attack_distance;
-	public float attack_cd;
-	public int attack_power;
+	protected int attack_distance;
+	float attack_cd;
+	int attack_power;
 	float _time;
 	// Use this for initialization
 	protected virtual void Start () {
+		HeroInit init = GetComponent<HeroInit> ();
+		attack_distance = init.attackDistance;
+		attack_cd = init.attackCd;
+		attack_power = init.attackPower;
 		_time = 0;
 	}
 

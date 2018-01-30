@@ -6,9 +6,8 @@ using UnityStandardAssets.Utility;
 using UnityEngine.UI;
 
 public class HP : NetworkBehaviour {
-	public GameObject HPBar;
-
-	public int max_blood = 10;
+	int max_blood = 10;
+	GameObject HPBar;
 	[SyncVar (hook = "OnHeathChanged")]
 	int blood;
 
@@ -26,7 +25,7 @@ public class HP : NetworkBehaviour {
 		}
 	}
 
-	GameObject bar;
+	GameObject bar = null;
 
 	protected virtual void Update() {
 		bar.transform.LookAt (Camera.main.transform);
@@ -34,6 +33,9 @@ public class HP : NetworkBehaviour {
 
 	void OnEnable() {
 		if (bar == null) {
+			Initialize init = GetComponent<Initialize> ();
+			max_blood = init.maxBlood;
+			HPBar = init.HPBar;
 			bar = GameObject.Instantiate (HPBar, transform);
 			UpdateColor (gameObject.tag);
 		}
@@ -41,14 +43,7 @@ public class HP : NetworkBehaviour {
 	}
 
 	public void UpdateHP(int hp) {
-		var netid = GetComponent<NetworkIdentity> ();
-		if (!isLocalPlayer) {
-			netid.AssignClientAuthority (connectionToClient);
-		}
 		CmdTakeDamage (hp);
-		if (!isLocalPlayer) {
-			netid.RemoveClientAuthority (connectionToClient);
-		}
 	}
 
 	[Command]
