@@ -13,8 +13,8 @@ public class TowerAttack : AttackBase {
 
 
 	// Use this for initialization
-	protected override void Start () {
-		base.Start ();
+	protected override void Awake () {
+		base.Awake ();
 		ChangeStage (tag);
 		zhenying = blood_tag = tag;
 		show = transform.Find ("rang").GetComponent<SpriteRenderer> ();
@@ -56,6 +56,7 @@ public class TowerAttack : AttackBase {
 		
 	public override void Attack(GameObject enemy)
 	{
+		base.Attack (enemy);
 		bool toshow = false;
 		if (enemy) {
 			toshow = true;

@@ -9,8 +9,8 @@ public class AttackBase : NetworkBehaviour {
 	int attack_power;
 	float _time;
 	// Use this for initialization
-	protected virtual void Start () {
-		HeroInit init = GetComponent<HeroInit> ();
+	protected virtual void Awake () {
+		Initialize init = GetComponent<Initialize> ();
 		attack_distance = init.attackDistance;
 		attack_cd = init.attackCd;
 		attack_power = init.attackPower;

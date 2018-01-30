@@ -28,7 +28,9 @@ public class HP : NetworkBehaviour {
 	GameObject bar = null;
 
 	protected virtual void Update() {
-		bar.transform.LookAt (Camera.main.transform);
+		if (bar) {
+			bar.transform.LookAt (Camera.main.transform);
+		}
 	}
 
 	void OnEnable() {
