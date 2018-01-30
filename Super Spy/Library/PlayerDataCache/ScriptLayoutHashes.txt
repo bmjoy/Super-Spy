@@ -137,6 +137,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 149e538468c9a609cf26b23682c996c7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
+147beda1768c1609517fb6deae55ec96 Assembly-CSharp.dll:.TowerInit
 4df86f437a61b08c14fd0adff88ddf71 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ActivateTrigger
 a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.InputAxisScrollbar
 fe76270bd84ec3b6f2f6f92c69cf69da Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.AxisTouchButton
@@ -181,7 +182,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.AlphaButtonClickMask
-6874b80232c73264d66184df35ddf018 Assembly-CSharp.dll:.HeroInit
+e34c37e15f07f794caf49244c1ecf73e Assembly-CSharp.dll:.HeroInit
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 f1d73ac1760876ca422604500197a3f6 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyPlayerList
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HP
@@ -195,7 +196,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.XiaoBinController
-d104c94fca453de5008e93cb4ce7dd30 Assembly-CSharp.dll:.TowerAttack
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TowerAttack
 1c87578e8be3ae82b40d239d06946da5 Assembly-CSharp.dll:.SkillJoystick
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bullet
 9d1e138111d33aad3c62dab4e71ae0e6 Assembly-CSharp.dll:.MiniMapElement
@@ -205,7 +206,7 @@ d104c94fca453de5008e93cb4ce7dd30 Assembly-CSharp.dll:.TowerAttack
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InitTarget
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 8ca369eb1f70b6ddf18275a5e2fa36c4 Assembly-CSharp.dll:.SkillEffect
-fca2ca106e94163353df3dcc945f1fa0 Assembly-CSharp.dll:.GenerateSoldiers
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GenerateSoldiers
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroAttack
 1369a844a5a8a7a3c4babe57e463df9b Assembly-CSharp.dll:.ETCDPad
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
@@ -219,7 +220,8 @@ ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FogOfWarStalker
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FPSCounter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Prototype.NetworkLobby.DraggablePanel
+b445e6c66981f94fd2bc90818bec8e59 Assembly-CSharp.dll:.Initialize
 239d2cc8d353bbfcbefc27fa8f0221cc Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyServerList
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Initialize
+94119a3a88e6f1f88bee39577e0f2cba Assembly-CSharp.dll:.TowerGroup

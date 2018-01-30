@@ -107,6 +107,7 @@
      <Compile Include="Assets\Map\Tower\Scripts\Positions.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Rotate.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\TowerAttack.cs" />
+     <Compile Include="Assets\Map\Tower\Scripts\TowerGroup.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\TowerInit.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapCameraManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapController.cs" />

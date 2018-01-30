@@ -45,28 +45,13 @@ public class HP : NetworkBehaviour {
 	}
 
 	public void UpdateHP(int hp) {
-		CmdTakeDamage (hp);
-	}
-
-	[Command]
-	void CmdTakeDamage(int hp) {
-		bool died = false;
 		blood += hp;
 		if (blood > 0) {
 			if (blood > max_blood) {
 				blood = max_blood;
 			}
 		} else {
-			died = true;
-		}
-		RpcCheck (died);
-
-	}
-
-	[ClientRpc]
-	void RpcCheck(bool died) {
-		if (died) {
-			Destroy (gameObject);
+			NetworkServer.Destroy (gameObject);
 		}
 	}
 

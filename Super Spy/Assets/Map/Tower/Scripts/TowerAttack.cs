@@ -10,28 +10,26 @@ public class TowerAttack : AttackBase {
 	string zhenying;
 	[SyncVar (hook = "OnBloodEmpty")]
 	string blood_tag;
+	[SyncVar (hook = "OnShow")]
+	bool toShow;
 
-
-	// Use this for initialization
-	protected override void Awake () {
-		base.Awake ();
-		ChangeStage (tag);
-		zhenying = blood_tag = tag;
-		show = transform.Find ("rang").GetComponent<SpriteRenderer> ();
-		show.enabled = false;
+	public override void OnStartServer ()
+	{
+		base.OnStartServer ();
 		bullet = GetComponent<TowerInit> ().bullet;
+		zhenying = blood_tag = tag;
+		toShow = false;
 	}
-		
+
 	protected override void Update()
 	{
-		if (!isServer) {
-			return;
-		}
 		base.Update ();
-		if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
-		{
-			GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
-			Attack (mAttackTarget);
+		if (isServer) {
+			if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
+			{
+				GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
+				Attack (mAttackTarget);
+			}
 		}
 	}
 
@@ -57,14 +55,12 @@ public class TowerAttack : AttackBase {
 	public override void Attack(GameObject enemy)
 	{
 		base.Attack (enemy);
-		bool toshow = false;
+		toShow = enemy != null;
 		if (enemy) {
-			toshow = true;
 			GameObject n = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y+6, transform.position.z), transform.rotation);
 			n.GetComponent<Bullet>().InitData(enemy, 8, 2);
 			NetworkServer.Spawn (n);
 		}
-		show.enabled = toshow;
 	}
 
 	void OnBloodEmpty(string value) {
@@ -74,6 +70,15 @@ public class TowerAttack : AttackBase {
 	void OnZhenyingChanged(string value) {
 		zhenying = value;
 		ChangeStage (zhenying);
+	}
+
+	void OnShow(bool value) {
+		if (toShow != value) {
+			if (show == null) {
+				show = transform.Find ("rang").GetComponent<SpriteRenderer> ();
+			}
+			show.enabled = toShow = value;
+		}
 	}
 		
 	public void ChangeStage(string zhenying) {

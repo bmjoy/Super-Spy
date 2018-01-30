@@ -2,11 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Map\Tower\Scripts\TowerAttack.cs">
     <Files>
-      <File FileName="Assets\Character\Scripts\HeroInit.cs" Line="9" Column="27" />
-      <File FileName="Assets\Character\Scripts\Initialize.cs" Line="10" Column="24" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerInit.cs" Line="14" Column="35" />
-      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="16" Column="35" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="59" Column="23" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="25" Column="3" />
+      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="17" Column="13" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerGroup.cs" Line="14" Column="36" />
+      <File FileName="Assets\Map\Tower\Scripts\Bullet.cs" Line="35" Column="19" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerInit.cs" Line="14" Column="21" />
+      <File FileName="Assets\Character\XiaoBin\Scripts\XiaoBinController.cs" Line="13" Column="1" />
+      <File FileName="Assets\Map\Tower\Scripts\HP.cs" Line="49" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
