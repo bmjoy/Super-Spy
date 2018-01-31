@@ -33,7 +33,7 @@ namespace Prototype.NetworkLobby
 
         protected RectTransform currentPanel;
 
-        public Button backButton;
+        public Button backButton, startGameButton;
 
         public Text hostInfo;
 
@@ -46,7 +46,7 @@ namespace Prototype.NetworkLobby
         {
             s_Singleton = this;
             currentPanel = mainMenuPanel;
-
+			startGameButton.gameObject.SetActive (false);
             backButton.gameObject.SetActive(false);
             GetComponent<Canvas>().enabled = true;
 
@@ -196,6 +196,8 @@ namespace Prototype.NetworkLobby
 			base.OnStartHost ();
             ChangeTo(lobbyPanel);
             backDelegate = StopHostClbk;
+			startGameButton.gameObject.SetActive (true);
+			startGameButton.interactable = false;
 			SetServerInfo (Network.player.ipAddress);
         }
 
@@ -272,8 +274,12 @@ namespace Prototype.NetworkLobby
 			}
 
 			if(allready)
-				StartCoroutine(ServerCountdownCoroutine());
+				startGameButton.interactable = true;
         }
+
+		public void StartToLoad() {
+			StartCoroutine(ServerCountdownCoroutine());
+		}
 
         public IEnumerator ServerCountdownCoroutine()
         {
