@@ -13,6 +13,8 @@ public class TowerAttack : AttackBase {
 	[SyncVar (hook = "OnShow")]
 	bool toShow;
 
+	static Dictionary<string, Color> colors;
+
 	public override void OnStartServer ()
 	{
 		base.OnStartServer ();
@@ -33,20 +35,18 @@ public class TowerAttack : AttackBase {
 		}
 	}
 
-	[Server]
 	public override void BeAttacked(GameObject enemy, int power) {
 		HP hp = GetComponent<HP> ();
 		if (blood_tag != enemy.tag) {
-			if (power <= hp.curBlood) {
-				hp.curBlood -= power;
+			if (power < hp.curBlood) {
+				hp.UpdateHP (-power);
 			} else {
-				hp.curBlood = power - hp.curBlood;
+				hp.curBlood = (power - hp.curBlood);
 				blood_tag = enemy.tag;
 			}
 		} else {
-			hp.curBlood += power;
+			hp.UpdateHP (power);
 			if (hp.curBlood >= hp.originBlood) {
-				hp.curBlood = hp.originBlood;
 				zhenying = blood_tag;
 			}
 		}
@@ -57,9 +57,8 @@ public class TowerAttack : AttackBase {
 		base.Attack (enemy);
 		toShow = enemy != null;
 		if (enemy) {
-			GameObject n = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y+6, transform.position.z), transform.rotation);
+			GameObject n = Instantiate(bullet, transform);
 			n.GetComponent<Bullet>().InitData(enemy, 8, 2);
-			NetworkServer.Spawn (n);
 		}
 	}
 
@@ -69,7 +68,9 @@ public class TowerAttack : AttackBase {
 	}
 	void OnZhenyingChanged(string value) {
 		zhenying = value;
-		ChangeStage (zhenying);
+		gameObject.tag = zhenying;
+		transform.Find ("Walls").tag = zhenying;
+		SetTowerMaterial ();
 	}
 
 	void OnShow(bool value) {
@@ -81,27 +82,15 @@ public class TowerAttack : AttackBase {
 		}
 	}
 		
-	public void ChangeStage(string zhenying) {
-		gameObject.tag = zhenying;
-		transform.Find ("Walls").tag = zhenying;
-		switch (zhenying) {
-		case "Blue":
-			SetTowerMaterial (Color.blue);
-			break;
-		case "Red":
-			SetTowerMaterial (Color.red);
-			break;
-		case "Gray":
-			SetTowerMaterial (Color.gray);
-			break;
-		default:
-			break;
-		}
-
-	}
-
-	void SetTowerMaterial(Color color) {
+	void SetTowerMaterial() {
 		string[] str = {"Banners", "Crystal", "Tower_Gray"};
+		if (colors == null) {
+			colors = new Dictionary<string, Color> ();
+			colors ["Gray"] = Color.gray;
+			colors ["Red"] = Color.red;
+			colors ["Blue"] = Color.blue;
+		}
+		Color color = colors [zhenying];
 		foreach (var s in str) {
 			transform.Find(s).GetComponent<MeshRenderer> ().material.color = color;
 		}

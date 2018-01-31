@@ -45,11 +45,12 @@ public class HP : NetworkBehaviour {
 	}
 
 	public void UpdateHP(int hp) {
-		blood += hp;
-		if (blood > 0) {
-			if (blood > max_blood) {
-				blood = max_blood;
+		int newBlood = blood + hp;
+		if (newBlood > 0) {
+			if (newBlood > max_blood) {
+				newBlood = max_blood;
 			}
+			blood = newBlood;
 		} else {
 			NetworkServer.Destroy (gameObject);
 		}
@@ -73,7 +74,7 @@ public class HP : NetworkBehaviour {
 		}
 	}
 
-	void OnHeathChanged(int value) {
+	public void OnHeathChanged(int value) {
 		blood = value;
 		UpdateBar ();
 	}

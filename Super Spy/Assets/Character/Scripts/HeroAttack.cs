@@ -36,7 +36,7 @@ public class HeroAttack : AttackBase {
 		}
 		if (Time.time - m_recovery > 1.0f) {
 			m_recovery = Time.time;
-			GetComponent<HP> ().UpdateHP (1);
+			//GetComponent<HP> ().UpdateHP (1);
 		}
 	}
 }

@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 public class TowerGroup : NetworkBehaviour {
 	public GameObject tower;
 	public Vector3[] towerPositions;
+
 	public override void OnStartServer ()
 	{
 		base.OnStartServer ();

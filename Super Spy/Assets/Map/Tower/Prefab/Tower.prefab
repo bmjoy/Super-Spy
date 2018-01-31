@@ -71,6 +71,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117413026578688}
+  - component: {fileID: 114712880619662242}
   - component: {fileID: 114506407914704830}
   - component: {fileID: 114839778587677476}
   m_Layer: 0
@@ -173,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718533149653878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100, y: 1, z: 100}
+  m_LocalPosition: {x: 100, y: 0, z: 100}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4440440837375202}
@@ -623,7 +624,28 @@ MonoBehaviour:
     i14: 144
     i15: 160
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114712880619662242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1718533149653878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114816257076507524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -647,10 +669,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb110061a6c48746a76d42eef1bfadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBlood: 30
+  maxBlood: 5
   HPBar: {fileID: 1160566874324768, guid: 130082987fa0a7d43a04316c52c72060, type: 2}
   attackDistance: 6
-  attackCd: 1
+  attackCd: 1.5
   attackPower: 2
   bullet: {fileID: 1595122694536210, guid: adff6295211d64249b426411b48e875d, type: 2}
   soldier: {fileID: 1344826912453464, guid: 7b4c7a4f5d964e04d8a87b7b9265b012, type: 2}

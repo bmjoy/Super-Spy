@@ -445,8 +445,10 @@ GameObject:
   m_Component:
   - component: {fileID: 121750284}
   - component: {fileID: 121750283}
+  - component: {fileID: 121750286}
+  - component: {fileID: 121750285}
   m_Layer: 0
-  m_Name: GameContrller
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,6 +478,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121750285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121750282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d460a332b7c8f246882bacb6ea17411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 1718533149653878, guid: b20abaae1f1b7224cbf4d86eb90990a0, type: 2}
+  towerPositions: []
+--- !u!114 &121750286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121750282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 0
+    i1: 0
+    i2: 0
+    i3: 0
+    i4: 0
+    i5: 0
+    i6: 0
+    i7: 0
+    i8: 0
+    i9: 0
+    i10: 0
+    i11: 0
+    i12: 0
+    i13: 0
+    i14: 0
+    i15: 0
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!1 &199872363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,7 +3577,6 @@ MonoBehaviour:
   m_SpawnPrefabs:
   - {fileID: 1238489775458748, guid: b6cea08bc1d7c2844a780329c6f6b764, type: 2}
   - {fileID: 1395180769760150, guid: da4da167c6135204289bc24bc8abad34, type: 2}
-  - {fileID: 1595122694536210, guid: adff6295211d64249b426411b48e875d, type: 2}
   - {fileID: 1718533149653878, guid: b20abaae1f1b7224cbf4d86eb90990a0, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
@@ -3589,7 +3635,7 @@ MonoBehaviour:
   matchMaker: {fileID: 0}
   m_ShowLobbyGUI: 0
   m_MaxPlayers: 10
-  m_MaxPlayersPerConnection: 1
+  m_MaxPlayersPerConnection: 10
   m_MinPlayers: 0
   m_LobbyPlayerPrefab: {fileID: 11487034, guid: ad727d7e1462ecc4f83c898ecc501997,
     type: 2}
