@@ -8,22 +8,17 @@ namespace Prototype.NetworkLobby
     public class LobbyMainMenu : MonoBehaviour 
     {
         public LobbyManager lobbyManager;
-
-        public RectTransform lobbyServerList;
         public RectTransform lobbyPanel;
-
-        public InputField ipInput;
-        public InputField matchNameInput;
+        public InputField roomInput;
+		public Button joinRoom;
 
         public void OnEnable()
         {
             lobbyManager.topPanel.ToggleVisibility(true);
-
-            ipInput.onEndEdit.RemoveAllListeners();
-            ipInput.onEndEdit.AddListener(onEndEditIP);
-
-            /*matchNameInput.onEndEdit.RemoveAllListeners();
-            matchNameInput.onEndEdit.AddListener(onEndEditGameName);*/
+			roomInput.onEndEdit.RemoveAllListeners();
+			roomInput.onEndEdit.AddListener(onEndEditRoomName);
+			roomInput.onValueChanged.RemoveAllListeners();
+			roomInput.onValueChanged.AddListener(onEditRoomName);
         }
 
         public void OnClickHost()
@@ -33,66 +28,23 @@ namespace Prototype.NetworkLobby
 
         public void OnClickJoin()
         {
-            lobbyManager.ChangeTo(lobbyPanel);
-
-            lobbyManager.networkAddress = ipInput.text;
-            lobbyManager.StartClient();
-
-            lobbyManager.backDelegate = lobbyManager.StopClientClbk;
-            lobbyManager.DisplayIsConnecting();
-
-            lobbyManager.SetServerInfo("Connecting...", lobbyManager.networkAddress);
+			lobbyManager.ChangeTo(lobbyPanel);
+			lobbyManager.DisplayIsConnecting();
+			lobbyManager.networkAddress = roomInput.text;
+			lobbyManager.StartClient();
+			lobbyManager.backDelegate = lobbyManager.StopClientClbk;
         }
 
-        /*public void OnClickDedicated()
-        {
-            lobbyManager.ChangeTo(null);
-            lobbyManager.StartServer();
+		void onEditRoomName(string text) {
+			joinRoom.interactable = text.Length != 0;
+		}
 
-            lobbyManager.backDelegate = lobbyManager.StopServerClbk;
-
-            lobbyManager.SetServerInfo("Dedicated Server", lobbyManager.networkAddress);
-        }
-
-        public void OnClickCreateMatchmakingGame()
-        {
-            lobbyManager.StartMatchMaker();
-            lobbyManager.matchMaker.CreateMatch(
-                matchNameInput.text,
-                (uint)lobbyManager.maxPlayers,
-                true,
-				"", "", "", 0, 0,
-				lobbyManager.OnMatchCreate);
-
-            lobbyManager.backDelegate = lobbyManager.StopHost;
-            lobbyManager._isMatchmaking = true;
-            lobbyManager.DisplayIsConnecting();
-
-            lobbyManager.SetServerInfo("Matchmaker Host", lobbyManager.matchHost);
-        }
-
-        public void OnClickOpenServerList()
-        {
-            lobbyManager.StartMatchMaker();
-            lobbyManager.backDelegate = lobbyManager.SimpleBackClbk;
-            lobbyManager.ChangeTo(lobbyServerList);
-        }*/
-
-        void onEndEditIP(string text)
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                OnClickJoin();
-            }
-        }
-
-        /*void onEndEditGameName(string text)
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                OnClickCreateMatchmakingGame();
-            }
-        }*/
-
+		void onEndEditRoomName(string text)
+		{
+			if (Input.GetKeyDown(KeyCode.Return))
+			{
+				OnClickJoin();
+			}
+		}
     }
 }

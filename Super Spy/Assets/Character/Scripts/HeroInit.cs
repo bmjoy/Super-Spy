@@ -20,7 +20,7 @@ public class HeroInit : Initialize {
 		OnEnableCheck ();
 		OnEnaleAttack ();
 	}
-
+		
 	public override void OnStartLocalPlayer ()
 	{
 		base.OnStartLocalPlayer ();

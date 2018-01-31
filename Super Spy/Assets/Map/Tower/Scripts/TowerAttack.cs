@@ -37,12 +37,13 @@ public class TowerAttack : AttackBase {
 
 	public override void BeAttacked(GameObject enemy, int power) {
 		HP hp = GetComponent<HP> ();
-		if (blood_tag != enemy.tag) {
+		string enemyTag = enemy.tag;
+		if (blood_tag != enemyTag) {
 			if (power < hp.curBlood) {
 				hp.UpdateHP (-power);
 			} else {
 				hp.curBlood = (power - hp.curBlood);
-				blood_tag = enemy.tag;
+				blood_tag = enemyTag;
 			}
 		} else {
 			hp.UpdateHP (power);

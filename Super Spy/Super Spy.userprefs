@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Map\Tower\Scripts\TowerAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs">
     <Files>
-      <File FileName="Assets\Map\Tower\Scripts\TowerGroup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="88" Column="24" />
-      <File FileName="Assets\Map\Tower\Scripts\HP.cs" Line="65" Column="14" />
+      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyManager.cs" Line="22" Column="3" />
+      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyPlayerList.cs" Line="59" Column="29" />
+      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyPlayer.cs" Line="47" Column="82" />
+      <File FileName="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs" Line="39" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -35,21 +35,12 @@ namespace Prototype.NetworkLobby
 
         public Button backButton;
 
-        public Text statusInfo;
         public Text hostInfo;
 
         //Client numPlayers from NetworkManager is always 0, so we count (throught connect/destroy in LobbyPlayer) the number
         //of players, so that even client know how many player there is.
         [HideInInspector]
         public int _playerNumber = 0;
-
-        //used to disconnect a client properly when exiting the matchmaker
-        [HideInInspector]
-        public bool _isMatchmaking = false;
-
-        protected bool _disconnectServer = false;
-        
-        protected ulong _currentMatchID;
 
         void Start()
         {
@@ -61,7 +52,7 @@ namespace Prototype.NetworkLobby
 
             DontDestroyOnLoad(gameObject);
 
-            SetServerInfo("Offline", "None");
+            SetServerInfo("无");
         }
 			
 		public override GameObject OnLobbyServerCreateGamePlayer (NetworkConnection conn, short playerControllerId)
@@ -77,28 +68,14 @@ namespace Prototype.NetworkLobby
                 if (topPanel.isInGame)
                 {
                     ChangeTo(lobbyPanel);
-                    if (_isMatchmaking)
-                    {
-                        if (conn.playerControllers[0].unetView.isServer)
-                        {
-                            backDelegate = StopHostClbk;
-                        }
-                        else
-                        {
-                            backDelegate = StopClientClbk;
-                        }
-                    }
-                    else
-                    {
-                        if (conn.playerControllers[0].unetView.isClient)
-                        {
-                            backDelegate = StopHostClbk;
-                        }
-                        else
-                        {
-                            backDelegate = StopClientClbk;
-                        }
-                    }
+					if (conn.playerControllers[0].unetView.isClient)
+					{
+						backDelegate = StopHostClbk;
+					}
+					else
+					{
+						backDelegate = StopClientClbk;
+					}
                 }
                 else
                 {
@@ -141,8 +118,7 @@ namespace Prototype.NetworkLobby
             else
             {
                 backButton.gameObject.SetActive(false);
-                SetServerInfo("Offline", "None");
-                _isMatchmaking = false;
+                SetServerInfo("无");
             }
         }
 
@@ -152,9 +128,8 @@ namespace Prototype.NetworkLobby
             infoPanel.Display("正在连接...", "取消", () => { _this.backDelegate(); });
         }
 
-        public void SetServerInfo(string status, string host)
+        public void SetServerInfo(string host)
         {
-            statusInfo.text = status;
             hostInfo.text = host;
         }
 
@@ -186,29 +161,13 @@ namespace Prototype.NetworkLobby
                  
         public void StopHostClbk()
         {
-            if (_isMatchmaking)
-            {
-				matchMaker.DestroyMatch((NetworkID)_currentMatchID, 0, OnDestroyMatch);
-				_disconnectServer = true;
-            }
-            else
-            {
-                StopHost();
-            }
-
-            
+			StopHost();
             ChangeTo(mainMenuPanel);
         }
 
         public void StopClientClbk()
         {
             StopClient();
-
-            if (_isMatchmaking)
-            {
-                StopMatchMaker();
-            }
-
             ChangeTo(mainMenuPanel);
         }
 
@@ -234,39 +193,16 @@ namespace Prototype.NetworkLobby
 
         public override void OnStartHost()
         {
-            base.OnStartHost();
-
+			base.OnStartHost ();
             ChangeTo(lobbyPanel);
             backDelegate = StopHostClbk;
-            SetServerInfo("Hosting", networkAddress);
-        }
-
-		public override void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo)
-		{
-			base.OnMatchCreate(success, extendedInfo, matchInfo);
-            _currentMatchID = (System.UInt64)matchInfo.networkId;
-		}
-
-		public override void OnDestroyMatch(bool success, string extendedInfo)
-		{
-			base.OnDestroyMatch(success, extendedInfo);
-			if (_disconnectServer)
-            {
-                StopMatchMaker();
-                StopHost();
-            }
+			SetServerInfo (Network.player.ipAddress);
         }
 
         //allow to handle the (+) button to add/remove player
         public void OnPlayersNumberModified(int count)
         {
             _playerNumber += count;
-
-            int localPlayerCount = 0;
-            foreach (PlayerController p in ClientScene.localPlayers)
-                localPlayerCount += (p == null || p.playerControllerId == -1) ? 0 : 1;
-
-            //addPlayerButton.SetActive(localPlayerCount < maxPlayersPerConnection && _playerNumber < maxPlayers);
         }
 
         // ----------------- Server callbacks ------------------
@@ -397,7 +333,7 @@ namespace Prototype.NetworkLobby
             {//only to do on pure client (not self hosting client)
                 ChangeTo(lobbyPanel);
                 backDelegate = StopClientClbk;
-                SetServerInfo("Client", networkAddress);
+				SetServerInfo(networkAddress);
             }
         }
 
