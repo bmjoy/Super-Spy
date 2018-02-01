@@ -120,7 +120,6 @@
      <Compile Include="Assets\Scripts\Network\NetworkSkillController.cs" />
      <Compile Include="Assets\Store\Scripts\comeback.cs" />
      <Compile Include="Assets\Store\Scripts\EventTriggerClick.cs" />
-     <Compile Include="Assets\Store\Scripts\MyImage.cs" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_SimpleDoubleSide.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_UVscroll.shader" />
      <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />

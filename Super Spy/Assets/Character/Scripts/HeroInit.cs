@@ -26,10 +26,10 @@ public class HeroInit : Initialize {
 		base.OnStartLocalPlayer ();
 		OnEnableExplore ();
 		var canvas = GameObject.Find ("Canvas");
-		canvas.transform.Find ("SkillButtons").GetComponent<InitTarget> ().SetTarget (transform);
+		canvas.GetComponentInChildren<InitTarget> ().SetTarget (transform);
 		var joystick = canvas.GetComponentInChildren<ETCJoystick> ();
 		if (gameObject.tag == "Blue") {
-			canvas.transform.Find ("Minimap/MiniMapBg/Mask/Bg").rotation = Quaternion.Euler (0, 0, 180);
+			canvas.GetComponentInChildren<PolygonCollider2D>().transform.rotation = Quaternion.Euler (0, 0, 180);
 			joystick.TurnAndMove = -1;
 			joystick.followOffset.z *= -1;
 			canvas.GetComponentInChildren<MiniMapCameraManager> ().flag = -1;

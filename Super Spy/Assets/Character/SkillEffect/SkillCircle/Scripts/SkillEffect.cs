@@ -7,16 +7,6 @@ using UnityEngine.UI;
 public class SkillEffect : Effect {
 	public string skill;
 
-	public override void LateUpdate() {
-		/*base.LateUpdate ();
-		if (player) {
-			NetworkAnimatorController ani_ctrl = player.GetComponent<NetworkAnimatorController> ();
-			ani_ctrl.SetAnimation (skill, false);
-			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
-			skill_ctrl.ShowEffect (skill, false, Vector3.zero);
-		}*/
-
-	}
 	protected override void PlayEffect()
 	{
 		base.PlayEffect ();

@@ -119,17 +119,14 @@ public class SkillArea : MonoBehaviour {
     /// </summary>
     void CreateSkillArea()
     {
+		CreateElement(SKillAreaElement.OuterCircle);
+		Debug.Log (areaType);
         switch (areaType)
         {
-            case SkillAreaType.OuterCircle:
-                CreateElement(SKillAreaElement.OuterCircle);
-                break;
             case SkillAreaType.OuterCircle_InnerCube:
-                CreateElement(SKillAreaElement.OuterCircle);
                 CreateElement(SKillAreaElement.Cube);
                 break;
             case SkillAreaType.OuterCircle_InnerSector:
-                CreateElement(SKillAreaElement.OuterCircle);
                 switch (angle)
                 {
                     case 60:
@@ -143,7 +140,6 @@ public class SkillArea : MonoBehaviour {
                 }
                 break;
             case SkillAreaType.OuterCircle_InnerCircle:
-                CreateElement(SKillAreaElement.OuterCircle);
                 CreateElement(SKillAreaElement.InnerCircle);
                 break;
             default:

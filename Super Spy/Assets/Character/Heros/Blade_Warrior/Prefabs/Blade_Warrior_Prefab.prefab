@@ -2651,18 +2651,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658f21ca06cace74494d3eecf22eb03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originPosition: {x: 100, y: 1, z: 105}
   maxBlood: 100
   HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
   attackDistance: 3
   attackCd: 1.5
   attackPower: 5
+  originPosition: {x: 100, y: 1, z: 105}
   skills:
   - {fileID: 1878038004280662, guid: b1e17c5b965c40e4fb296c1b2cb20fab, type: 2}
-  - {fileID: 180852, guid: 9ef916b309aba9446a08be5910cbc272, type: 2}
-  - {fileID: 100012, guid: 6da647a5ddf517441af0e916ea8667d7, type: 2}
-  - {fileID: 100008, guid: f1177dffe93275645a1647b479053f8f, type: 2}
-  - {fileID: 100010, guid: 1916f5208820a5c4fa7d42b174f30c70, type: 2}
+  - {fileID: 129582, guid: 594cef4fbae82174a8b8c5c44019db1b, type: 2}
+  - {fileID: 100010, guid: 5a0053d8d1af0bf48a1dfa03b38e3cb4, type: 2}
+  - {fileID: 173814, guid: 810eb771809ba56409dd29eab937ddb2, type: 2}
+  - {fileID: 1000012194824256, guid: 714b866976846d14d994261942e71d83, type: 2}
   lifeTimes:
   - 30
   - 10

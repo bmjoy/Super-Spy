@@ -279,6 +279,7 @@ namespace Prototype.NetworkLobby
 
 		public void StartToLoad() {
 			StartCoroutine(ServerCountdownCoroutine());
+			startGameButton.interactable = false;
 		}
 
         public IEnumerator ServerCountdownCoroutine()

@@ -3,10 +3,11 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 
 public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler{
-	public Transform minimap;
+	Transform minimap, point;
 	public ScaleController scaleController;
+
+	[HideInInspector]
 	public int flag = 1;
-	private Transform point;
 
 	public Vector3 cameraOffset;
 
@@ -23,6 +24,7 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
     void Start()
     {
         point = transform.Find( "Mask/Point" );
+		minimap = scaleController.minimap;
         polygonCollider2D = transform.Find( "Mask/Bg" ).GetComponent<PolygonCollider2D>();
 
         mapSize = MiniMapView.Instance.mapSize;
@@ -39,8 +41,8 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
         }
 		point.position = eventData.position;
 		if (minimap.localScale.x == 1) {
-			var controller = GameObject.FindWithTag ("GameController");
-			var joystick = controller.GetComponentInChildren<ETCJoystick> ();
+			var canvas = GameObject.Find ("Canvas");
+			var joystick = canvas.GetComponentInChildren<ETCJoystick> ();
 			target = joystick.cameraLookAt;
 			joystick.cameraLookAt = null;
 			Vector2 pos = point.localPosition;
