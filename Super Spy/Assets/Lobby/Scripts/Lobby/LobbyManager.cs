@@ -14,7 +14,10 @@ namespace Prototype.NetworkLobby
         static short MsgKicked = MsgType.Highest + 1;
 
         static public LobbyManager s_Singleton;
-		Queue<GameObject> gamePlayersQueue;
+		Dictionary<NetworkConnection, GameObject> gamePlayersQueue;
+
+		[HideInInspector]
+		public Dictionary<NetworkConnection, bool> isSpy;
 
         [Header("Unity UI Lobby")]
         [Tooltip("Time in second between all players ready & match start")]
@@ -54,10 +57,10 @@ namespace Prototype.NetworkLobby
 
             SetServerInfo("无");
         }
-			
+
 		public override GameObject OnLobbyServerCreateGamePlayer (NetworkConnection conn, short playerControllerId)
 		{
-			gamePlayerPrefab = gamePlayersQueue.Dequeue ();
+			gamePlayerPrefab = gamePlayersQueue[conn];
 			return base.OnLobbyServerCreateGamePlayer (conn, playerControllerId);
 		}
 
@@ -281,7 +284,7 @@ namespace Prototype.NetworkLobby
 			StartCoroutine(ServerCountdownCoroutine());
 			startGameButton.interactable = false;
 		}
-
+			
         public IEnumerator ServerCountdownCoroutine()
         {
             float remainingTime = prematchCountdown;
@@ -308,17 +311,32 @@ namespace Prototype.NetworkLobby
                 }
             }
 
-			gamePlayersQueue = new Queue<GameObject>();
+			if (s_Singleton.isSpy == null) {
+				s_Singleton.gamePlayersQueue = new Dictionary<NetworkConnection, GameObject> ();
+				s_Singleton.isSpy = new Dictionary<NetworkConnection, bool> ();
+			}
+			bool redSpy = true, blueSpy = true;
+			int mid = lobbySlots.Length / 2;
+			System.Array.Sort(lobbySlots, (x, y)=>Random.Range(0, lobbySlots.Length) - mid);
+
             for (int i = 0; i < lobbySlots.Length; ++i)
             {
                 if (lobbySlots[i] != null)
                 {
 					LobbyPlayer player = (lobbySlots [i] as LobbyPlayer);
 					int index = 0;
+					bool spyIdentity = false;
 					if (player.playerColor == Color.blue) {
 						index = 1;
+						spyIdentity = blueSpy;
+						blueSpy = false;
+					} else {
+						index = 0;
+						spyIdentity = redSpy;
+						redSpy = false;
 					}
-					gamePlayersQueue.Enqueue (spawnPrefabs [index]);
+					isSpy [player.connectionToClient] = spyIdentity;
+					gamePlayersQueue[player.connectionToClient] = spawnPrefabs [index];
 					player.RpcUpdateCountdown(0);
                 }
             }

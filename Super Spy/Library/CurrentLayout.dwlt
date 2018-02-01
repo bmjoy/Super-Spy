@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 619
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -93,10 +93,10 @@ MonoBehaviour:
     y: 0
     width: 266
     height: 619
-  m_MinSize: {x: 232, y: 471}
-  m_MaxSize: {x: 10002, y: 14021}
+  m_MinSize: {x: 232, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 52
+  controlID: 29
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,10 +118,10 @@ MonoBehaviour:
     y: 30
     width: 1350
     height: 619
-  m_MinSize: {x: 711, y: 471}
-  m_MaxSize: {x: 18006, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 127
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,8 +140,8 @@ MonoBehaviour:
     y: 0
     width: 266
     height: 288
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -229,8 +229,8 @@ MonoBehaviour:
     y: 0
     width: 807
     height: 619
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
@@ -431,7 +431,7 @@ MonoBehaviour:
     width: 275
     height: 598
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 329.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: -160
@@ -477,19 +477,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Character/Heros/Blade_Girl/Prefabs
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Character/Heros/Blade_Girl/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\UnityProject\Super Spy
   m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 022e0000
-    m_LastClickedID: 11778
-    m_ExpandedIDs: 00000000ca280000022900003c290000222b00004c2b0000202c0000662c00006a2d0000c42d0000182e00002c2e0000a02e00002e2f00000a3100004e32000056320000e8320000743400008e350000963500006a38000074380000d638000088390000323a00002a440000cc4400005246000090520000925200009452000096520000985200009a5200009c5200009e520000a0520000a2520000a4520000a6520000a8520000aa520000ac520000ae520000b0520000b2520000b4520000b6520000b8520000ba520000bc520000be520000c0520000c2520000c4520000c6520000c8520000ca520000cc520000ce520000d0520000ffffff7f
+    m_SelectedIDs: ae2e0000
+    m_LastClickedID: 11950
+    m_ExpandedIDs: 00000000ca280000022900003c290000202b00004a2b00001e2c0000642c0000682d0000c22d0000162e00002a2e00002c2f00000831000054320000e6320000723400008c350000943500006638000070380000d2380000843900002e3a000026440000c64400004c4600008c5200008e52000090520000925200009452000096520000985200009a5200009c5200009e520000a0520000a2520000a4520000a6520000a8520000aa520000ac520000ae520000b0520000b2520000b4520000b6520000b8520000ba520000bc520000be520000c0520000c2520000c4520000c6520000c8520000ca520000cc520000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,7 +517,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca280000022900003c290000222b00004c2b0000202c0000662c00006a2d0000c42d0000182e00002c2e0000a02e00002e2f00000a3100004e32000056320000e8320000743400008e350000963500006a38000074380000d638000088390000323a00002a440000cc4400005246000090520000925200009452000096520000985200009a5200009c5200009e520000a0520000a2520000a4520000a6520000a8520000aa520000ac520000ae520000b0520000b2520000b4520000b6520000b8520000ba520000bc520000be520000c0520000c2520000c4520000c6520000c8520000ca520000cc520000ce520000d0520000
+    m_ExpandedIDs: 00000000ca280000022900003c290000202b00004a2b00001e2c0000642c0000682d0000c22d0000162e00002a2e00009e2e00002c2f0000083100004c32000054320000e6320000723400008c350000943500006638000070380000d2380000843900002e3a000026440000c64400004c4600008c5200008e52000090520000925200009452000096520000985200009a5200009c5200009e520000a0520000a2520000a4520000a6520000a8520000aa520000ac520000ae520000b0520000b2520000b4520000b6520000b8520000ba520000bc520000be520000c0520000c2520000c4520000c6520000c8520000ca520000cc520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2310000
+    m_SelectedIDs: 222f0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 002df6ff4230f6ff1a8ef6ff76bbf6ffd4bef6ff68fcf6ff266af8ffa66df8ff7addfeff123effff963effff205bffff285bffff56d1ffffe2d1ffff6ceeffff74eeffff9efbffff0000000054d00000fed0000024d10000765d0100946d0100667b0100b8320200f63302005a3702007847020020490200b04f02005650020068610200fe8f020054a802000cba02008e5e0300e47603009c8803002cb7030082cf03003ae103005ade040068080500
+    m_ExpandedIDs: 5095feffc4e0fefff647ffff4aadffff02d3ffff9efbffff00000000fc7e0000529700000aa90000c61901001c320100d44301000234030020440300584c0300f2510300
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
