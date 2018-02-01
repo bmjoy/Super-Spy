@@ -4,14 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BianshenEffect : Effect {
+	float life_time;
 	float remaining_time;
+
+	public override void Start ()
+	{
+		base.Start ();
+		life_time = player.GetComponent<HeroInit> ().lifeTimes [(int)SkillType.BianShen];
+	}
 
 	public override void LateUpdate() {
 		base.LateUpdate ();
 		if (remaining_time <= 0) {
 			if (player) {
 				NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
-				skill_ctrl.ShowEffect ("bianshen", false, Vector3.zero);
+				skill_ctrl.ShowEffect (SkillType.BianShen, false, Vector3.zero);
 			}
 		} else {
 			remaining_time -= Time.deltaTime;
@@ -34,8 +41,8 @@ public class BianshenEffect : Effect {
 		base.PlayEffect ();
 		if (player) {
 			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
-			skill_ctrl.ShowEffect ("bianshen", true, Vector3.zero);
-			remaining_time = 30;
+			skill_ctrl.ShowEffect (SkillType.BianShen, true, Vector3.zero);
+			remaining_time = life_time;
 		}
 	}
 }

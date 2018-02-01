@@ -4,9 +4,14 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class HeroInit : Initialize {
+	[Header("Born Position")]
 	public Vector3 originPosition;
+
+	[Space]
+	[Header("Skill Properties")]
 	public GameObject[] skills;
 	public float[] lifeTimes;
+	public float[] skillCDs;
 	// Use this for initialization
 	public override void OnEnaleAttack ()
 	{

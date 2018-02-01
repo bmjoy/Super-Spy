@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class Initialize : NetworkBehaviour {
+	[Space]
+	[Header("Attack Properties")]
 	public int maxBlood;
 	public GameObject HPBar;
 	public int attackDistance;

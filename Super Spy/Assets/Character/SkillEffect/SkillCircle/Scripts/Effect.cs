@@ -3,15 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum SkillType
+{
+	BianShen,
+	Skill1,
+	Skill2,
+	Skill3,
+	Skill4,
+	Attack
+}
+
 [RequireComponent(typeof(SkillJoystick))]
 public class Effect : SkillArea {
-	public float cooling_time;
+	public SkillType skill;
+	float cooling_time;
 	protected Image mask;
 	protected Text time_text;
 	protected float cur_time;
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
+		var init = player.GetComponent<HeroInit> ();
+		if (skill == SkillType.Attack) {
+			cooling_time = init.attackCd;
+		} else {
+			cooling_time = init.skillCDs [(int)skill];
+		}
 		cur_time = 0;
 		var m_mask = transform.parent.Find (
 			transform.gameObject.name.Replace ("Skill", "mask"));

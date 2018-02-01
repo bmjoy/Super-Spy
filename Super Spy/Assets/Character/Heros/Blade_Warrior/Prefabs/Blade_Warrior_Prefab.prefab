@@ -2669,6 +2669,12 @@ MonoBehaviour:
   - 5
   - 4
   - 3
+  skillCDs:
+  - 120
+  - 15
+  - 8
+  - 4
+  - 1
 --- !u!137 &137022014942281088
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
