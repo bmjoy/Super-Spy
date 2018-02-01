@@ -6,7 +6,7 @@ using System;
 
 public class SkillJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler {
 
-    float outerCircleRadius;
+    public float outerCircleRadius = 100;
 
     Transform innerCircleTrans;
 
@@ -23,11 +23,6 @@ public class SkillJoystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     void Start()
     {
-		float width = 0;
-		if (GetComponent<SkillEffect>().areaType != SkillAreaType.OuterCircle) {
-			width = outerCircleRadius = GetComponent<RectTransform> ().sizeDelta.x / 2;
-		}
-		outerCircleRadius = width;
         outerCircleStartWorldPos = transform.position;
     }
 

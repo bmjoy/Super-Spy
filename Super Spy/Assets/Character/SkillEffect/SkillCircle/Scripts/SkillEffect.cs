@@ -5,19 +5,8 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class SkillEffect : Effect {
-	static Dictionary<SkillType, string> skillName;
-	public override void Start ()
-	{
-		base.Start ();
-		if (skillName == null) {
-			skillName = new Dictionary<SkillType, string> ();
-			skillName [SkillType.Attack] = "attack";
-			skillName [SkillType.Skill1] = "skill1";
-			skillName [SkillType.Skill2] = "skill2";
-			skillName [SkillType.Skill3] = "skill3";
-			skillName [SkillType.Skill4] = "skill4";
-		}
-	}
+	public string skill;
+
 	protected override void PlayEffect()
 	{
 		base.PlayEffect ();
@@ -37,8 +26,8 @@ public class SkillEffect : Effect {
 			default:
 				break;
 			}
-			ani_ctrl.SetAnimation (skillName[skill]);
-			if (skill != SkillType.Attack) {
+			ani_ctrl.SetAnimation (skill);
+			if (skill != "attack") {
 				skill_ctrl.ShowEffect (skill, true, pos);
 			}
 		}

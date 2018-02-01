@@ -2,31 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using Prototype.NetworkLobby;
 
 public class HeroInit : Initialize {
-	[Space]
-	[Header("Born Properties")]
 	public Vector3 originPosition;
-
-	[HideInInspector]
-	public bool isSpy;
-
-	[Space]
-	[Header("Skill Properties")]
 	public GameObject[] skills;
 	public float[] lifeTimes;
-	public float[] skillCDs;
 	// Use this for initialization
 	public override void OnEnaleAttack ()
 	{
 		base.OnEnaleAttack ();
 		base.Add<HeroAttack> ();
 	}
-
 	void Awake () {
 		transform.position = originPosition;
-		//isSpy = LobbyManager.s_Singleton.isSpy [GetComponent<NetworkIdentity>().connectionToClient];
 		OnEnableAnimator ();
 		OnEnableSkill ();
 		OnEnableCheck ();
