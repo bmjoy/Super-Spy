@@ -52,7 +52,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400004}
-  - component: {fileID: 11400002}
   m_Layer: 0
   m_Name: EffectsRotator
   m_TagString: Untagged
@@ -74,7 +73,6 @@ GameObject:
   - component: {fileID: 1500004}
   - component: {fileID: 1200004}
   - component: {fileID: 2600004}
-  - component: {fileID: 11400006}
   m_Layer: 0
   m_Name: NatureLeaves
   m_TagString: Untagged
@@ -96,7 +94,6 @@ GameObject:
   - component: {fileID: 1500006}
   - component: {fileID: 1200006}
   - component: {fileID: 2600006}
-  - component: {fileID: 11400008}
   m_Layer: 0
   m_Name: NatureLines
   m_TagString: Untagged
@@ -179,7 +176,6 @@ GameObject:
   - component: {fileID: 1500012}
   - component: {fileID: 1200012}
   - component: {fileID: 2600012}
-  - component: {fileID: 11400012}
   m_Layer: 0
   m_Name: LightbeamsUp
   m_TagString: Untagged
@@ -1280,21 +1276,6 @@ MonoBehaviour:
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0128581e0b9403341a9e122b1150ff85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeedX: 0
-  rotationSpeedY: 360
-  rotationSpeedZ: 0
-  rotationVector: {x: 90, y: 0, z: 0}
 --- !u!1002 &11400003
 EditorExtensionImpl:
   serializedVersion: 6
@@ -1317,63 +1298,15 @@ MonoBehaviour:
 --- !u!1002 &11400005
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 1
-  rampDownTime: 1
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400007
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 1
-  rampDownTime: 1
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400009
 EditorExtensionImpl:
   serializedVersion: 6
 --- !u!1002 &11400011
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 1
-  rampDownTime: 1
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400013
 EditorExtensionImpl:
   serializedVersion: 6

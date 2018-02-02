@@ -33,7 +33,6 @@ GameObject:
   - component: {fileID: 1500002}
   - component: {fileID: 1200002}
   - component: {fileID: 2600002}
-  - component: {fileID: 11400002}
   m_Layer: 0
   m_Name: FallingStars
   m_TagString: Untagged
@@ -72,7 +71,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400006}
-  - component: {fileID: 11100000}
   m_Layer: 0
   m_Name: HelixUp_FBX
   m_TagString: Untagged
@@ -130,7 +128,6 @@ GameObject:
   - component: {fileID: 1500004}
   - component: {fileID: 1200004}
   - component: {fileID: 2600004}
-  - component: {fileID: 11400006}
   m_Layer: 0
   m_Name: LineExplosionUp
   m_TagString: Untagged
@@ -173,7 +170,6 @@ GameObject:
   - component: {fileID: 1500008}
   - component: {fileID: 1200008}
   - component: {fileID: 2600008}
-  - component: {fileID: 11400012}
   m_Layer: 0
   m_Name: ResurrectUplights
   m_TagString: Untagged
@@ -238,7 +234,6 @@ GameObject:
   - component: {fileID: 1500014}
   - component: {fileID: 1200014}
   - component: {fileID: 2600014}
-  - component: {fileID: 11400010}
   m_Layer: 0
   m_Name: LineExplosion
   m_TagString: Untagged
@@ -1332,43 +1327,12 @@ ParticleRenderer:
 --- !u!1002 &2600015
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e395a7ff68ceb6d41a2f9ca0e5cac560, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: e395a7ff68ceb6d41a2f9ca0e5cac560, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1002 &11100001
 EditorExtensionImpl:
   serializedVersion: 6
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 1.5
-  rampDownTime: 0.5
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400003
 EditorExtensionImpl:
   serializedVersion: 6
@@ -1391,22 +1355,6 @@ MonoBehaviour:
 --- !u!1002 &11400005
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 0.5
-  rampDownTime: 1
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400007
 EditorExtensionImpl:
   serializedVersion: 6
@@ -1429,41 +1377,9 @@ MonoBehaviour:
 --- !u!1002 &11400009
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 0.5
-  rampDownTime: 1
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400011
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc5563ecb7e29ea4bb42a6266df0e390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delayTime: 0
-  delayPlusTime: 0.5
-  rampDownTime: 1
-  origMinEmission: 0
-  origMaxEmission: 0
 --- !u!1002 &11400013
 EditorExtensionImpl:
   serializedVersion: 6

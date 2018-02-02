@@ -49,7 +49,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400004}
-  - component: {fileID: 11100000}
   m_Layer: 0
   m_Name: HelixUpSingle_FBX
   m_TagString: Untagged
@@ -1193,21 +1192,6 @@ MeshFilter:
 --- !u!1002 &3300001
 EditorExtensionImpl:
   serializedVersion: 6
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 310256d8fd4c3cb409cf2ebb2322ed35, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 310256d8fd4c3cb409cf2ebb2322ed35, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1002 &11100001
 EditorExtensionImpl:
   serializedVersion: 6
