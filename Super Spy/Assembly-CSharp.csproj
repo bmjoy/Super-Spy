@@ -51,9 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Character\EasyTouchControl\Component\ETCSetDirectActionTransform.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Component\InitTarget.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\ComponentExtensions.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCArea.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCAxis.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCBase.cs" />
@@ -62,14 +60,11 @@
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCInput.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCJoystick.cs" />
      <Compile Include="Assets\Character\EasyTouchControl\Plugins\ETCTouchPad.cs" />
-     <Compile Include="Assets\Character\Heros\Blade_Girl\FT_Pulse_volume01\magic\ClipObjControl.cs" />
      <Compile Include="Assets\Character\Scripts\AttackBase.cs" />
      <Compile Include="Assets\Character\Scripts\HeroAttack.cs" />
      <Compile Include="Assets\Character\Scripts\HeroInit.cs" />
      <Compile Include="Assets\Character\Scripts\Initialize.cs" />
      <Compile Include="Assets\Character\Scripts\SpyIdentity.cs" />
-     <Compile Include="Assets\Character\Scripts\XiaoBinAttack.cs" />
-     <Compile Include="Assets\Character\Simple Health Bar\Scripts\SimpleHealthBar.cs" />
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\BianshenEffect.cs" />
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\Effect.cs" />
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\LifeControl.cs" />
@@ -89,8 +84,6 @@
      <Compile Include="Assets\FogOfWar\Scripts\FogOfWar\Core\MaskCalcluater\MaskCalcluatorBase.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarEffect.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarExplorer.cs" />
-     <Compile Include="Assets\FogOfWar\Scripts\FogOfWar\FogOfWarStalker.cs" />
-     <Compile Include="Assets\Lobby\Scripts\DraggablePanel.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyCountdownPanel.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyInfoPanel.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyMainMenu.cs" />
@@ -100,17 +93,12 @@
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Bullet.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Check.cs" />
-     <Compile Include="Assets\Map\Tower\Scripts\GenerateSoldiers.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\HP.cs" />
-     <Compile Include="Assets\Map\Tower\Scripts\Positions.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Rotate.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\TowerAttack.cs" />
-     <Compile Include="Assets\Map\Tower\Scripts\TowerGroup.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\TowerInit.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapCameraManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapController.cs" />
-     <Compile Include="Assets\Minimap\Scripts\MiniMapEffect.cs" />
-     <Compile Include="Assets\Minimap\Scripts\MiniMapElement.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapMessageDispatcher.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapPoolManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapView.cs" />
@@ -118,34 +106,27 @@
      <Compile Include="Assets\Scripts\Game\GameController.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkSkillController.cs" />
-     <Compile Include="Assets\Store\Scripts\comeback.cs" />
-     <Compile Include="Assets\Store\Scripts\EventTriggerClick.cs" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_SimpleDoubleSide.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_UVscroll.shader" />
-     <None Include="Assets\Map\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
      <None Include="Assets\Character\Heros\Blade_Girl\FT_Pulse_volume01\magic\Clip.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_Beam.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_UVscrollFresnel.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_DoubleDistortionRamp02.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_DissolveSimple.shader" />
-     <None Include="Assets\DOTween\DOTween50.xml" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\effect_distortion_mask.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\ParticleAddSoftEffect.shader" />
      <None Include="Assets\Character\SkillEffect\SkillCircle\Resources\Effect\Shader\Particle Alpha Blend1.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_HeatDistortion.shader" />
-     <None Include="Assets\DOTween\readme.txt" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_Simple.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\Toon Blended Premmultiply.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_Light.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\ParticlePremultiplyBlend.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\READ ME.txt" />
      <None Include="Assets\Character\SkillEffect\SkillCircle\Resources\Effect\Textures\item\NewSurfaceShader.shader" />
-     <None Include="Assets\DOTween\DOTween46.xml" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_DoubleDistortion.shader" />
      <None Include="Assets\FogOfWar\Shaders\FogOfWarBlur.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\ParticleAddEffect.shader" />
      <None Include="Assets\FogOfWar\Shaders\FogOfWarEffect.shader" />
-     <None Include="Assets\DOTween\DOTween43.xml" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\Toon Additive.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\ParticleBlendEffect.shader" />
  <Reference Include="UnityEngine.UI">

@@ -163,11 +163,11 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 	protected override void Awake (){
 
 		base.Awake ();
-
+		RectTransform trans = GetComponent<RectTransform> ();
 		if (joystickType == JoystickType.Dynamic){
-			this.rectTransform().anchorMin = new Vector2(0.5f,0.5f);
-			this.rectTransform().anchorMax = new Vector2(0.5f,0.5f);
-			this.rectTransform().SetAsLastSibling();
+			trans.anchorMin = new Vector2(0.5f,0.5f);
+			trans.anchorMax = new Vector2(0.5f,0.5f);
+			trans.SetAsLastSibling();
 			visible = false;
 		}
 
@@ -335,11 +335,11 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 				thumbPosition =  (eventData.position - eventData.pressPosition);// / (cachedRootCanvas.rectTransform().localScale.x  ) ;
 			}
 			else{
-				thumbPosition =((eventData.position - noReturnPosition) /cachedRootCanvas.rectTransform().localScale.x) + noReturnOffset;
+				thumbPosition =((eventData.position - noReturnPosition) /cachedRootCanvas.GetComponent<RectTransform>().localScale.x) + noReturnOffset;
 			}
 
 			if (isNoOffsetThumb){
-			    thumbPosition =  (eventData.position - (Vector2)cachedRectTransform.position) / cachedRootCanvas.rectTransform().localScale.x;
+				thumbPosition =  (eventData.position - (Vector2)cachedRectTransform.position) / cachedRootCanvas.GetComponent<RectTransform>().localScale.x;
 			}
 
 			thumbPosition.x = Mathf.FloorToInt( thumbPosition.x);
@@ -614,7 +614,7 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 		bool returnValue = false;
 		
 		if (joystickArea != JoystickArea.UserDefined){
-			if (RectTransformUtility.ScreenPointToLocalPointInRectangle( cachedRootCanvas.rectTransform(),screenPosition,null,out localPosition)){
+			if (RectTransformUtility.ScreenPointToLocalPointInRectangle( cachedRootCanvas.GetComponent<RectTransform>(),screenPosition,null,out localPosition)){
 				
 				switch (joystickArea){
 				case JoystickArea.Left:
@@ -672,7 +672,7 @@ public class ETCJoystick : ETCBase,IPointerEnterHandler,IDragHandler, IBeginDrag
 		}
 		else{
 			if (RectTransformUtility.RectangleContainsScreenPoint( userArea, screenPosition, cachedRootCanvas.worldCamera )){
-				RectTransformUtility.ScreenPointToLocalPointInRectangle( cachedRootCanvas.rectTransform(),screenPosition,cachedRootCanvas.worldCamera,out localPosition);
+				RectTransformUtility.ScreenPointToLocalPointInRectangle( cachedRootCanvas.GetComponent<RectTransform>(),screenPosition,cachedRootCanvas.worldCamera,out localPosition);
 				returnValue = true;
 			}
 		}

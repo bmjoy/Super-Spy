@@ -357,7 +357,7 @@ public class ETCDPad : ETCBase, IDragHandler,  IPointerDownHandler, IPointerUpHa
 		Vector2 localPoint;
 		RectTransformUtility.ScreenPointToLocalPointInRectangle( cachedRectTransform,position,cam,out localPoint);
 		
-		Vector2 buttonSize = this.rectTransform().sizeDelta / buttonSizeCoef;
+		Vector2 buttonSize = GetComponent<RectTransform>().sizeDelta / buttonSizeCoef;
 		
 		
 		tmpAxis = Vector2.zero;

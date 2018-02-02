@@ -51,16 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCAreaInspector.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCAxisInspector.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCButtonInspector.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCDPadInspector.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCGuiTools.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCJoystickInspector.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCMenu.cs" />
-     <Compile Include="Assets\Character\EasyTouchControl\Plugins\Editor\ETCTouchPadInspector.cs" />
-     <Compile Include="Assets\Character\Simple Health Bar\Editor\SimpleHealthBarEditor.cs" />
-     <Compile Include="Assets\FogOfWar\Editor\FogOfWarEffectEditor.cs" />
+     <Compile Include="Assets\Editor\AssetCollector.cs" />
+     <Compile Include="Assets\Editor\ClassReferenceCollection.cs" />
+     <Compile Include="Assets\Editor\FindUnusedAssets.cs" />
+     <Compile Include="Assets\Editor\ShaderReferenceCollection.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -169,8 +163,6 @@
       <Project>{0BA32FD8-EF34-5854-6975-DF5E73295122}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{2781DDE8-34CE-E07F-13F6-68483A89CC01}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{C8AACEF9-2FA6-03F9-45DE-C4C9CA4DA97C}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

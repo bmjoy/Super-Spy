@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityStandardAssets.Utility;
 using UnityEngine.UI;
 
 public class HP : NetworkBehaviour {

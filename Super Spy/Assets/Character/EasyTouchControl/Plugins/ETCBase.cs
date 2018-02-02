@@ -263,56 +263,56 @@ public abstract class ETCBase : MonoBehaviour {
 	}
 
 	public void SetAnchorPosition(){
-		
+		RectTransform trans = GetComponent<RectTransform> ();
 		switch (_anchor){
 		case RectAnchor.TopLeft:
-			this.rectTransform().anchorMin = new Vector2(0,1);
-			this.rectTransform().anchorMax = new Vector2(0,1);
-			this.rectTransform().anchoredPosition = new Vector2( this.rectTransform().sizeDelta.x/2f + _anchorOffet.x, -this.rectTransform().sizeDelta.y/2f - _anchorOffet.y);
+			trans.anchorMin = new Vector2(0,1);
+			trans.anchorMax = new Vector2(0,1);
+			trans.anchoredPosition = new Vector2( trans.sizeDelta.x/2f + _anchorOffet.x, -trans.sizeDelta.y/2f - _anchorOffet.y);
 			break;
 		case RectAnchor.TopCenter:
-			this.rectTransform().anchorMin = new Vector2(0.5f,1);
-			this.rectTransform().anchorMax = new Vector2(0.5f,1);
-			this.rectTransform().anchoredPosition = new Vector2(  _anchorOffet.x, -this.rectTransform().sizeDelta.y/2f - _anchorOffet.y);
+			trans.anchorMin = new Vector2(0.5f,1);
+			trans.anchorMax = new Vector2(0.5f,1);
+			trans.anchoredPosition = new Vector2(  _anchorOffet.x, -trans.sizeDelta.y/2f - _anchorOffet.y);
 			break;
 		case RectAnchor.TopRight:
-			this.rectTransform().anchorMin = new Vector2(1,1);
-			this.rectTransform().anchorMax = new Vector2(1,1);
-			this.rectTransform().anchoredPosition = new Vector2( -this.rectTransform().sizeDelta.x/2f - _anchorOffet.x, -this.rectTransform().sizeDelta.y/2f - _anchorOffet.y);
+			trans.anchorMin = new Vector2(1,1);
+			trans.anchorMax = new Vector2(1,1);
+			trans.anchoredPosition = new Vector2( -trans.sizeDelta.x/2f - _anchorOffet.x, -trans.sizeDelta.y/2f - _anchorOffet.y);
 			break;
 			
 		case RectAnchor.CenterLeft:
-			this.rectTransform().anchorMin = new Vector2(0,0.5f);
-			this.rectTransform().anchorMax = new Vector2(0,0.5f);
-			this.rectTransform().anchoredPosition = new Vector2( this.rectTransform().sizeDelta.x/2f + _anchorOffet.x, _anchorOffet.y);
+			trans.anchorMin = new Vector2(0,0.5f);
+			trans.anchorMax = new Vector2(0,0.5f);
+			trans.anchoredPosition = new Vector2( trans.sizeDelta.x/2f + _anchorOffet.x, _anchorOffet.y);
 			break;
 			
 		case RectAnchor.Center:
-			this.rectTransform().anchorMin = new Vector2(0.5f,0.5f);
-			this.rectTransform().anchorMax = new Vector2(0.5f,0.5f);
-			this.rectTransform().anchoredPosition = new Vector2(  _anchorOffet.x, _anchorOffet.y);
+			trans.anchorMin = new Vector2(0.5f,0.5f);
+			trans.anchorMax = new Vector2(0.5f,0.5f);
+			trans.anchoredPosition = new Vector2(  _anchorOffet.x, _anchorOffet.y);
 			break;
 			
 		case RectAnchor.CenterRight:
-			this.rectTransform().anchorMin = new Vector2(1,0.5f);
-			this.rectTransform().anchorMax = new Vector2(1,0.5f);
-			this.rectTransform().anchoredPosition = new Vector2( -this.rectTransform().sizeDelta.x/2f -  _anchorOffet.x, _anchorOffet.y);
+			trans.anchorMin = new Vector2(1,0.5f);
+			trans.anchorMax = new Vector2(1,0.5f);
+			trans.anchoredPosition = new Vector2( -trans.sizeDelta.x/2f -  _anchorOffet.x, _anchorOffet.y);
 			break; 
 			
 		case RectAnchor.BottomLeft:
-			this.rectTransform().anchorMin = new Vector2(0,0);
-			this.rectTransform().anchorMax = new Vector2(0,0);
-			this.rectTransform().anchoredPosition = new Vector2( this.rectTransform().sizeDelta.x/2f + _anchorOffet.x, this.rectTransform().sizeDelta.y/2f + _anchorOffet.y);
+			trans.anchorMin = new Vector2(0,0);
+			trans.anchorMax = new Vector2(0,0);
+			trans.anchoredPosition = new Vector2( trans.sizeDelta.x/2f + _anchorOffet.x, trans.sizeDelta.y/2f + _anchorOffet.y);
 			break;
 		case RectAnchor.BottomCenter:
-			this.rectTransform().anchorMin = new Vector2(0.5f,0);
-			this.rectTransform().anchorMax = new Vector2(0.5f,0);
-			this.rectTransform().anchoredPosition = new Vector2(  _anchorOffet.x, this.rectTransform().sizeDelta.y/2f + _anchorOffet.y);
+			trans.anchorMin = new Vector2(0.5f,0);
+			trans.anchorMax = new Vector2(0.5f,0);
+			trans.anchoredPosition = new Vector2(  _anchorOffet.x, trans.sizeDelta.y/2f + _anchorOffet.y);
 			break;
 		case RectAnchor.BottonRight:
-			this.rectTransform().anchorMin = new Vector2(1,0);
-			this.rectTransform().anchorMax = new Vector2(1,0);
-			this.rectTransform().anchoredPosition = new Vector2( -this.rectTransform().sizeDelta.x/2f - _anchorOffet.x, this.rectTransform().sizeDelta.y/2f + _anchorOffet.y);
+			trans.anchorMin = new Vector2(1,0);
+			trans.anchorMax = new Vector2(1,0);
+			trans.anchoredPosition = new Vector2( -trans.sizeDelta.x/2f - _anchorOffet.x, trans.sizeDelta.y/2f + _anchorOffet.y);
 			break;
 		}
 		

@@ -33,49 +33,50 @@ public class ETCArea : MonoBehaviour {
 	public void ApplyPreset(AreaPreset preset){
 
 		RectTransform parent = transform.parent.GetComponent<RectTransform>();
-	
+
+		RectTransform trans = GetComponent<RectTransform> ();
 		switch (preset) {
 			case AreaPreset.TopRight:
-				this.rectTransform().anchoredPosition = new Vector2(parent.rect.width/4f,parent.rect.height/4f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
+				trans.anchoredPosition = new Vector2(parent.rect.width/4f,parent.rect.height/4f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
 
-				this.rectTransform().anchorMin = new Vector2(1,1);
-				this.rectTransform().anchorMax = new Vector2(1,1);
-				this.rectTransform().anchoredPosition = new Vector2( -this.rectTransform().sizeDelta.x/2f , -this.rectTransform().sizeDelta.y/2f );
+				trans.anchorMin = new Vector2(1,1);
+				trans.anchorMax = new Vector2(1,1);
+				trans.anchoredPosition = new Vector2( -trans.sizeDelta.x/2f , -trans.sizeDelta.y/2f );
 
 				break;
 
 			case AreaPreset.TopLeft:
-				this.rectTransform().anchoredPosition = new Vector2(-parent.rect.width/4f,parent.rect.height/4f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
+				trans.anchoredPosition = new Vector2(-parent.rect.width/4f,parent.rect.height/4f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
 
-				this.rectTransform().anchorMin = new Vector2(0,1);
-				this.rectTransform().anchorMax = new Vector2(0,1);
-				this.rectTransform().anchoredPosition = new Vector2( this.rectTransform().sizeDelta.x/2f, -this.rectTransform().sizeDelta.y/2f );
+				trans.anchorMin = new Vector2(0,1);
+				trans.anchorMax = new Vector2(0,1);
+				trans.anchoredPosition = new Vector2( trans.sizeDelta.x/2f, -trans.sizeDelta.y/2f );
 
 				break;
 
 			case AreaPreset.BottomRight:
-				this.rectTransform().anchoredPosition = new Vector2(parent.rect.width/4f,-parent.rect.height/4f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
+				trans.anchoredPosition = new Vector2(parent.rect.width/4f,-parent.rect.height/4f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
 
-				this.rectTransform().anchorMin = new Vector2(1,0);
-				this.rectTransform().anchorMax = new Vector2(1,0);
-				this.rectTransform().anchoredPosition = new Vector2( -this.rectTransform().sizeDelta.x/2f , this.rectTransform().sizeDelta.y/2f );
+				trans.anchorMin = new Vector2(1,0);
+				trans.anchorMax = new Vector2(1,0);
+				trans.anchoredPosition = new Vector2( -trans.sizeDelta.x/2f , trans.sizeDelta.y/2f );
 
 				break;
 				
 			case AreaPreset.BottomLeft:
-				this.rectTransform().anchoredPosition = new Vector2(-parent.rect.width/4f,-parent.rect.height/4f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
-				this.rectTransform().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
+				trans.anchoredPosition = new Vector2(-parent.rect.width/4f,-parent.rect.height/4f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,parent.rect.width/2f);
+				trans.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,parent.rect.height/2f);
 
-				this.rectTransform().anchorMin = new Vector2(0,0);
-				this.rectTransform().anchorMax = new Vector2(0,0);
-				this.rectTransform().anchoredPosition = new Vector2( this.rectTransform().sizeDelta.x/2f , this.rectTransform().sizeDelta.y/2f );
+				trans.anchorMin = new Vector2(0,0);
+				trans.anchorMax = new Vector2(0,0);
+				trans.anchoredPosition = new Vector2( trans.sizeDelta.x/2f , trans.sizeDelta.y/2f );
 
 				break;
 		}
