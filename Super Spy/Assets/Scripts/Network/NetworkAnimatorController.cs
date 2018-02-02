@@ -5,12 +5,23 @@ using UnityEngine.Networking;
 
 public class NetworkAnimatorController : NetworkBehaviour {
 	protected Animator anim;
-
 	public virtual void Start() {
 		anim = GetComponent<Animator> ();
 	}
 
 	public void SetAnimation(string state) {
+		if (isLocalPlayer) {
+			CmdPlay (state);
+		}	
+	}
+
+	[Command]
+	void CmdPlay(string ani) {
+		RpcPlay (ani);
+	}
+
+	[ClientRpc]
+	void RpcPlay(string state) {
 		anim.SetTrigger (state);
 	}
 		
