@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class NetworkSkillController : NetworkBehaviour {
-	GameObject[] skills;
-	float[] life_time;
+	Skill[] skills;
 
 	void Start() {
 		HeroInit init = GetComponent<HeroInit> ();
 		skills = init.skills;
-		life_time = init.lifeTimes;
 	}
 	public void ShowEffect(string state, bool flag, Vector3 pos) {
 		CmdShowEffect (state, flag, pos);
@@ -31,23 +29,24 @@ public class NetworkSkillController : NetworkBehaviour {
 			int num = 0;
 			SetVisual (!flag);
 			if (flag) {
-				Destroy(GameObject.Instantiate (skills [num], transform), life_time[num]);
+				Destroy(GameObject.Instantiate (skills [num].effect, transform), skills[num].lifeTime);
 			}
 		} else {
 			if (flag) {
 				int num = state[state.Length - 1] - '0';
 
-				GameObject skill_effect = null;
+				GameObject skill_effect = null, skill = skills[num].effect;
+				float life_time = skills [num].lifeTime;
 				float x, z;
 				LifeControl life_ctrl;
 
 				switch (state) {
 				case "skill1":
 					if (gameObject.tag == "Red") {
-						skill_effect = GameObject.Instantiate (skills [num], transform);
+						skill_effect = GameObject.Instantiate (skill, transform);
 					} else {
-						skill_effect = GameObject.Instantiate (skills [num], transform.position, 
-							skills [num].transform.rotation);
+						skill_effect = GameObject.Instantiate (skill, transform.position, 
+							skill.transform.rotation);
 					}
 					break;
 				case "skill2":
@@ -55,7 +54,7 @@ public class NetworkSkillController : NetworkBehaviour {
 
 					x = pos.x - transform.position.x;
 					z = pos.z - transform.position.z;
-					skill_effect = GameObject.Instantiate (skills [num], 
+					skill_effect = GameObject.Instantiate (skill, 
 						transform.position, 
 						transform.rotation);
 					pos.x += x * 5;
@@ -77,8 +76,8 @@ public class NetworkSkillController : NetworkBehaviour {
 						pos.z += z * 5;
 					}
 					pos.y = 0.7f;
-					skill_effect = GameObject.Instantiate (skills [num], 
-						pos, skills [num].transform.rotation);
+					skill_effect = GameObject.Instantiate (skill, 
+						pos, skill.transform.rotation);
 					if (gameObject.tag == "Blue") {
 						life_ctrl = skill_effect.GetComponent<LifeControl> ();
 						life_ctrl.target = transform.position;
@@ -88,13 +87,13 @@ public class NetworkSkillController : NetworkBehaviour {
 					break;
 				case "skill4":
 					transform.LookAt (pos);
-					pos.y = skills [num].transform.position.y;
-					skill_effect = GameObject.Instantiate (skills [num], pos, skills [num].transform.rotation);
+					pos.y = skill.transform.position.y;
+					skill_effect = GameObject.Instantiate (skill, pos, skill.transform.rotation);
 					break;
 				default:
 					break;
 				}
-				Destroy (skill_effect, life_time[num]);
+				Destroy (skill_effect, life_time);
 			}
 		}
 

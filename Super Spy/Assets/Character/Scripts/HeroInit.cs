@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[System.Serializable]
+public class Skill
+{
+	public GameObject effect;
+	public float lifeTime;
+	public float CD;
+}
 public class HeroInit : Initialize {
+	[Header("Born Properties")]
 	public Vector3 originPosition;
-	public GameObject[] skills;
-	public float[] lifeTimes;
+
+	[Header("Skill Properties")]
+	public Skill[] skills;
 	// Use this for initialization
 	public override void OnEnaleAttack ()
 	{
