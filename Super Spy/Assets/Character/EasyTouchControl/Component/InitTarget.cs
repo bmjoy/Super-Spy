@@ -5,14 +5,14 @@ using UnityEngine;
 public class InitTarget : MonoBehaviour {
 	public void SetTarget(Transform target) {
 		foreach (var skill in GetComponentsInChildren<SkillEffect>()) {
-			skill.player = target.gameObject;
+			skill.SetTarget(target.gameObject);
 		}
 
 		var bianshen = GetComponentInChildren<BianshenEffect> ();
 		if (bianshen) {
-			bool is_spy = false;/*target.GetComponent<SpyIdentity> ().IsSpy;*/
+			bool is_spy = true;/*target.GetComponent<SpyIdentity> ().IsSpy;*/
 			if (is_spy) {
-				bianshen.player = target.gameObject;
+				bianshen.SetTarget(target.gameObject);
 			} else {
 				bianshen.gameObject.SetActive (false);
 			}

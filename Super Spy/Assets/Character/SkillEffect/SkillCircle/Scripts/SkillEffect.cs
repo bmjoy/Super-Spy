@@ -5,8 +5,6 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class SkillEffect : Effect {
-	public string skill;
-
 	protected override void PlayEffect()
 	{
 		base.PlayEffect ();
@@ -26,8 +24,8 @@ public class SkillEffect : Effect {
 			default:
 				break;
 			}
-			ani_ctrl.SetAnimation (skill);
-			if (skill != "attack") {
+			ani_ctrl.SetAnimation (skillName[(int)skill]);
+			if (skill != SkillType.Attack) {
 				skill_ctrl.ShowEffect (skill, true, pos);
 			}
 		}

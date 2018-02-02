@@ -3,9 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum SkillType
+{
+	BianShen,
+	Skill1,
+	Skill2,
+	Skill3,
+	Skill4,
+	Attack
+}
+
 [RequireComponent(typeof(SkillJoystick))]
 public class Effect : SkillArea {
-	public float cooling_time;
+	protected static string[] skillName = { "bianshen", "skill1", "skill2", "skill3", "skill4", "attack" };
+
+	public SkillType skill;
+	float cooling_time;
 	protected Image mask;
 	protected Text time_text;
 	protected float cur_time;
@@ -21,6 +34,17 @@ public class Effect : SkillArea {
 		time_text.text = "";
 	}
 
+	public override void SetTarget (GameObject p)
+	{
+		base.SetTarget (p);
+		HeroInit init = p.GetComponent<HeroInit> ();
+		if (skill == SkillType.Attack) {
+			cooling_time = init.attackCd;
+		} else {
+			cooling_time = init.skills [(int)skill].CD;
+		}
+	}
+
 	protected override void OnJoystickUpEvent ()
 	{
 		base.OnJoystickUpEvent ();
@@ -29,20 +53,22 @@ public class Effect : SkillArea {
 	
 	// Update is called once per frame
 	public virtual void Update () {
-		if (mask.fillAmount == 0) {
-			time_text.text = "";
-			mask.gameObject.SetActive (false);
-		} else {
-			cur_time += Time.deltaTime;
-			float remaining_time = cooling_time - cur_time;
-			string t;
-			if (remaining_time < 10f) {
-				t = string.Format ("{0:F}", remaining_time);
+		if (player != null) {
+			if (mask.fillAmount == 0) {
+				time_text.text = "";
+				mask.gameObject.SetActive (false);
 			} else {
-				t = ((int)remaining_time).ToString();
+				cur_time += Time.deltaTime;
+				float remaining_time = cooling_time - cur_time;
+				string t;
+				if (remaining_time < 10f) {
+					t = string.Format ("{0:F}", remaining_time);
+				} else {
+					t = ((int)remaining_time).ToString();
+				}
+				time_text.text = t;
+				mask.fillAmount = remaining_time / cooling_time;
 			}
-			time_text.text = t;
-			mask.fillAmount = remaining_time / cooling_time;
 		}
 	}
 

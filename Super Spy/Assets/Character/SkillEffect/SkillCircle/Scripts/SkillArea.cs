@@ -22,7 +22,7 @@ public class SkillArea : MonoBehaviour {
 
     protected SkillJoystick joystick;
 
-    public GameObject player;
+	protected GameObject player;
 
     public SkillAreaType areaType;      // 设置指示器类型
 
@@ -71,6 +71,10 @@ public class SkillArea : MonoBehaviour {
 		}
         
     }
+
+	public virtual void SetTarget(GameObject p) {
+		player = p;
+	}
 
     void InitSkillAreaType()
     {
