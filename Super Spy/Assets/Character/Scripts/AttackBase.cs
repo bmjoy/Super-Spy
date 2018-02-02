@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class AttackBase : NetworkBehaviour {
+	Collider weapon;
 	protected int attack_distance;
 	float attack_cd;
 	int attack_power;
@@ -11,6 +12,7 @@ public class AttackBase : NetworkBehaviour {
 	// Use this for initialization
 	protected virtual void Awake () {
 		Initialize init = GetComponent<Initialize> ();
+		weapon = init.weaponCollider;
 		attack_distance = init.attackDistance;
 		attack_cd = init.attackCd;
 		attack_power = init.attackPower;
@@ -21,6 +23,31 @@ public class AttackBase : NetworkBehaviour {
 	protected virtual void Update () {
 		if (!CanAttack()) {
 			_time += Time.deltaTime;
+			weapon.enabled = false;
+		} else {
+			weapon.enabled = true;
+		}
+	}
+
+	string GetRootParentTag(Transform g) {
+		string untag = "Untagged";
+		if (g != null) {
+			while (g.parent != null && g.parent.tag == untag) {
+				g = g.parent;
+			}
+			if (g.parent) {
+				untag = g.parent.tag;
+			}
+		}
+		return untag;
+	}
+
+	void OnTriggerEnter(Collider enemy) {
+		if (isLocalPlayer && enemy.GetType() != typeof(CharacterController)) {
+			string t = GetRootParentTag (enemy.transform);
+			if (t != gameObject.tag) {
+				enemy.gameObject.GetComponentInParent<AttackBase> ().Attack (gameObject);
+			}
 		}
 	}
 
@@ -40,6 +67,8 @@ public class AttackBase : NetworkBehaviour {
 	}
 
 	public virtual void BeAttacked(GameObject enemy, int power) {
-		GetComponent<HP> ().UpdateHP (-power);
+		if (isLocalPlayer) {
+			GetComponent<HP> ().UpdateHP (-power);
+		}
 	}
 }

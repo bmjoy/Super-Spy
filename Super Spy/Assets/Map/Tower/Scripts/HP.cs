@@ -44,6 +44,11 @@ public class HP : NetworkBehaviour {
 	}
 
 	public void UpdateHP(int hp) {
+		CmdTakeDamage (hp);
+	}
+
+	[Command]
+	void CmdTakeDamage(int hp) {
 		int newBlood = blood + hp;
 		if (newBlood > 0) {
 			if (newBlood > max_blood) {

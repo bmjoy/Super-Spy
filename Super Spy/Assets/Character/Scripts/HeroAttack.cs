@@ -6,11 +6,6 @@ using UnityEngine.Networking;
 public class HeroAttack : AttackBase {
 	float m_recovery = 0;
 
-	public override bool CanAttack ()
-	{
-		return base.CanAttack () && GetComponent<Animator>().GetBool("attack");
-	}
-
 	public override void Attack (GameObject enemy)
 	{
 		base.Attack (enemy);
@@ -30,13 +25,11 @@ public class HeroAttack : AttackBase {
 	protected override void Update ()
 	{
 		base.Update ();
-		if (this.CanAttack()) {
-			GameObject obj = Check.FindObjectAroundthePoint (transform.position, attack_distance, gameObject.tag);
-			Attack (obj);
-		}
-		if (Time.time - m_recovery > 1.0f) {
-			m_recovery = Time.time;
-			//GetComponent<HP> ().UpdateHP (1);
+		if (isLocalPlayer) {
+			if (Time.time - m_recovery > 1.0f) {
+				m_recovery = Time.time;
+				GetComponent<HP> ().UpdateHP (1);
+			}
 		}
 	}
 }
