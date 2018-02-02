@@ -14,7 +14,7 @@ namespace Prototype.NetworkLobby
         static short MsgKicked = MsgType.Highest + 1;
 
         static public LobbyManager s_Singleton;
-		Queue<GameObject> gamePlayersQueue;
+		Dictionary<NetworkConnection, GameObject> gamePlayerOfConnection;
 
         [Header("Unity UI Lobby")]
         [Tooltip("Time in second between all players ready & match start")]
@@ -57,7 +57,7 @@ namespace Prototype.NetworkLobby
 			
 		public override GameObject OnLobbyServerCreateGamePlayer (NetworkConnection conn, short playerControllerId)
 		{
-			gamePlayerPrefab = gamePlayersQueue.Dequeue ();
+			gamePlayerPrefab = gamePlayerOfConnection[conn];
 			return base.OnLobbyServerCreateGamePlayer (conn, playerControllerId);
 		}
 
@@ -308,7 +308,7 @@ namespace Prototype.NetworkLobby
                 }
             }
 
-			gamePlayersQueue = new Queue<GameObject>();
+			gamePlayerOfConnection = new Dictionary<NetworkConnection, GameObject> ();
             for (int i = 0; i < lobbySlots.Length; ++i)
             {
                 if (lobbySlots[i] != null)
@@ -318,7 +318,7 @@ namespace Prototype.NetworkLobby
 					if (player.playerColor == Color.blue) {
 						index = 1;
 					}
-					gamePlayersQueue.Enqueue (spawnPrefabs [index]);
+					gamePlayerOfConnection[player.connectionToClient] = (spawnPrefabs [index]);
 					player.RpcUpdateCountdown(0);
                 }
             }

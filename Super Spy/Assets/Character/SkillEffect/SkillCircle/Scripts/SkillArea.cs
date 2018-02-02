@@ -120,7 +120,6 @@ public class SkillArea : MonoBehaviour {
     void CreateSkillArea()
     {
 		CreateElement(SKillAreaElement.OuterCircle);
-		Debug.Log (areaType);
         switch (areaType)
         {
             case SkillAreaType.OuterCircle_InnerCube:
