@@ -9,7 +9,8 @@ public class HeroAttack : AttackBase {
 	public override void Attack (GameObject enemy)
 	{
 		base.Attack (enemy);
-		if (enemy) {
+		if (isLocalPlayer && enemy) {
+			Debug.Log (enemy + " " + gameObject);
 			Vector3 look = enemy.transform.position;
 			look.y = transform.position.y;
 			transform.LookAt (look);
@@ -19,7 +20,9 @@ public class HeroAttack : AttackBase {
 	public override void BeAttacked (GameObject enemy, int power)
 	{
 		base.BeAttacked (enemy, power);
-		m_recovery = Time.time;
+		if (isLocalPlayer) {
+			m_recovery = Time.time;
+		}
 	}
 
 	protected override void Update ()

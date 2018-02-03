@@ -13,7 +13,6 @@ public class AttackBase : NetworkBehaviour {
 	protected virtual void Awake () {
 		Initialize init = GetComponent<Initialize> ();
 		weapon = init.weaponCollider;
-		attack_distance = init.attackDistance;
 		attack_cd = init.attackCd;
 		attack_power = init.attackPower;
 		_time = 0;
@@ -29,24 +28,25 @@ public class AttackBase : NetworkBehaviour {
 		}
 	}
 
-	string GetRootParentTag(Transform g) {
+	GameObject GetRootParent(Transform g) {
+		GameObject root = null;
 		string untag = "Untagged";
 		if (g != null) {
 			while (g.parent != null && g.parent.tag == untag) {
 				g = g.parent;
 			}
 			if (g.parent) {
-				untag = g.parent.tag;
+				root = g.parent.gameObject;
 			}
 		}
-		return untag;
+		return root;
 	}
 
 	void OnTriggerEnter(Collider enemy) {
-		if (isLocalPlayer && enemy.GetType() != typeof(CharacterController)) {
-			string t = GetRootParentTag (enemy.transform);
-			if (t != gameObject.tag) {
-				enemy.gameObject.GetComponentInParent<AttackBase> ().Attack (gameObject);
+		if (enemy.GetType() != typeof(CharacterController)) {
+			GameObject root = GetRootParent (enemy.transform);
+			if (root.tag != gameObject.tag) {
+				root.GetComponent<AttackBase> ().Attack (gameObject);
 			}
 		}
 	}
