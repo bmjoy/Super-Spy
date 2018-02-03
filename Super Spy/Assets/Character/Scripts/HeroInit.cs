@@ -10,6 +10,13 @@ public class Skill
 	public float lifeTime;
 	public float CD;
 }
+
+[System.Serializable]
+public class MagicSkill : Skill
+{
+	public float magicPowerNeeded;
+}
+
 public class HeroInit : Initialize {
 	[Space]
 	[Header("Born Properties")]
@@ -18,7 +25,7 @@ public class HeroInit : Initialize {
 	public Collider bodyCollider;
 
 	[Header("Skill Properties")]
-	public Skill[] skills;
+	public MagicSkill[] skills;
 
 	void Awake () {
 		transform.localPosition = originPosition;
