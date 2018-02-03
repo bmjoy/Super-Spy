@@ -37,12 +37,5 @@ public class Initialize : NetworkBehaviour {
 	public virtual void OnEnableCheck(bool flag) 
 	{
 		isVisual = flag;
-		CapsuleCollider cp = GetComponent<CapsuleCollider> ();
-		if (!cp) {
-			cp = Add<CapsuleCollider> ();
-			cp.center = new Vector3 (0, 1, 0);
-			cp.height = 3;
-		}
-		cp.enabled = flag;
 	}
 }

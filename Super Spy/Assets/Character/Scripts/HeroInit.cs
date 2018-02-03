@@ -15,21 +15,29 @@ public class HeroInit : Initialize {
 	[Header("Born Properties")]
 	public Vector3 originPosition;
 	public Collider weaponCollider;
+	public Collider bodyCollider;
 
 	[Header("Skill Properties")]
 	public Skill[] skills;
-	// Use this for initialization
-	public override void OnEnaleAttack ()
-	{
-		base.OnEnaleAttack ();
-		base.Add<HeroAttack> ();
-	}
+
 	void Awake () {
 		transform.localPosition = originPosition;
 		OnEnableAnimator ();
 		OnEnableSkill ();
 		OnEnableCheck (true);
 		OnEnaleAttack ();
+	}
+
+	public override void OnEnaleAttack ()
+	{
+		base.OnEnaleAttack ();
+		base.Add<HeroAttack> ();
+	}
+
+	public override void OnEnableCheck (bool flag)
+	{
+		base.OnEnableCheck (flag);
+		bodyCollider.enabled = flag;
 	}
 		
 	public override void OnStartLocalPlayer ()
