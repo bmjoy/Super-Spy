@@ -339,10 +339,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4482841050651492}
   - component: {fileID: 114689846093565516}
+  - component: {fileID: 114700439198774014}
   - component: {fileID: 143054230879557066}
   - component: {fileID: 95420923669093702}
   - component: {fileID: 114947572943642586}
-  - component: {fileID: 114700439198774014}
   m_Layer: 0
   m_Name: Blade_Warrior_Prefab
   m_TagString: Red
@@ -2683,11 +2683,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBlood: 100
   HPBar: {fileID: 1287972891066818, guid: d11172cc60550c740b06e57fbee8e712, type: 2}
-  weaponCollider: {fileID: 64828292499607730}
   attackDistance: 3
   attackCd: 1.5
   attackPower: 5
+  isVisual: 0
   originPosition: {x: 100, y: 1, z: 105}
+  weaponCollider: {fileID: 64828292499607730}
   skills:
   - effect: {fileID: 1878038004280662, guid: b1e17c5b965c40e4fb296c1b2cb20fab, type: 2}
     lifeTime: 30

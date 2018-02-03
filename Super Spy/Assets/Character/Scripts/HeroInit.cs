@@ -11,8 +11,10 @@ public class Skill
 	public float CD;
 }
 public class HeroInit : Initialize {
+	[Space]
 	[Header("Born Properties")]
 	public Vector3 originPosition;
+	public Collider weaponCollider;
 
 	[Header("Skill Properties")]
 	public Skill[] skills;
@@ -23,7 +25,7 @@ public class HeroInit : Initialize {
 		base.Add<HeroAttack> ();
 	}
 	void Awake () {
-		transform.position = originPosition;
+		transform.localPosition = originPosition;
 		OnEnableAnimator ();
 		OnEnableSkill ();
 		OnEnableCheck (true);

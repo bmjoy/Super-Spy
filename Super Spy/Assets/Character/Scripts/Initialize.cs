@@ -8,7 +8,6 @@ public class Initialize : NetworkBehaviour {
 	[Header("Attack Properties")]
 	public int maxBlood;
 	public GameObject HPBar;
-	public Collider weaponCollider;
 	public int attackDistance;
 	public float attackCd;
 	public int attackPower;

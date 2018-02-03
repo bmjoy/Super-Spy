@@ -30,36 +30,41 @@ public class TowerAttack : AttackBase {
 			if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
 			{
 				GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
-				Attack (mAttackTarget);
+				Fire (mAttackTarget);
 			}
 		}
 	}
 
-	public override void BeAttacked(GameObject enemy, int power) {
-		HP hp = GetComponent<HP> ();
-		string enemyTag = enemy.tag;
-		if (blood_tag != enemyTag) {
-			if (power < hp.curBlood) {
-				hp.UpdateHP (-power);
-			} else {
-				hp.curBlood = (power - hp.curBlood);
-				blood_tag = enemyTag;
-			}
-		} else {
-			hp.UpdateHP (power);
-			if (hp.curBlood >= hp.originBlood) {
-				zhenying = blood_tag;
-			}
-		}
-	}
-		
-	public override void Attack(GameObject enemy)
-	{
-		base.Attack (enemy);
+	void Fire(GameObject enemy) {
+		reCount ();
 		toShow = enemy != null;
 		if (enemy) {
 			GameObject n = Instantiate(bullet, transform);
-			n.GetComponent<Bullet>().InitData(enemy, 8, 2);
+			n.GetComponent<Bullet>().InitData(enemy, 8, colors[tag]);
+		}
+	}
+
+	public override void BeAttacked(GameObject enemy, int power) {
+		base.BeAttacked (enemy, power);
+		if (isServer) {
+			HP hp = GetComponent<HP> ();
+			string enemyTag = enemy.tag;
+			if (blood_tag != enemyTag) {
+				if (power < hp.curBlood) {
+					hp.curBlood -= power;
+				} else {
+					hp.curBlood = (power - hp.curBlood);
+					blood_tag = enemyTag;
+				}
+			} else {
+				int newblood = hp.curBlood + power;
+				if (newblood >= hp.originBlood) {
+					hp.curBlood = hp.originBlood;
+					zhenying = blood_tag;
+				} else {
+					hp.curBlood = newblood;
+				}
+			}
 		}
 	}
 

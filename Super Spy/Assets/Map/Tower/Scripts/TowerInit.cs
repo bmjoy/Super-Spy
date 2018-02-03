@@ -17,11 +17,7 @@ public class TowerInit : Initialize {
 	}
 
 	void Awake () {
-		NetworkIdentity id = GetComponent<NetworkIdentity> ();
-		if (id.observers == null || id.observers.Count == 0) {
-			Debug.Log ("lalala");
-			id.RebuildObservers (true);
-		}
 		OnEnaleAttack ();
+		isVisual = true;
 	}
 }
