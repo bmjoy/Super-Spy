@@ -151,24 +151,27 @@ public class FogOfWarEffect : MonoBehaviour {
 
     private bool m_IsFieldDatasUpdated;
 
-    void Awake()
-    {
-        m_IsInitialized = Init();
-        
-    }
+	void OnEnable() {
+		m_IsInitialized = Init();
+	}
+
+	void OnDisable() {
+		if (m_Renderer != null)
+			m_Renderer.Release();
+		if (m_Map != null)
+			m_Map.Release();
+		if (m_FieldDatas != null)
+			m_FieldDatas.Clear();
+		m_FieldDatas = null;
+		m_Renderer = null;
+		m_Map = null;
+		instance = null;
+		m_IsInitialized = false;
+	}
 
     void OnDestroy()
     {
-        if (m_Renderer != null)
-            m_Renderer.Release();
-        if (m_Map != null)
-            m_Map.Release();
-        if (m_FieldDatas != null)
-            m_FieldDatas.Clear();
-        m_FieldDatas = null;
-        m_Renderer = null;
-        m_Map = null;
-        instance = null;
+		OnDisable ();
     }
 
     void FixedUpdate()

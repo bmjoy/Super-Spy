@@ -21,6 +21,8 @@ public class HeroInit : Initialize {
 	[Space]
 	[Header("Born Properties")]
 	public Vector3 originPosition;
+	[HideInInspector]
+	public float originSpeed;
 	public Collider weaponCollider;
 	public Collider bodyCollider;
 
@@ -61,5 +63,6 @@ public class HeroInit : Initialize {
 			canvas.GetComponentInChildren<MiniMapCameraManager> ().flag = -1;
 		}
 		joystick.axisX.directTransform = joystick.axisY.directTransform = joystick.cameraLookAt = transform;
+		originSpeed = joystick.tmSpeed;
 	}
 }

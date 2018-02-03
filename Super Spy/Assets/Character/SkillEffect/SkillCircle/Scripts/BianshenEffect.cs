@@ -13,8 +13,8 @@ public class BianshenEffect : Effect {
 		life_time = p.GetComponent<HeroInit> ().skills [0].lifeTime;
 	}
 
-	public override void LateUpdate() {
-		base.LateUpdate ();
+	public override void Update() {
+		base.Update ();
 		if (remaining_time <= 0) {
 			if (player) {
 				NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
