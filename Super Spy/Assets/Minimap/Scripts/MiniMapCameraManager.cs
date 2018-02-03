@@ -9,7 +9,7 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
 	[HideInInspector]
 	public int flag = 1;
 
-	public Vector3 cameraOffset;
+	Vector3 cameraOffset;
 
     private Vector3 mapSize;
 
@@ -44,6 +44,7 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
 			var canvas = GameObject.Find ("Canvas");
 			var joystick = canvas.GetComponentInChildren<ETCJoystick> ();
 			target = joystick.cameraLookAt;
+			cameraOffset = joystick.followOffset;
 			joystick.cameraLookAt = null;
 			Vector2 pos = point.localPosition;
 			pos.x *= flag;
@@ -91,6 +92,5 @@ public class MiniMapCameraManager : MonoBehaviour, IDragHandler, IPointerDownHan
         }
 
 		tweener = DOTween.To( () => Camera.main.transform.localPosition, value => Camera.main.transform.localPosition = value, targetPosition, 0.3f ).SetEase(Ease.OutQuad);
-		Camera.main.transform.rotation = Quaternion.Euler (90, 0, 0);
     }
 }
