@@ -26,7 +26,7 @@ public class HeroInit : Initialize {
 		transform.position = originPosition;
 		OnEnableAnimator ();
 		OnEnableSkill ();
-		OnEnableCheck ();
+		OnEnableCheck (true);
 		OnEnaleAttack ();
 	}
 		

@@ -10,7 +10,6 @@ public class HeroAttack : AttackBase {
 	{
 		base.Attack (enemy);
 		if (isLocalPlayer && enemy) {
-			Debug.Log (enemy + " " + gameObject);
 			Vector3 look = enemy.transform.position;
 			look.y = transform.position.y;
 			transform.LookAt (look);

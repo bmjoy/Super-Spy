@@ -98,7 +98,7 @@ public class NetworkSkillController : NetworkBehaviour {
 	}
 
 	void SetVisual(bool is_visual) {
-		GetComponent<CapsuleCollider> ().enabled = is_visual;
+		GetComponent<Initialize> ().OnEnableCheck (is_visual);
 		if (!isLocalPlayer) {
 			foreach (var render in GetComponentsInChildren<MeshRenderer>()) {
 				render.enabled = is_visual;

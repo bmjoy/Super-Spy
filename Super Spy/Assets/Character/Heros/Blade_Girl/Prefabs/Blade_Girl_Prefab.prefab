@@ -1078,6 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4192810512426652}
   - component: {fileID: 137061891626703040}
+  - component: {fileID: 64591946203362934}
   m_Layer: 0
   m_Name: headusOBJexport008
   m_TagString: Untagged
@@ -1339,13 +1340,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940019647417310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.0027524566, y: 0.017443836, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4269784153674928}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!4 &4229479177766138
 Transform:
   m_ObjectHideFlags: 1
@@ -2259,6 +2260,20 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300026, guid: cce083416ffd93944822232682031c3c, type: 3}
+--- !u!64 &64591946203362934
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940019647417310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 1b8727b32a423e64a8962b395bfecc15, type: 3}
 --- !u!95 &95182477348093082
 Animator:
   serializedVersion: 3

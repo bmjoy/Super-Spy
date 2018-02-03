@@ -123,7 +123,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Check
-0f0f92c574e2300ae9ef0658deed1ca5 Assembly-CSharp.dll:.TowerInit
+177976825b98913bf012dd5d51b2f9bc Assembly-CSharp.dll:.TowerInit
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SpyIdentity
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:.FogOfWarExplorer
 c99104cca6f33db39d236f8efb9aafb4 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyCountdownPanel
@@ -155,7 +155,7 @@ e1bfd67f385bdcd852d72bb937d71506 Assembly-CSharp.dll:.SkillArea
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-e3760533c13728a77ea5bf4beb2dae86 Assembly-CSharp.dll:.HeroInit
+2644dee3b7637c31896e2993eca3a6ca Assembly-CSharp.dll:.HeroInit
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 f1d73ac1760876ca422604500197a3f6 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyPlayerList
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HP
@@ -183,5 +183,5 @@ faa7e1cbfafc90d16604627ebae63064 Assembly-CSharp.dll:.SkillEffect
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkAnimatorController
 faa7e1cbfafc90d16604627ebae63064 Assembly-CSharp.dll:.BianshenEffect
 ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
-6b20299914e1939d567876c544f84712 Assembly-CSharp.dll:.Initialize
+a10186c083325637e5dc79f3d5bccfa2 Assembly-CSharp.dll:.Initialize
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate

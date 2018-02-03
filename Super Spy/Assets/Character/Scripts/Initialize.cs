@@ -12,6 +12,7 @@ public class Initialize : NetworkBehaviour {
 	public int attackDistance;
 	public float attackCd;
 	public int attackPower;
+	public bool isVisual;
 
 	protected T Add<T>() where T : Component {
 		return gameObject.AddComponent<T> () as T;
@@ -34,10 +35,15 @@ public class Initialize : NetworkBehaviour {
 		Add<FogOfWarExplorer> ().radius = 10;
 	}
 
-	public virtual void OnEnableCheck() 
+	public virtual void OnEnableCheck(bool flag) 
 	{
-		CapsuleCollider cp = Add<CapsuleCollider> ();
-		cp.center = new Vector3 (0, 1, 0);
-		cp.height = 3;
+		isVisual = flag;
+		CapsuleCollider cp = GetComponent<CapsuleCollider> ();
+		if (!cp) {
+			cp = Add<CapsuleCollider> ();
+			cp.center = new Vector3 (0, 1, 0);
+			cp.height = 3;
+		}
+		cp.enabled = flag;
 	}
 }
