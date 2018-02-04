@@ -20,6 +20,7 @@ public class MagicSkill : Skill
 public class HeroInit : Initialize {
 	[Space]
 	[Header("Born Properties")]
+	public Vector3 originPosition;
 	[HideInInspector]
 	public float originSpeed;
 	public Collider weaponCollider;
@@ -29,14 +30,11 @@ public class HeroInit : Initialize {
 	public MagicSkill[] skills;
 
 	void Awake () {
+		transform.localPosition = originPosition;
 		OnEnableAnimator ();
 		OnEnableSkill ();
 		OnEnableCheck (true);
 		OnEnaleAttack ();
-	}
-
-	void Start() {
-		transform.localPosition = GameObject.Find(tag+"Born").transform.position;
 	}
 
 	public override void OnEnaleAttack ()

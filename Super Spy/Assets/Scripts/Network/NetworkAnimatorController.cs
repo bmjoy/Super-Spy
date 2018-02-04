@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class NetworkAnimatorController : NetworkBehaviour {
-	Animator anim;
+	protected Animator anim;
 	public virtual void Start() {
 		anim = GetComponent<Animator> ();
 	}

@@ -124,7 +124,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Check
 998d30e15ac1f917213d968b512f6936 Assembly-CSharp.dll:.TowerInit
-f92be5cf03a7f83e03049631dc9d6997 Assembly-CSharp.dll:.DayNightController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SpyIdentity
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:.FogOfWarExplorer
 c99104cca6f33db39d236f8efb9aafb4 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyCountdownPanel
@@ -156,7 +155,7 @@ e1bfd67f385bdcd852d72bb937d71506 Assembly-CSharp.dll:.SkillArea
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-211304d6d67454aecc7d54f87a1ddf8d Assembly-CSharp.dll:.HeroInit
+2e811b7d7e46176802131a69cbffcc4d Assembly-CSharp.dll:.HeroInit
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 f1d73ac1760876ca422604500197a3f6 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyPlayerList
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HP
@@ -169,7 +168,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.XiaoBinController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TowerAttack
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SkillJoystick
+1c87578e8be3ae82b40d239d06946da5 Assembly-CSharp.dll:.SkillJoystick
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Bullet
 94678f7833bd0dd50297dbd289556f88 Assembly-CSharp.dll:.ETCButton
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
