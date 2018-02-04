@@ -6,9 +6,12 @@ using UnityEngine.Networking;
 public class NetworkAnimatorController : NetworkBehaviour {
 	Animator anim;
 	Collider weapon;
+	MeleeWeaponTrail weaponTrail;
+
 	public virtual void Start() {
 		anim = GetComponent<Animator> ();
 		weapon = GetComponent<HeroInit> ().weaponCollider;
+		weaponTrail = GetComponentInChildren<MeleeWeaponTrail> ();
 
 		foreach (var item in anim.runtimeAnimatorController.animationClips) {
 			if (!Filter(item.name)) {
@@ -30,10 +33,12 @@ public class NetworkAnimatorController : NetworkBehaviour {
 
 	void OnAnimationStart() {
 		weapon.enabled = true;
+		weaponTrail.Emit = true;
 	}
 
 	void OnAnimationEnd() {
 		weapon.enabled = false;
+		weaponTrail.Emit = false;
 	}
 
 	public void SetAnimation(string state) {

@@ -71,6 +71,8 @@
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillArea.cs" />
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillEffect.cs" />
      <Compile Include="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillJoystick.cs" />
+     <Compile Include="Assets\Character\SkillEffect\WeaponTrail\Scripts\Interpolate.cs" />
+     <Compile Include="Assets\Character\SkillEffect\WeaponTrail\Scripts\MeleeWeaponTrail.cs" />
      <Compile Include="Assets\Character\XiaoBin\Scripts\SoldierInit.cs" />
      <Compile Include="Assets\Character\XiaoBin\Scripts\XiaoBinController.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\FogOfWar\Core\FOWMap.cs" />
