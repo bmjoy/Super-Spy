@@ -98,16 +98,8 @@ public class NetworkSkillController : NetworkBehaviour {
 	}
 
 	void SetVisual(bool is_visual) {
-		var init = GetComponent<Initialize> ();
-		init.OnEnableCheck (is_visual);
-		var canvas = GameObject.Find ("Canvas");
-		var joystick = canvas.GetComponentInChildren<ETCJoystick> ();
+		GetComponent<Initialize> ().OnEnableCheck (is_visual);
 
-		if (is_visual) {
-			joystick.tmSpeed = (init as HeroInit).originSpeed;
-		} else {
-			joystick.tmSpeed *= 3;
-		}
 		if (!isLocalPlayer) {
 			GetComponentInChildren<Canvas> ().enabled = is_visual;
 			foreach (var render in GetComponentsInChildren<MeshRenderer>()) {
