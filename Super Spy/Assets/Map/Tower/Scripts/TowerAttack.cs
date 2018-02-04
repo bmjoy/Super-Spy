@@ -23,20 +23,19 @@ public class TowerAttack : AttackBase {
 		toShow = false;
 	}
 
-	protected override void Update()
+	void Update()
 	{
-		base.Update ();
 		if (isServer) {
-			if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
+			/*if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
 			{
 				GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
 				Fire (mAttackTarget);
-			}
+			}*/
 		}
 	}
 
 	void Fire(GameObject enemy) {
-		reCount ();
+		//reCount ();
 		toShow = enemy != null;
 		if (enemy) {
 			GameObject n = Instantiate(bullet, transform);

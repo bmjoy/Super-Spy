@@ -91,6 +91,7 @@
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayer.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayerList.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
+     <Compile Include="Assets\Map\5V5\Grass\CaoController.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Bullet.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Check.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\HP.cs" />
@@ -114,6 +115,8 @@
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_DoubleDistortionRamp02.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_DissolveSimple.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\effect_distortion_mask.shader" />
+     <None Include="Assets\Resources\FogOfWarEffect.shader" />
+     <None Include="Assets\Resources\FogOfWarBlur.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill1\Shader\ParticleAddSoftEffect.shader" />
      <None Include="Assets\Character\SkillEffect\SkillCircle\Resources\Effect\Shader\Particle Alpha Blend1.shader" />
      <None Include="Assets\Character\SkillEffect\Resources\skill2\Shaders\FT_HeatDistortion.shader" />

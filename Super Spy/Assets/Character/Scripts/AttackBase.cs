@@ -5,22 +5,11 @@ using UnityEngine.Networking;
 
 public class AttackBase : NetworkBehaviour {
 	protected int attack_distance;
-	float attack_cd;
 	int attack_power;
-	float _time;
 	// Use this for initialization
 	protected virtual void Awake () {
 		Initialize init = GetComponent<Initialize> ();
-		attack_cd = init.attackCd;
 		attack_power = init.attackPower;
-		_time = 0;
-	}
-
-	// Update is called once per frame
-	protected virtual void Update () {
-		if (!CanAttack()) {
-			_time += Time.deltaTime;
-		}
 	}
 
 	GameObject GetRootParent(Transform g) {
@@ -43,18 +32,9 @@ public class AttackBase : NetworkBehaviour {
 			}
 		}
 	}
-
-	public virtual bool CanAttack() {
-		return _time >= attack_cd;
-	}
-
-	protected void reCount() {
-		_time = 0;
-	}
-
+		
 	public virtual void Attack(GameObject enemy) {
 		if (enemy != null) {
-			reCount ();
 			AttackBase attack_base = enemy.GetComponent<AttackBase> ();
 			if (!attack_base) {
 				attack_base = enemy.GetComponentInParent<AttackBase> ();

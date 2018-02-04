@@ -32,11 +32,10 @@ public class XiaoBinController : AttackBase {
 	}
 	
 	// Update is called once per frame
-	protected override void Update () {
-		base.Update ();
-		if (!CanAttack()) {
+	void Update () {
+		/*if (!CanAttack()) {
 			return;
-		}
+		}*/
 		GameObject obj = Check.FindObjectAroundthePoint (transform.position, attack_distance + 2, gameObject.tag);
 
 		if (obj) {

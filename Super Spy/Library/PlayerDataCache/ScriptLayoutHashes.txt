@@ -155,7 +155,7 @@ e1bfd67f385bdcd852d72bb937d71506 Assembly-CSharp.dll:.SkillArea
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-2e811b7d7e46176802131a69cbffcc4d Assembly-CSharp.dll:.HeroInit
+da73a594d77026e663138f4cdd57483f Assembly-CSharp.dll:.HeroInit
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 f1d73ac1760876ca422604500197a3f6 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyPlayerList
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HP
@@ -185,3 +185,4 @@ faa7e1cbfafc90d16604627ebae63064 Assembly-CSharp.dll:.BianshenEffect
 ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 c8b0cb6e3979750fb75e177ba05a04b0 Assembly-CSharp.dll:.Initialize
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CaoController

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7b9d7c258b29bee439f97ec9387ab8b1
+guid: 000903160acb43847b989047080bc06a
 timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: defaultdetachobj260
     11100000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__1076
+    second: {fileID: 2100000, guid: 270a0e385a7488142b882f5e97f81886, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -53,6 +58,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

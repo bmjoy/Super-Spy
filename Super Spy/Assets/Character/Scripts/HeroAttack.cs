@@ -5,13 +5,6 @@ using UnityEngine.Networking;
 
 public class HeroAttack : AttackBase {
 	float m_recovery = 0;
-	Collider weapon;
-
-	protected override void Awake ()
-	{
-		base.Awake ();
-		weapon = GetComponent<HeroInit> ().weaponCollider;
-	}
 
 	public override void Attack (GameObject enemy)
 	{
@@ -33,12 +26,8 @@ public class HeroAttack : AttackBase {
 		}
 	}
 
-	protected override void Update ()
+	void Update ()
 	{
-		base.Update ();
-		if (weapon) {
-			weapon.enabled = CanAttack ();
-		}
 		if (isLocalPlayer) {
 			if (Time.time - m_recovery > 1.0f) {
 				m_recovery = Time.time;
