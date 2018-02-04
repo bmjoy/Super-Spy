@@ -151,11 +151,22 @@ public class FogOfWarEffect : MonoBehaviour {
 
     private bool m_IsFieldDatasUpdated;
 
-	void OnEnable() {
+	void Start() {
+		m_FogColor = Color.black;
+		m_FogColor.a = 80;
+		m_XSize = m_ZSize = 200;
+		m_TexWidth = m_TexHeight = 120;
+		m_HeightRange = 5;
+		m_CenterPosition = new Vector3 (100, 0.75f, 100);
+		m_BlurOffset = 0.005f;
+		m_BlurInteration = 2;
+		effectShader = Resources.Load<Shader> ("FogOfWarEffect");
+		blurShader = Resources.Load<Shader> ("FogOfWarBlur");
 		m_IsInitialized = Init();
 	}
-
-	void OnDisable() {
+		
+    void OnDestroy()
+    {
 		if (m_Renderer != null)
 			m_Renderer.Release();
 		if (m_Map != null)
@@ -166,12 +177,6 @@ public class FogOfWarEffect : MonoBehaviour {
 		m_Renderer = null;
 		m_Map = null;
 		instance = null;
-		m_IsInitialized = false;
-	}
-
-    void OnDestroy()
-    {
-		OnDisable ();
     }
 
     void FixedUpdate()

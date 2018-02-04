@@ -2688,6 +2688,7 @@ MonoBehaviour:
   attackPower: 5
   isVisual: 0
   originPosition: {x: 100, y: 1, z: 105}
+  originSpeed: 0
   weaponCollider: {fileID: 64828292499607730}
   bodyCollider: {fileID: 64768393147935650}
   skills:

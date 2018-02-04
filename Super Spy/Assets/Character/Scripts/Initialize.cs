@@ -31,7 +31,8 @@ public class Initialize : NetworkBehaviour {
 	}
 
 	public virtual void OnEnableExplore() {
-		Add<FogOfWarExplorer> ().radius = 10;
+		var explorer = Add<FogOfWarExplorer> ();
+		explorer.radius = 10;
 	}
 
 	public virtual void OnEnableCheck(bool flag) 
