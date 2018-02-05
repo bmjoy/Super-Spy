@@ -28,10 +28,12 @@ public class Effect : SkillArea {
 		cur_time = 0;
 		var m_mask = transform.parent.Find (
 			transform.gameObject.name.Replace ("Skill", "mask"));
-		mask = m_mask.GetComponent<Image>();
-		mask.gameObject.SetActive (false);
-		time_text = m_mask.GetComponentInChildren<Text>();
-		time_text.text = "";
+		if (m_mask) {
+			mask = m_mask.GetComponent<Image>();
+			mask.gameObject.SetActive (false);
+			time_text = m_mask.GetComponentInChildren<Text>();
+			time_text.text = "";
+		}
 	}
 
 	public override void SetTarget (GameObject p)
@@ -53,7 +55,7 @@ public class Effect : SkillArea {
 	
 	// Update is called once per frame
 	public virtual void Update () {
-		if (player != null) {
+		if (mask != null) {
 			if (mask.fillAmount == 0) {
 				time_text.text = "";
 				mask.gameObject.SetActive (false);
@@ -73,7 +75,7 @@ public class Effect : SkillArea {
 	}
 
 	protected virtual void PlayEffect() {
-		if (player) {
+		if (mask) {
 			mask.gameObject.SetActive (true);
 			mask.fillAmount = 1;
 			cur_time = 0;

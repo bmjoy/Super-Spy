@@ -230,10 +230,11 @@ namespace Prototype.NetworkLobby
         }
 
         [ClientRpc]
-        public void RpcUpdateCountdown(int countdown)
+		public void RpcUpdateCountdown(float cur, float max)
         {
-            LobbyManager.s_Singleton.countdownPanel.UIText.text = "准备加载 " + countdown;
-            LobbyManager.s_Singleton.countdownPanel.gameObject.SetActive(countdown != 0);
+			LobbyManager.s_Singleton.timeSlider.maxValue = max;
+			LobbyManager.s_Singleton.timeSlider.value = cur;
+
         }
 
         [ClientRpc]

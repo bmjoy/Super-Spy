@@ -90,7 +90,7 @@ public class FogOfWarEffect : MonoBehaviour {
     [SerializeField]
     private FogMaskType m_FogMaskType;
     [SerializeField]
-    private Color m_FogColor = Color.black;
+	private Color m_FogColor = Color.black;
     [SerializeField]
     private float m_XSize;
     [SerializeField]
@@ -151,24 +151,23 @@ public class FogOfWarEffect : MonoBehaviour {
 
     private bool m_IsFieldDatasUpdated;
 
-    void Awake()
+    void Start()
     {
-        m_IsInitialized = Init();
-        
+		m_IsInitialized = Init();
     }
 
     void OnDestroy()
     {
-        if (m_Renderer != null)
-            m_Renderer.Release();
-        if (m_Map != null)
-            m_Map.Release();
-        if (m_FieldDatas != null)
-            m_FieldDatas.Clear();
-        m_FieldDatas = null;
-        m_Renderer = null;
-        m_Map = null;
-        instance = null;
+		if (m_FieldDatas != null)
+			m_FieldDatas.Clear();
+		if (m_Renderer != null)
+			m_Renderer.Release();
+		if (m_Map != null)
+			m_Map.Release();
+		m_FieldDatas = null;
+		instance = null;
+		m_Map = null;
+		m_Renderer = null;
     }
 
     void FixedUpdate()
@@ -204,19 +203,26 @@ public class FogOfWarEffect : MonoBehaviour {
 
     private bool Init()
     {
-        if (m_XSize <= 0 || m_ZSize <= 0 || m_TexWidth <= 0 || m_TexHeight <= 0)
-            return false;
+		m_XSize = m_ZSize = 200;
+		m_TexWidth = m_TexHeight = 120;
+		m_CenterPosition = new Vector3 (100, 0.75f, 100);
+		m_HeightRange = 2;
+		m_BlurOffset = 0.005f;
+		effectShader = Resources.Load<Shader> ("FogOfWarEffect");
+		blurShader = Resources.Load<Shader> ("FogOfWarBlur");
+        /*if (m_XSize <= 0 || m_ZSize <= 0 || m_TexWidth <= 0 || m_TexHeight <= 0)
+            return false;*/
         if (effectShader == null || !effectShader.isSupported)
             return false;
         m_Camera = gameObject.GetComponent<Camera>();
         if (m_Camera == null)
             return false;
         m_Camera.depthTextureMode |= DepthTextureMode.Depth;
-        m_DeltaX = m_XSize / m_TexWidth;
-        m_DeltaZ = m_ZSize / m_TexHeight;
-        m_BeginPos = m_CenterPosition - new Vector3(m_XSize / 2, 0, m_ZSize / 2);
-        m_Renderer = new FOWRenderer(effectShader, blurShader, m_CenterPosition, m_XSize, m_ZSize, m_FogColor, m_BlurOffset, m_BlurInteration);
-        m_Map = new FOWMap(m_FogMaskType, m_BeginPos, m_XSize, m_ZSize, m_TexWidth, m_TexHeight, m_HeightRange);
+		m_DeltaX = m_XSize / m_TexWidth;
+		m_DeltaZ = m_ZSize / m_TexHeight;
+		m_BeginPos = m_CenterPosition - new Vector3(m_XSize / 2, 0, m_ZSize / 2);
+		m_Renderer = new FOWRenderer(effectShader, blurShader, m_CenterPosition, m_XSize, m_ZSize, m_FogColor, m_BlurOffset, m_BlurInteration);
+		m_Map = new FOWMap(m_FogMaskType, m_BeginPos, m_XSize, m_ZSize, m_TexWidth, m_TexHeight, m_HeightRange);
         return true;
     }
 

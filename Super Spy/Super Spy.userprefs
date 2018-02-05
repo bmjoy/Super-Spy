@@ -1,14 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Minimap\Scripts\MiniMapCameraManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\Scripts\HeroInit.cs">
     <Files>
-      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="38" Column="16" />
-      <File FileName="Assets\Character\Scripts\Initialize.cs" Line="30" Column="13" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="24" Column="3" />
-      <File FileName="Assets\Character\Scripts\HeroAttack.cs" Line="40" Column="34" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerInit.cs" Line="15" Column="23" />
-      <File FileName="Assets\Character\Scripts\HeroInit.cs" Line="28" Column="26" />
-      <File FileName="Assets\Minimap\Scripts\MiniMapCameraManager.cs" Line="47" Column="41" />
+      <File FileName="Assets\Character\Scripts\HeroAttack.cs" Line="31" Column="23" />
+      <File FileName="Assets\Scripts\Network\NetworkAnimatorController.cs" Line="41" Column="28" />
+      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="39" Column="23" />
+      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="33" Column="7" />
+      <File FileName="Assets\Character\XiaoBin\Scripts\XiaoBinController.cs" Line="38" Column="6" />
+      <File FileName="Assets\Character\Scripts\HeroInit.cs" Line="53" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

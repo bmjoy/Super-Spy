@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Prototype.NetworkLobby;
 
 public class NetworkSkillController : NetworkBehaviour {
 	Skill[] skills;
@@ -87,6 +88,12 @@ public class NetworkSkillController : NetworkBehaviour {
 				break;
 			case SkillType.BianShen:
 				skill_effect = GameObject.Instantiate (skills [num].effect, transform);
+				var slider = LobbyManager.s_Singleton.timeSlider;
+				slider.onValueChanged.AddListener(delegate(float arg0) {
+					if (slider.maxValue != LobbyManager.s_Singleton.NightTime) {
+						Destroy(skill_effect);
+					}
+				});
 				break;
 			default:
 				break;

@@ -2,10 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Prototype.NetworkLobby;
 
 public class BianshenEffect : Effect {
 	float remaining_time;
 	float life_time;
+
+	public override void Start ()
+	{
+		base.Start ();
+		Slider slider = LobbyManager.s_Singleton.timeSlider;
+		slider.onValueChanged.AddListener (delegate(float arg0) {
+			if (arg0 <= 0) {
+				gameObject.SetActive (true);
+			} else if (arg0 >= slider.maxValue) {
+				gameObject.SetActive (false);
+			}
+		});
+	}
 
 	public override void SetTarget (GameObject p)
 	{
@@ -39,6 +53,8 @@ public class BianshenEffect : Effect {
 	protected override void PlayEffect ()
 	{
 		base.PlayEffect ();
+		gameObject.SetActive (false);
+		Destroy(Camera.main.GetComponent<FogOfWarEffect>());
 		if (player) {
 			NetworkSkillController skill_ctrl = player.GetComponent<NetworkSkillController> ();
 			skill_ctrl.ShowEffect (SkillType.BianShen, true, Vector3.zero);

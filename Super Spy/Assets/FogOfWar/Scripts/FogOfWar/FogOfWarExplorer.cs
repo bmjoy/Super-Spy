@@ -61,7 +61,7 @@ public class FogOfWarExplorer : NetworkBehaviour
 	        {
                 m_FowMapPos = pos;
 	            m_IsInitialized = true;
-	            m_FieldData.position = transform.position;
+				m_FieldData.position = transform.position;
 	            m_FieldData.radius = radius;
                 //FogOfWarEffect.SetVisibleAtPosition(m_FieldData);
 	            FogOfWarEffect.UpdateFOWFieldData(m_FieldData);
