@@ -26,7 +26,7 @@ public class SkillEffect : Effect {
 			}
 			ani_ctrl.SetAnimation (skillName[(int)skill]);
 			if (skill != SkillType.Attack) {
-				skill_ctrl.ShowEffect (skill, true, pos);
+				skill_ctrl.ShowEffect (skill, pos);
 			}
 		}
 	}

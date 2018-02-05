@@ -25,6 +25,7 @@ namespace Prototype.NetworkLobby
         [Header("UI Reference")]
         public LobbyTopPanel topPanel;
 		public Slider timeSlider;
+		public Text timeText;
 
         public RectTransform mainMenuPanel;
         public RectTransform lobbyPanel;
@@ -49,6 +50,7 @@ namespace Prototype.NetworkLobby
             s_Singleton = this;
             currentPanel = mainMenuPanel;
 			timeSlider.gameObject.SetActive (false);
+			timeText.gameObject.SetActive (false);
 			startGameButton.gameObject.SetActive (false);
             backButton.gameObject.SetActive(false);
             GetComponent<Canvas>().enabled = true;
@@ -98,6 +100,7 @@ namespace Prototype.NetworkLobby
                 topPanel.isInGame = true;
                 topPanel.ToggleVisibility(false);
 				timeSlider.gameObject.SetActive (true);
+				timeText.gameObject.SetActive (true);
 				StartCoroutine (ServerCountdownCoroutine());
             }
         }
@@ -317,6 +320,7 @@ namespace Prototype.NetworkLobby
 						Destroy(fow);
 					}
 				}
+				timeText.text = ((int)timeSlider.value).ToString() + "/" + timeSlider.maxValue.ToString();
 			});
 
 			if (NetworkServer.active) {

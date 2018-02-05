@@ -1,13 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\Scripts\HeroInit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Character\Scripts\HeroAttack.cs">
     <Files>
-      <File FileName="Assets\Character\Scripts\HeroAttack.cs" Line="31" Column="23" />
-      <File FileName="Assets\Scripts\Network\NetworkAnimatorController.cs" Line="41" Column="28" />
-      <File FileName="Assets\Character\Scripts\AttackBase.cs" Line="39" Column="23" />
-      <File FileName="Assets\Map\Tower\Scripts\TowerAttack.cs" Line="33" Column="7" />
-      <File FileName="Assets\Character\XiaoBin\Scripts\XiaoBinController.cs" Line="38" Column="6" />
-      <File FileName="Assets\Character\Scripts\HeroInit.cs" Line="53" Column="22" />
+      <File FileName="Assets\Scripts\Network\NetworkSkillController.cs" Line="22" Column="2" />
+      <File FileName="Assets\Character\SkillEffect\SkillCircle\Scripts\BianshenEffect.cs" Line="15" Column="41" />
+      <File FileName="Assets\Character\SkillEffect\SkillCircle\Scripts\SkillEffect.cs" Line="21" Column="45" />
+      <File FileName="Assets\Character\Scripts\HeroAttack.cs" Line="19" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
