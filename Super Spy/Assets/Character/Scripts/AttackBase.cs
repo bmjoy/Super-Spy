@@ -13,8 +13,8 @@ public class AttackBase : NetworkBehaviour {
 
 	public virtual void OnTriggerEnter(Collider enemy) {
 		if (enemy.GetType() != typeof(CharacterController) && GetComponent<Initialize>().isVisual) {
-			var root = Check.GetRootParent (enemy.transform);
-			if (root && root.tag != gameObject.tag) {
+			Transform root = Check.GetRootParent (enemy.transform);
+			if (root && root != transform) {
 				root.GetComponent<AttackBase> ().Attack (gameObject);
 			}
 		}

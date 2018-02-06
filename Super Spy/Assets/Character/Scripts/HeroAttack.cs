@@ -9,7 +9,7 @@ public class HeroAttack : AttackBase {
 	public override void Attack (GameObject enemy)
 	{
 		base.Attack (enemy);
-		if (isLocalPlayer && enemy) {
+		if (isLocalPlayer && enemy && enemy.tag != tag) {
 			Vector3 look = enemy.transform.position;
 			look.y = transform.position.y;
 			transform.LookAt (look);
