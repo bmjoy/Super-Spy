@@ -87,7 +87,7 @@ public class NetworkSkillController : NetworkBehaviour {
 			SetVisual (false);
 			var slider = LobbyManager.s_Singleton.timeSlider;
 			slider.onValueChanged.AddListener(delegate(float arg0) {
-				if (slider.maxValue != LobbyManager.s_Singleton.NightTime) {
+				if (slider.maxValue != LobbyManager.s_Singleton.timeSlider.GetComponent<DayNightController>().NightTime) {
 					Destroy(skill_effect);
 					SetVisual(true);
 				}

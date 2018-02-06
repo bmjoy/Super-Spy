@@ -234,8 +234,18 @@ namespace Prototype.NetworkLobby
         {
 			LobbyManager.s_Singleton.timeSlider.maxValue = max;
 			LobbyManager.s_Singleton.timeSlider.value = cur;
-
         }
+
+		[ClientRpc]
+		public void RpcUpdateTower(string towerName, string zhenying, string bloodTag, bool toShow) {
+			var towers = LobbyManager.s_Singleton.towers;
+			if (towers.ContainsKey(towerName)) {
+				TowerAttack attack = towers [towerName].GetComponent<TowerAttack> ();
+				attack.OnZhenyingChanged(zhenying);
+				attack.OnBloodEmpty (bloodTag);
+				attack.OnShow (toShow);
+			}
+		}
 
         [ClientRpc]
         public void RpcUpdateRemoveButton()

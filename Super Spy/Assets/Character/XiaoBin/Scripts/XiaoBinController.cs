@@ -15,9 +15,9 @@ public class XiaoBinController : AttackBase {
 		anim = GetComponent<Animator> ();
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		//origin_target = cur_target = null;
-		if (attack_distance == 0) {
+		/*if (attack_distance == 0) {
 			attack_distance = (int)navMeshAgent.stoppingDistance + 1;
-		}
+		}*/
 		last_dis = 0;
 	}
 
@@ -35,8 +35,8 @@ public class XiaoBinController : AttackBase {
 	void Update () {
 		/*if (!CanAttack()) {
 			return;
-		}*/
-		GameObject obj = Check.FindObjectAroundthePoint (transform.position, attack_distance + 2, gameObject.tag);
+		}
+		//GameObject obj = Check.FindObjectAroundthePoint (transform.position, attack_distance + 2, gameObject.tag);
 
 		if (obj) {
 			SetTarget (obj.transform.position);
@@ -44,7 +44,7 @@ public class XiaoBinController : AttackBase {
 			SetTarget (origin_target);
 		}
 		float dis = Vector3.Distance (transform.position, navMeshAgent.destination);
-		if (dis > 0 && dis <= attack_distance) {
+		if (dis > 0 /*&& dis <= attack_distance) {
 			transform.LookAt (navMeshAgent.destination);
 
 			anim.SetBool ("attack", !anim.GetBool("attack"));
@@ -72,7 +72,7 @@ public class XiaoBinController : AttackBase {
 				SetTarget (target);
 			}
 		}
-		last_dis = dis;
+		last_dis = dis;*/
 	}
 		
 	public void SetTarget(Vector3 target) {

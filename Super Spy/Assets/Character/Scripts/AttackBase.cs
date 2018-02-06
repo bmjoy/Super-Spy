@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class AttackBase : NetworkBehaviour {
-	protected int attack_distance;
 	int attack_power;
 	// Use this for initialization
 	protected virtual void Awake () {
@@ -12,22 +11,10 @@ public class AttackBase : NetworkBehaviour {
 		attack_power = init.attackPower;
 	}
 
-	GameObject GetRootParent(Transform g) {
-		GameObject root = null;
-		string untag = "Untagged";
-		if (g != null) {
-			while (g.tag == untag && g.parent != null) {
-				g = g.parent;
-			}
-			root = g.gameObject;
-		}
-		return root;
-	}
-
 	public virtual void OnTriggerEnter(Collider enemy) {
 		if (enemy.GetType() != typeof(CharacterController) && GetComponent<Initialize>().isVisual) {
-			GameObject root = GetRootParent (enemy.transform);
-			if (root.tag != gameObject.tag) {
+			var root = Check.GetRootParent (enemy.transform);
+			if (root && root.tag != gameObject.tag) {
 				root.GetComponent<AttackBase> ().Attack (gameObject);
 			}
 		}

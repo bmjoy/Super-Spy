@@ -2,44 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Prototype.NetworkLobby;
 
-public class TowerAttack : AttackBase {
+public class TowerAttack : AutoAttack {
 	GameObject bullet;
 	SpriteRenderer show;
-	[SyncVar (hook = "OnZhenyingChanged")]
 	string zhenying;
-	[SyncVar (hook = "OnBloodEmpty")]
 	string blood_tag;
-	[SyncVar (hook = "OnShow")]
 	bool toShow;
 
 	static Dictionary<string, Color> colors;
+
+	public override void Start ()
+	{
+		base.Start ();
+		LobbyManager.s_Singleton.towers [name] = gameObject;
+	}
+
+	public override void Update ()
+	{
+		base.Update ();
+		if (isServer) {
+			SyncToClients ();
+		}
+	}
 
 	public override void OnStartServer ()
 	{
 		base.OnStartServer ();
 		bullet = GetComponent<TowerInit> ().bullet;
-		zhenying = blood_tag = tag;
-		toShow = false;
+		OnZhenyingChanged (tag);
+		OnBloodEmpty (tag);
+		OnShow (false);
+		SyncToClients ();
 	}
 
-	void Update()
-	{
-		if (isServer) {
-			/*if (CanAttack()) //超guo冷却cd就攻ji，并重置jishi
-			{
-				GameObject mAttackTarget = Check.FindObjectAroundthePoint (transform.position, 6f, tag);
-				Fire (mAttackTarget);
-			}*/
-		}
+	void SyncToClients() {
+		LobbyManager.s_Singleton.UpdateTower (name, zhenying, blood_tag, toShow);
 	}
 
-	void Fire(GameObject enemy) {
-		//reCount ();
-		toShow = enemy != null;
+	public override void AutoHit(GameObject enemy) {
+		base.AutoHit (enemy);
+		OnShow (enemy != null);
 		if (enemy) {
 			GameObject n = Instantiate(bullet, transform);
 			n.GetComponent<Bullet>().InitData(enemy, 8, colors[tag]);
+			NetworkServer.Spawn (n);
 		}
 	}
 
@@ -53,13 +61,13 @@ public class TowerAttack : AttackBase {
 					hp.curBlood -= power;
 				} else {
 					hp.curBlood = (power - hp.curBlood);
-					blood_tag = enemyTag;
+					OnBloodEmpty (enemyTag);
 				}
 			} else {
 				int newblood = hp.curBlood + power;
 				if (newblood >= hp.originBlood) {
 					hp.curBlood = hp.originBlood;
-					zhenying = blood_tag;
+					OnZhenyingChanged (blood_tag);
 				} else {
 					hp.curBlood = newblood;
 				}
@@ -67,18 +75,22 @@ public class TowerAttack : AttackBase {
 		}
 	}
 
-	void OnBloodEmpty(string value) {
-		blood_tag = value;
-		GetComponent<HP> ().UpdateColor (blood_tag);
+	public void OnBloodEmpty(string value) {
+		if (blood_tag != value) {
+			blood_tag = value;
+			GetComponent<HP> ().UpdateColor (blood_tag);
+		}
 	}
-	void OnZhenyingChanged(string value) {
-		zhenying = value;
-		gameObject.tag = zhenying;
-		transform.Find ("Walls").tag = zhenying;
-		SetTowerMaterial ();
+	public void OnZhenyingChanged(string value) {
+		if (zhenying != value) {
+			zhenying = value;
+			gameObject.tag = zhenying;
+			transform.Find ("Walls").tag = zhenying;
+			SetTowerMaterial ();
+		}
 	}
 
-	void OnShow(bool value) {
+	public void OnShow(bool value) {
 		if (toShow != value) {
 			if (show == null) {
 				show = transform.Find ("rang").GetComponent<SpriteRenderer> ();

@@ -93,6 +93,7 @@
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayer.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyPlayerList.cs" />
      <Compile Include="Assets\Lobby\Scripts\Lobby\LobbyTopPanel.cs" />
+     <Compile Include="Assets\Map\Tower\Scripts\AutoAttack.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Bullet.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\Check.cs" />
      <Compile Include="Assets\Map\Tower\Scripts\GenerateSoldiers.cs" />
@@ -106,6 +107,7 @@
      <Compile Include="Assets\Minimap\Scripts\MiniMapPoolManager.cs" />
      <Compile Include="Assets\Minimap\Scripts\MiniMapView.cs" />
      <Compile Include="Assets\Minimap\Scripts\ScaleController.cs" />
+     <Compile Include="Assets\Scripts\Game\DayNightController.cs" />
      <Compile Include="Assets\Scripts\Game\GameController.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkSkillController.cs" />

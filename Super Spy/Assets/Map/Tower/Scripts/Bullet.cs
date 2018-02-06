@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Bullet : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
 		if (mTarget == null)//追人追到一半那个人死了
-			GameObject.Destroy(gameObject);
+			NetworkServer.Destroy(gameObject);
 		else
 		{
 			mTargetPos = mTarget.transform.position;
@@ -31,7 +32,7 @@ public class Bullet : MonoBehaviour
 			}
 			else//子dan追人
 			{
-				Destroy(gameObject);
+				NetworkServer.Destroy(gameObject);
 			}
 		}
     }

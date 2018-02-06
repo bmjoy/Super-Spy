@@ -112,6 +112,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+ee4c485b3b3049376e69468739b407df Assembly-CSharp.dll:.DayNightController
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ad985fadc05d306a7dd8a151d4d29648 Assembly-CSharp.dll:.MiniMapCameraManager
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -124,12 +125,13 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Check
 998d30e15ac1f917213d968b512f6936 Assembly-CSharp.dll:.TowerInit
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AutoAttack
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SpyIdentity
 1bd73dc08780414ea7c06375d2fbc18e Assembly-CSharp.dll:.FogOfWarExplorer
 c99104cca6f33db39d236f8efb9aafb4 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyCountdownPanel
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-2af1452674dd82f34cb590d2e1f52014 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyManager
+6ec240da4eb81981fcf9784ba8a84b25 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyManager
 f266a453cd4bfbe81533762a3e3589f4 DOTween.dll:DG.Tweening.Core.DOTweenComponent
 0869883b6445f616fc171fe47d5fa3a0 DOTween.dll:DG.Tweening.Core.DOTweenSettings
 0e0671daccfdc07c5a4a410c6329cba4 Assembly-CSharp.dll:Prototype.NetworkLobby.LobbyTopPanel
@@ -176,6 +178,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.NetworkSkillController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InitTarget
 faa7e1cbfafc90d16604627ebae63064 Assembly-CSharp.dll:.SkillEffect
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GenerateSoldiers
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HeroAttack
 1369a844a5a8a7a3c4babe57e463df9b Assembly-CSharp.dll:.ETCDPad
 9b2ea1e17f48f9cac9a3ff88e0a673fa Assembly-CSharp.dll:.ETCJoystick
@@ -186,4 +189,3 @@ faa7e1cbfafc90d16604627ebae63064 Assembly-CSharp.dll:.BianshenEffect
 ba3bd209617a51f21ebc145dc5acefe8 Assembly-CSharp.dll:.ETCArea
 c8b0cb6e3979750fb75e177ba05a04b0 Assembly-CSharp.dll:.Initialize
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.Rotate
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GenerateSoldiers

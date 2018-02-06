@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - floor
-  - Minimap
   - Gray
   - Red
-  - soldier
   - Blue
   layers:
   - Default

@@ -18,14 +18,10 @@ namespace Prototype.NetworkLobby
 
         [Header("Unity UI Lobby")]
         [Tooltip("Time in second between all players ready & match start")]
-        public float DayTime = 120;
-		public float NightTime = 30;
 
         [Space]
         [Header("UI Reference")]
         public LobbyTopPanel topPanel;
-		public Slider timeSlider;
-		public Text timeText;
 
         public RectTransform mainMenuPanel;
         public RectTransform lobbyPanel;
@@ -43,14 +39,16 @@ namespace Prototype.NetworkLobby
         //Client numPlayers from NetworkManager is always 0, so we count (throught connect/destroy in LobbyPlayer) the number
         //of players, so that even client know how many player there is.
         [HideInInspector]
+		public Slider timeSlider;
+		[HideInInspector]
         public int _playerNumber = 0;
+		public Dictionary<string, GameObject> towers;
 
         void Start()
         {
             s_Singleton = this;
             currentPanel = mainMenuPanel;
-			timeSlider.gameObject.SetActive (false);
-			timeText.gameObject.SetActive (false);
+			towers = new Dictionary<string, GameObject> ();
 			startGameButton.gameObject.SetActive (false);
             backButton.gameObject.SetActive(false);
             GetComponent<Canvas>().enabled = true;
@@ -99,9 +97,6 @@ namespace Prototype.NetworkLobby
                 //backDelegate = StopGameClbk;
                 topPanel.isInGame = true;
                 topPanel.ToggleVisibility(false);
-				timeSlider.gameObject.SetActive (true);
-				timeText.gameObject.SetActive (true);
-				StartCoroutine (ServerCountdownCoroutine());
             }
         }
 
@@ -303,45 +298,27 @@ namespace Prototype.NetworkLobby
 			startGameButton.interactable = false;
 		}
 
-        public IEnumerator ServerCountdownCoroutine()
-        {
-			int isDay = 0;
-			FogOfWarEffect fow = null;
-			timeSlider.onValueChanged.AddListener(delegate(float arg0) {
-				if (arg0 <= 0) {
-					timeSlider.maxValue = NightTime;
-					isDay = -1;
-					fow = Camera.main.gameObject.AddComponent<FogOfWarEffect>();
-				}
-				else if (arg0 >= timeSlider.maxValue) {
-					timeSlider.value = timeSlider.maxValue = DayTime;
-					isDay = 1;
-					if (fow) {
-						Destroy(fow);
-					}
-				}
-				timeText.text = ((int)timeSlider.value).ToString() + "/" + timeSlider.maxValue.ToString();
-			});
-
-			if (NetworkServer.active) {
-				timeSlider.value = timeSlider.maxValue;
-				while (true)
-				{
-					yield return null;
-
-					timeSlider.value -= Time.deltaTime * isDay;
-					for (int i = 0; i < lobbySlots.Length; ++i)
-					{
-						if (lobbySlots[i] != null)
-						{//there is maxPlayer slots, so some could be == null, need to test it before accessing!
-							LobbyPlayer p = (lobbySlots[i] as LobbyPlayer);
-							p.RpcUpdateCountdown(timeSlider.value, timeSlider.maxValue);
-						}
-					}
+		public void UpdateTower(string towerName, string zhenying, string bloodTag, bool toShow) {
+			for (int i = 0; i < lobbySlots.Length; ++i)
+			{
+				if (lobbySlots[i] != null)
+				{//there is maxPlayer slots, so some could be == null, need to test it before accessing!
+					LobbyPlayer p = (lobbySlots[i] as LobbyPlayer);
+					p.RpcUpdateTower (towerName, zhenying, bloodTag, toShow);
 				}
 			}
-        }
+		}
 
+		public void UpdateTime(float value, float max) {
+			for (int i = 0; i < lobbySlots.Length; ++i)
+			{
+				if (lobbySlots[i] != null)
+				{//there is maxPlayer slots, so some could be == null, need to test it before accessing!
+					LobbyPlayer p = (lobbySlots[i] as LobbyPlayer);
+					p.RpcUpdateCountdown(timeSlider.value, timeSlider.maxValue);
+				}
+			}
+		}
         // ----------------- Client callbacks ------------------
 
         public override void OnClientConnect(NetworkConnection conn)
