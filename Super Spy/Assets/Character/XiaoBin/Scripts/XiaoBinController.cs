@@ -4,21 +4,21 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class XiaoBinController : AttackBase {
-	float last_dis;
+	//float last_dis;
 	Vector3 origin_target = Vector3.zero;
-	Animator anim;
+	//Animator anim;
 	NavMeshAgent navMeshAgent;
 
 	// Use this for initialization
 	protected override void Awake () {
 		base.Awake ();
-		anim = GetComponent<Animator> ();
+		//anim = GetComponent<Animator> ();
 		navMeshAgent = GetComponent<NavMeshAgent>();
 		//origin_target = cur_target = null;
 		/*if (attack_distance == 0) {
 			attack_distance = (int)navMeshAgent.stoppingDistance + 1;
 		}*/
-		last_dis = 0;
+		//last_dis = 0;
 	}
 
 	public override void Attack (GameObject enemy)

@@ -39,7 +39,7 @@ namespace Prototype.NetworkLobby
         //Client numPlayers from NetworkManager is always 0, so we count (throught connect/destroy in LobbyPlayer) the number
         //of players, so that even client know how many player there is.
         [HideInInspector]
-		public Slider timeSlider;
+		public DayNightController dayNightController;
 		[HideInInspector]
         public int _playerNumber = 0;
 		public Dictionary<string, GameObject> towers;
@@ -298,13 +298,13 @@ namespace Prototype.NetworkLobby
 			startGameButton.interactable = false;
 		}
 
-		public void UpdateTower(string towerName, string zhenying, string bloodTag, bool toShow) {
+		public void UpdateTower(string towerName, string zhenying, string bloodTag, bool toShow, int blood) {
 			for (int i = 0; i < lobbySlots.Length; ++i)
 			{
 				if (lobbySlots[i] != null)
 				{//there is maxPlayer slots, so some could be == null, need to test it before accessing!
 					LobbyPlayer p = (lobbySlots[i] as LobbyPlayer);
-					p.RpcUpdateTower (towerName, zhenying, bloodTag, toShow);
+					p.RpcUpdateTower (towerName, zhenying, bloodTag, toShow, blood);
 				}
 			}
 		}
@@ -315,7 +315,7 @@ namespace Prototype.NetworkLobby
 				if (lobbySlots[i] != null)
 				{//there is maxPlayer slots, so some could be == null, need to test it before accessing!
 					LobbyPlayer p = (lobbySlots[i] as LobbyPlayer);
-					p.RpcUpdateCountdown(timeSlider.value, timeSlider.maxValue);
+					p.RpcUpdateCountdown(value, max);
 				}
 			}
 		}

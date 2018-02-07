@@ -85,9 +85,9 @@ public class NetworkSkillController : NetworkBehaviour {
 		case SkillType.BianShen:
 			skill_effect = GameObject.Instantiate (skills [num].effect, transform);
 			SetVisual (false);
-			var slider = LobbyManager.s_Singleton.timeSlider;
-			slider.onValueChanged.AddListener(delegate(float arg0) {
-				if (slider.maxValue != LobbyManager.s_Singleton.timeSlider.GetComponent<DayNightController>().NightTime) {
+			var dayNightController = LobbyManager.s_Singleton.dayNightController;
+			dayNightController.onDayNightChanged.AddListener(delegate(bool arg0) {
+				if (!arg0) {
 					Destroy(skill_effect);
 					SetVisual(true);
 				}

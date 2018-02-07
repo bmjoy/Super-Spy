@@ -232,18 +232,15 @@ namespace Prototype.NetworkLobby
         [ClientRpc]
 		public void RpcUpdateCountdown(float cur, float max)
         {
-			LobbyManager.s_Singleton.timeSlider.maxValue = max;
-			LobbyManager.s_Singleton.timeSlider.value = cur;
+			LobbyManager.s_Singleton.dayNightController.SyncFromServer (cur, max);
         }
 
 		[ClientRpc]
-		public void RpcUpdateTower(string towerName, string zhenying, string bloodTag, bool toShow) {
+		public void RpcUpdateTower(string towerName, string zhenying, string bloodTag, bool toShow, int blood) {
 			var towers = LobbyManager.s_Singleton.towers;
 			if (towers.ContainsKey(towerName)) {
 				TowerAttack attack = towers [towerName].GetComponent<TowerAttack> ();
-				attack.OnZhenyingChanged(zhenying);
-				attack.OnBloodEmpty (bloodTag);
-				attack.OnShow (toShow);
+				attack.SyncFromServer (zhenying, bloodTag, toShow, blood);
 			}
 		}
 

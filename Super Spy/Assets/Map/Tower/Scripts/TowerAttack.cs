@@ -10,13 +10,21 @@ public class TowerAttack : AutoAttack {
 	string zhenying;
 	string blood_tag;
 	bool toShow;
+	HP hp;
 
 	static Dictionary<string, Color> colors;
 
 	public override void Start ()
 	{
 		base.Start ();
+		hp = GetComponent<HP> ();
 		LobbyManager.s_Singleton.towers [name] = gameObject;
+		bullet = GetComponent<TowerInit> ().bullet;
+		if (isServer) {
+			OnZhenyingChanged (tag);
+			OnBloodEmpty (tag);
+			OnShow (false);
+		}
 	}
 
 	public override void Update ()
@@ -27,18 +35,15 @@ public class TowerAttack : AutoAttack {
 		}
 	}
 
-	public override void OnStartServer ()
-	{
-		base.OnStartServer ();
-		bullet = GetComponent<TowerInit> ().bullet;
-		OnZhenyingChanged (tag);
-		OnBloodEmpty (tag);
-		OnShow (false);
-		SyncToClients ();
+	void SyncToClients() {
+		LobbyManager.s_Singleton.UpdateTower (name, zhenying, blood_tag, toShow, hp.curBlood);
 	}
 
-	void SyncToClients() {
-		LobbyManager.s_Singleton.UpdateTower (name, zhenying, blood_tag, toShow);
+	public void SyncFromServer(string zh, string bt, bool show, int blood) {
+		OnZhenyingChanged (zh);
+		OnBloodEmpty (bt);
+		OnShow (show);
+		hp.OnHeathChanged (blood);
 	}
 
 	public override void AutoHit(GameObject enemy) {
@@ -54,7 +59,6 @@ public class TowerAttack : AutoAttack {
 	public override void BeAttacked(GameObject enemy, int power) {
 		base.BeAttacked (enemy, power);
 		if (isServer) {
-			HP hp = GetComponent<HP> ();
 			string enemyTag = enemy.tag;
 			if (blood_tag != enemyTag) {
 				if (power < hp.curBlood) {
